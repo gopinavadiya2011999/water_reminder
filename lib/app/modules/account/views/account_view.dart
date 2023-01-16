@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eventify/eventify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,6 +7,7 @@ import 'package:waterreminder/app/modules/AccountDetail/views/account_detail_vie
 import 'package:waterreminder/app/modules/schedule_reminder/views/schedule_reminder_view.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/dialog_boxs/logout_dialog.dart';
+import 'package:waterreminder/dialog_boxs/schedule_dialog.dart';
 import 'package:waterreminder/dialog_boxs/weight_dialog.dart';
 import 'package:waterreminder/schedule_reminder.dart';
 import 'package:waterreminder/widgets/custom_back_button.dart';
@@ -50,7 +52,20 @@ class AccountView extends GetView<AccountController> {
                       plusButton: true,
                       padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 18),
                         buttonText: 'Schedule Reminder', context: context),
-                    onTap: () =>Get.to(ScheduleReminder(userModel: accountController.userData.first))),
+                    onTap: () async {
+                      QuerySnapshot<Map<String, dynamic>> snapShots = await FirebaseFirestore.instance
+                          .collection('user')
+                          .doc(accountController.userData.first.userId)
+                          .collection('reminder')
+                          .get();
+                   if(snapShots.docs.isEmpty){
+
+                       scheduleDialogDialog(context,userModel:accountController.userData.first);
+                   }
+                   else{
+                     Get.to(ScheduleReminder(userModel: accountController.userData.first));
+                   }
+                    }),
                 const SizedBox(height: 25),
                 _logOut(context)
               ],
@@ -73,7 +88,7 @@ class AccountView extends GetView<AccountController> {
         decoration: BoxDecoration(
             color: ColorConstant.white,
             border: Border.all(color: ColorConstant.grey80.withOpacity(.14)),
-            borderRadius: BorderRadius.circular(5)),
+            borderRadius: BorderRadius.circular(8)),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

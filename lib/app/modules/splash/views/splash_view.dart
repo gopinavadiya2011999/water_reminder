@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -37,8 +35,8 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   timer() async {
-    String? token = await FirebaseMessaging.instance.getToken();
-    print("Token :: ${token}");
+    // String? token = await FirebaseMessaging.instance.getToken();
+    // print("Token :: ${token}");
     await Future.delayed(Duration(milliseconds: 15));
     isStared = true;
     Timer(const Duration(seconds: 4), () {
@@ -91,9 +89,9 @@ class _SplashScreenState extends State<SplashScreen>
                           ..strokeWidth = 2
                           ..color = isStared
                               ? ColorConstant.blueFF
-                              : ColorConstant.white)),
+                              : ColorConstant.blueFF)),
                 duration: Duration(seconds: 3),
-                opacity: isStared ? 1 : 0.5,
+                opacity: isStared ? 1 : 0.4,
               ),
             ),
             AnimatedPositioned(

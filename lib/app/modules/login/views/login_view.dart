@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -172,7 +170,6 @@ class LoginView extends GetView<LoginController> {
           if (element.email == loginController.emailController.text.trim()) {
             if (element.password ==
                 loginController.passwordController.text.trim()) {
-              String? token = await FirebaseMessaging.instance.getToken();
 
               String encodeData = UserModel.encode([
                 UserModel(
@@ -189,8 +186,7 @@ class LoginView extends GetView<LoginController> {
                     drinkableWater: element.drinkableWater)
               ]);
 
-              FirebaseFirestore.instance.collection('user').doc(element.userId).update(
-                  {'token': token});
+
               box.write('save', encodeData);
               box.write('login', true);
               Get.offAll(BottomTabView());

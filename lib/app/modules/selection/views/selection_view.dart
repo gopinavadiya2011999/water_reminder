@@ -1,7 +1,6 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -31,10 +30,10 @@ class SelectionView extends GetView<SelectionController> {
 
   String weights = '03';
   String weightTypes = 'kg';
-  String bedTimeHour = DateTime.now().hour.toString();
+  String bedTimeHour = DateFormat.jm().format(DateTime.now()).split(":").first;
   String bedTimeMinute = DateTime.now().minute.toString();
   String bedTimeType = DateFormat('a').format(DateTime.now()).toString();
-  String wakeUpHour = DateTime.now().hour.toString();
+  String wakeUpHour = DateFormat.jm().format(DateTime.now()).split(":").first;
   String wakeUpMinute = DateTime.now().minute.toString();
   String wakeUpType = DateFormat('a').format(DateTime.now()).toString();
   String waterGoal = '2000 ml';
@@ -53,7 +52,6 @@ class SelectionView extends GetView<SelectionController> {
                   selectionController.pageController
                       .jumpToPage(selectionController.curr.value + 1);
                 } else {
-                  String? token = await FirebaseMessaging.instance.getToken();
 
                   String encodeData = UserModel.encode([
                     UserModel(
@@ -79,7 +77,7 @@ class SelectionView extends GetView<SelectionController> {
                     'user_name': userModel!.userName,
                     'email': userModel!.email,
                     'drinkableWater':'0',
-                    'token':token,
+
                     'time_records':null,
                     'password': userModel!.password,
                     'user_id': userModel!.userId,
@@ -175,6 +173,11 @@ class SelectionView extends GetView<SelectionController> {
                                           ? timeView(
                                               context: context,
                                               dayNightTime: ({dayNight}) {
+                                                // if (dayNight == 'AM') {
+                                                //   bedTimeHour = '01';
+                                                // } else {
+                                                //   bedTimeHour = '12';
+                                                // }
                                                 bedTimeType = dayNight!;
                                               },
                                               hours: ({hour}) {
@@ -189,6 +192,11 @@ class SelectionView extends GetView<SelectionController> {
                                               ? timeView(
                                                   context: context,
                                                   dayNightTime: ({dayNight}) {
+                                                    // if (dayNight == 'AM') {
+                                                    //   wakeUpHour = '01';
+                                                    // } else {
+                                                    //   wakeUpHour = '12';
+                                                    // }
                                                     wakeUpType = dayNight!;
                                                   },
                                                   hours: ({hour}) {

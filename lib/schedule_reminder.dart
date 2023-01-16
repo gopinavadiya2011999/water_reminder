@@ -1,19 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
-import 'package:waterreminder/app/modules/AccountDetail/views/account_detail_view.dart';
 import 'package:waterreminder/app/modules/bottom_tab/views/bottom_tab_view.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
+import 'package:waterreminder/dialog_boxs/schedule_dialog.dart';
+import 'package:waterreminder/model/reminder_model.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/notification_logic.dart';
+import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_back_button.dart';
+import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/system_overlay_style.dart';
-import 'main.dart';
 import 'widgets/custom_inkwell.dart';
 
 class ScheduleReminder extends StatefulWidget {
@@ -40,112 +38,139 @@ class _ScheduleReminderState extends State<ScheduleReminder> {
   @override
   void initState() {
     super.initState();
-    registerNotification();
-    // if (widget.userModel!.token != null) {
-    //   NotificationLogic.init(context, widget.userModel!.userId!);
-    // }
+
+    NotificationLogic.init(context, widget.userModel!.userId!);
+    listenNotifications();
+
   }
-
-
-  FirebaseMessaging _messaging = FirebaseMessaging.instance;
-
-  //register notification on firebase
-  void registerNotification() async {
-    NotificationSettings settings = await _messaging.requestPermission(
-      alert: true,
-
-      badge: true,
-      provisional: true,
-      sound: true,
-    );
-
-
-    Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-     print("%%%% ${message.data}");
-    }
-
-    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-
-      print("MESSAGE:: ${message.data}");
-
-    });
-    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
-      FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
-
-        firebaseMessagingBackgroundHandler(message);
-        RemoteNotification? remoteNotification = message.notification;
-          AndroidNotification? android = message.notification?.android;
-
-          if (remoteNotification != null && android != null && !kIsWeb) {
-            flutterLocalNotificationsPlugin.show(
-                remoteNotification.hashCode,
-                remoteNotification.title,
-                remoteNotification.body,
-
-                NotificationDetails(
-                    android: AndroidNotificationDetails('other_notifications',
-                        'Other Notifications',
-                        icon: 'ic_launcher_round',
-                        enableVibration: true,
-                        playSound: true,
-                        importance: Importance.high,
-                        priority: Priority.high,
-                        ticker: 'ticker'),
-                    iOS: IOSNotificationDetails()));
-
-            const AndroidInitializationSettings initializationSettingsAndroid =
-            AndroidInitializationSettings('app_icon');
-            IOSInitializationSettings initializationSettingsIOS =
-            IOSInitializationSettings(
-                onDidReceiveLocalNotification:
-                onDidReceiveLocalNotification);
-            final InitializationSettings initializationSettings =
-            InitializationSettings(
-
-                android: initializationSettingsAndroid,
-                iOS: initializationSettingsIOS);
-            flutterLocalNotificationsPlugin.initialize(initializationSettings,
-                onSelectNotification: onSelectNotification);
-
-
-          }
-
-      });
-    } else {
-      print('User declined or has not accepted permission');
-    }
-  }
-
-  Future<dynamic> onSelectNotification(String? payload) async {
-    print("payload:: ${payload}");
-  }
-
-  Future<dynamic> onDidReceiveLocalNotification(
-      int? id, String? title, String? body, String? payload) async {
-    // display a dialog with the notification details, tap ok to go to another page
-    print('receive Notification');
-  }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {},
-        child: Icon(Icons.add),
-      ),
-      body:inkWell(
+        extendBodyBehindAppBar: false,
+        appBar: appBar(context),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: inkWell(
+            onTap:()=>scheduleDialogDialog(context,userModel:widget.userModel!),
+          child: Container(
+              margin: EdgeInsets.only(bottom: 20),
+              child: customButton(
+                  plusButton: true,
+                  padding: EdgeInsets.symmetric(horizontal: 21, vertical: 20),
+                  buttonText: 'Schedule Reminder',
+                  context: context)),
+        ),
+        body: StreamBuilder(
+          stream: FirebaseFirestore.instance
+              .collection('user')
+              .doc(widget.userModel!.userId)
+              .collection('reminder')
+              .snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xff4FA8C5)),
+                ),
+              );
+            }
+            if (snapshot.data!.docs.isEmpty) {
+              return Center(child: Text("Nothing to show"));
+            }
+            final data = snapshot.data;
+            return ListView.builder(
+              itemCount: data?.docs.length,
+              itemBuilder: (context, index) {
+                DateTime dateTime = DateTime.fromMicrosecondsSinceEpoch(data?.docs[index].get('time').microsecondsSinceEpoch);
+                String formattedTime= DateFormat.jm().format(dateTime);
 
-        child: Center(
-          child:Text("Send Notification")
-        ), onTap: () {   NotificationLogic.showNotification(
-          dateTime: DateTime.now(),
-          id: 0,
-          title: 'Water Reminder',
-          body: "Don\'t forget to drink water"); },
-      ),
-    );
+                on = data!.docs[index].get('onOff');
+                if (on) {
+                  NotificationLogic.showNotification(
+                      dateTime:dateTime,
+                      id: 0,
+                      title: 'Water Reminder',
+                      body: "Don\'t forget to drink water");
+                }
+
+                return Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                  decoration: BoxDecoration(
+                      color: ColorConstant.white,
+                      border: Border.all(
+                          color: ColorConstant.grey80.withOpacity(.14)),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(formattedTime,
+                                style: TextStyleConstant.black13
+                                    .copyWith(fontSize: 18)),
+                            Text(
+                              "Everyday",
+                              style: TextStyleConstant.grey14.copyWith(
+                                  fontFamily: 'Sora', letterSpacing: -0.3),
+                            )
+                          ],
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 40,
+                            height: 30,
+                            child: FittedBox(
+                              fit: BoxFit.fill,
+                              child: Switch(
+                                onChanged: (value) {
+                                  ReminderModel reminder = ReminderModel();
+                                  reminder.onOff = value;
+                                  reminder.timeStamp =
+                                      data.docs[index].get('time');
+                                  FirebaseFirestore.instance
+                                      .collection('user')
+                                      .doc(widget.userModel!.userId)
+                                      .collection('reminder')
+                                      .doc(data.docs[index].id)
+                                      .update(reminder.toMap());
+                                },
+                                activeColor: ColorConstant.blueFE,
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                value: data.docs[index].get('onOff'),
+                              ),
+                            ),
+                          ),
+                          inkWell(
+                              onTap: () {
+                                FirebaseFirestore.instance
+                                    .collection('user')
+                                    .doc(widget.userModel!.userId)
+                                    .collection('reminder')
+                                    .doc(data.docs[index].id)
+                                    .delete();
+                                showBottomLongToast("Reminder Deleted");
+                              },
+                              child: Icon(Icons.more_vert_outlined))
+                        ],
+                      )
+                    ],
+                  ),
+                );
+              },
+            );
+          },
+        ));
   }
 
   appBar(context) {
@@ -163,14 +188,10 @@ class _ScheduleReminderState extends State<ScheduleReminder> {
                   },
                   child: customBackButton(),
                 ),
-                Text('Schedule Reminder', style: TextStyleConstant.titleStyle),
-                inkWell(
-                    onTap: () {
-                      Navigator.of(context, rootNavigator: true).push(
-                          MaterialPageRoute(
-                              builder: (context) => AccountDetailView()));
-                    },
-                    child: SvgPicture.asset('assets/settings.svg'))
+                Expanded(
+                    child: Text('Schedule Reminders',
+                        textAlign: TextAlign.center,
+                        style: TextStyleConstant.titleStyle)),
               ],
             )),
         elevation: 0,
@@ -178,4 +199,5 @@ class _ScheduleReminderState extends State<ScheduleReminder> {
         systemOverlayStyle: systemOverlayStyle(),
         backgroundColor: ColorConstant.white);
   }
+
 }

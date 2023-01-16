@@ -15,7 +15,6 @@ class UserModel {
   String? wakeUpTime;
   String? waterGoal;
   String? drinkableWater;
-  String? token;
   List<WaterRecords>? timeRecords;
 
 
@@ -30,7 +29,6 @@ class UserModel {
     this.weight,
     this.bedTime,
     this.wakeUpTime,
-    this.token,
     this.waterGoal});
 
   factory UserModel.fromJson(Map<String, dynamic> jsonData) {
@@ -46,7 +44,6 @@ class UserModel {
         wakeUpTime: jsonData['wakeUpTime'],
         waterGoal: jsonData['waterGoal'],
         drinkableWater: jsonData['drinkableWater'],
-        token: jsonData['token'],
         timeRecords: jsonData['timeRecords'] == null
             ? null
             : List<WaterRecords>.from(
@@ -61,7 +58,6 @@ class UserModel {
         'time': userModel.time,
         'gender': userModel.gender,
         'weight': userModel.weight,
-        'token': userModel.token,
         'bedTime': userModel.bedTime,
         'password': userModel.password,
         'wakeUpTime': userModel.wakeUpTime,
@@ -90,7 +86,7 @@ class WaterRecords {
   String? time;
   String? timeId;
   String? waterMl;
-  CustomPopupMenuController popUpController = CustomPopupMenuController();
+  CustomPopupMenuController popUpController = CustomPopupMenuController() ;
 
 
   WaterRecords({this.time, this.timeId, this.waterMl});

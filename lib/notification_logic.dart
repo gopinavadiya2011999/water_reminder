@@ -7,10 +7,9 @@ import 'package:get/get.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
+import 'package:waterreminder/app/modules/account/views/account_view.dart';
 import 'package:waterreminder/app/modules/bottom_tab/views/bottom_tab_view.dart';
 import 'package:waterreminder/model/user_model.dart';
-
-
 
 class NotificationLogic {
   static final _notifications = FlutterLocalNotificationsPlugin();
@@ -24,27 +23,23 @@ class NotificationLogic {
     );
   }
 
-  static Future init(BuildContext context,String uid) async {
-
-    print("%%%%%%%%%");
+  static Future init(BuildContext context, String uid) async {
     tz.initializeTimeZones();
     final android = AndroidInitializationSettings('app_icon');
     final settings = InitializationSettings(android: android);
-    await _notifications.initialize(settings,onSelectNotification: (payload) {
-
-      Get.to(BottomTabView()) ;
+    await _notifications.initialize(settings, onSelectNotification: (payload) {
+      Get.to(BottomTabView());
       try {
-
         WaterRecords waterModel = WaterRecords();
         waterModel.time = Timestamp.fromDate(DateTime.now()).toString();
         waterModel.waterMl = '200';
-        FirebaseFirestore.instance
-            .collection('user')
-            .doc(uid)
-            .update({'time_records':WaterRecords.toJson(waterModel)});
+        FirebaseFirestore.instance.collection('user').doc(uid).update({
+          'drinkableWater': '200',
+          'time_records': WaterRecords.toJson(waterModel)
+        });
+        emitter.emit('add');
         Fluttertoast.showToast(msg: "Addition Successful");
       } catch (e) {
-
         Fluttertoast.showToast(msg: e.toString());
         print(e);
       }
@@ -59,11 +54,9 @@ class NotificationLogic {
     String? payload,
     required DateTime dateTime,
   }) async {
-
-    print("(((((*****)))))");
-    // if (dateTime.isBefore(DateTime.now())) {
-    //   dateTime = dateTime.add(Duration(days: 1));
-    // }
+    if (dateTime.isBefore(DateTime.now())) {
+      dateTime = dateTime.add(Duration(days: 1));
+    }
     _notifications.zonedSchedule(
       id,
       title,
@@ -71,7 +64,7 @@ class NotificationLogic {
       tz.TZDateTime.from(dateTime, tz.local),
       await _notificationDetails(),
       uiLocalNotificationDateInterpretation:
-      UILocalNotificationDateInterpretation.absoluteTime,
+          UILocalNotificationDateInterpretation.absoluteTime,
       androidAllowWhileIdle: true,
       matchDateTimeComponents: DateTimeComponents.time,
     );

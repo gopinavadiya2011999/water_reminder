@@ -65,7 +65,6 @@ getUserData() async {
       bedTime: element['bed_time'],
       drinkableWater: element['drinkableWater'],
       time: element['time'],
-      token: element['token'],
       timeRecords:element['time_records']!=null?List<WaterRecords>.from(element['time_records'].map((items) {
         if (items != null) {
           return WaterRecords(

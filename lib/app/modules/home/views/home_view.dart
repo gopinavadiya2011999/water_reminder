@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:uuid/uuid.dart';
+import 'package:waterreminder/model/time_records.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
@@ -50,47 +51,52 @@ class HomeView extends GetView<HomeController> {
           systemOverlayStyle: systemOverlayStyle(),
           backgroundColor: ColorConstant.white,
         ),
-        body:  homeController.userData.isNotEmpty? StreamBuilder<UserModel>(
-            initialData: homeController.userData.first,
-            stream: Stream.value(homeController.userData.first),
-
-          builder: (context, snapshot) {
-                    return Container(
-                      height: double.infinity,
-                      width: double.infinity,
-                      padding: const EdgeInsets.only(bottom: 20),
-                      color: ColorConstant.whiteD9.withOpacity(.3),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 24),
-                            if (homeController.userData.isNotEmpty)
-                              Column(
-                                children: [
-                                  _progressBar(
-                                  context: context, snapshot: snapshot.data),
-                                  SizedBox(
-                                      height: MediaQuery.of(context).size.height / 20),
-                                  inkWell(
-                                      child: customButton(
-                                          buttonText: "Add Water", context: context),
-                                      onTap: () {
-                                    addWater(snapshot: snapshot.data);
-                                      }),
-                                ],
-                              ),
-
-                            SizedBox(height: MediaQuery.of(context).size.height / 28),
-                    _listView(context,snapshot:snapshot.data)
-                          ],
+        body: homeController.userData.isNotEmpty
+            ? Obx(
+                () => StreamBuilder<UserModel>(
+                    initialData: homeController.userData.first,
+                    stream: Stream.value(homeController.userData.first),
+                    builder: (context, snapshot) {
+                      return Container(
+                        height: double.infinity,
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(bottom: 20),
+                        color: ColorConstant.whiteD9.withOpacity(.3),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 24),
+                              if (homeController.userData.isNotEmpty)
+                                Column(
+                                  children: [
+                                    _progressBar(
+                                        context: context,
+                                        snapshot: snapshot.data),
+                                    SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                20),
+                                    inkWell(
+                                        child: customButton(
+                                            buttonText: "Add Water",
+                                            context: context),
+                                        onTap: () {
+                                          addWater(snapshot: snapshot.data);
+                                        }),
+                                  ],
+                                ),
+                              SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height / 28),
+                              _listView(context, snapshot: snapshot.data)
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-
-
-          }
-        ):Container(),
+                      );
+                    }),
+              )
+            : Container(),
       ),
     );
   }
@@ -161,137 +167,216 @@ class HomeView extends GetView<HomeController> {
                   style: TextStyleConstant.titleStyle,
                   textAlign: TextAlign.start),
               const SizedBox(height: 16),
-              snapshot!.timeRecords!.isEmpty
-                  ? _noData(context)
-                  : ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: snapshot.timeRecords!.length,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemBuilder: (context, index) {
-                        return Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 20),
-                          color: ColorConstant.white,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image.asset('assets/glass.png',
-                                  cacheHeight: 34,
-                                  cacheWidth: 21,
-                                  fit: BoxFit.fill),
-                              const SizedBox(width: 10),
-                              Text(snapshot.timeRecords![index].time!=null && snapshot.timeRecords![index].time!.isNotEmpty?readTimestamp(int.parse(snapshot.timeRecords![index].time!.toString())):"",
-                                  style: TextStyleConstant.black24
-                                      .copyWith(fontSize: 18)),
-                              const Spacer(),
-                              Text(snapshot.timeRecords![index].waterMl??"",
-                                  style: TextStyleConstant.grey14.copyWith(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400)),
-                              const SizedBox(width: 10),
-                              CustomPopupMenu(
-                                showArrow: false,
-                                horizontalMargin: 40,
-                                barrierColor: Colors.transparent,
-                                menuBuilder: () => Container(
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                        color: ColorConstant.grey80
-                                            .withOpacity(.2),
-                                        blurRadius: 5,
-                                        spreadRadius: 3,
-                                        offset: const Offset(0, 3))
-                                  ]),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: IntrinsicWidth(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.stretch,
-                                        children: homeController.menuItems
-                                            .map(
-                                              (item) => GestureDetector(
-                                                behavior:
-                                                    HitTestBehavior.translucent,
-                                                onTap: () {},
-                                                child: Container(
-                                                  height: MediaQuery.of(context)
-                                                          .size
-                                                          .height /
-                                                      18,
-                                                  color: item.isSelected.value
-                                                      ? ColorConstant.blueFE
-                                                      : ColorConstant.white,
-                                                  padding: const EdgeInsets
-                                                          .symmetric(
-                                                      horizontal: 20),
-                                                  child: Row(
-                                                    children: <Widget>[
-                                                      Image.asset(
-                                                        item.icon!,
-                                                        cacheHeight: 18,
-                                                        cacheWidth: 16,
-                                                        color: !item.isSelected
-                                                                .value
-                                                            ? ColorConstant
-                                                                .blueFE
-                                                            : ColorConstant
-                                                                .white,
-                                                      ),
-                                                      Expanded(
-                                                        child: Container(
-                                                          margin:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  left: 10),
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .symmetric(
-                                                                  vertical: 10),
-                                                          child: Text(
-                                                            item.text!,
-                                                            style: TextStyle(
-                                                                color: !item
-                                                                        .isSelected
-                                                                        .value
-                                                                    ? ColorConstant
-                                                                        .blueFE
-                                                                    : ColorConstant
-                                                                        .white,
-                                                                fontSize: 16,
-                                                                fontFamily:
-                                                                    'Sora',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600),
-                                                          ),
+              if (snapshot!.timeRecords!.isEmpty)
+                _noData(context)
+              else
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: snapshot.timeRecords!.length,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 20),
+                      color: ColorConstant.white,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/glass.png',
+                              cacheHeight: 34,
+                              cacheWidth: 21,
+                              fit: BoxFit.fill),
+                          const SizedBox(width: 10),
+                          Text(
+                              snapshot.timeRecords![index].time != null &&
+                                      snapshot
+                                          .timeRecords![index].time!.isNotEmpty
+                                  ? readTimestamp(int.parse(snapshot
+                                      .timeRecords![index].time!
+                                      .toString()))
+                                  : "",
+                              style: TextStyleConstant.black24
+                                  .copyWith(fontSize: 18)),
+                          const Spacer(),
+                          Text(snapshot.timeRecords![index].waterMl ?? "",
+                              style: TextStyleConstant.grey14.copyWith(
+                                  fontSize: 16, fontWeight: FontWeight.w400)),
+                          const SizedBox(width: 10),
+                        //  if(snapshot.timeRecords![index].popUpController!=null)
+                          CustomPopupMenu(
+                            showArrow: false,
+                            horizontalMargin: 40,
+                            barrierColor: Colors.transparent,
+                            menuBuilder: () => Container(
+                              decoration: BoxDecoration(boxShadow: [
+                                BoxShadow(
+                                    color: ColorConstant.grey80.withOpacity(.2),
+                                    blurRadius: 5,
+                                    spreadRadius: 3,
+                                    offset: const Offset(0, 3))
+                              ]),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: IntrinsicWidth(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: homeController.menuItems
+                                        .map(
+                                          (item) => GestureDetector(
+                                            behavior:
+                                                HitTestBehavior.translucent,
+                                            onTap: () async {
+                                              // snapshot.timeRecords![index]
+                                              //     .popUpController
+                                              //     .hideMenu();
+                                              // homeController.update();
+                                              homeController.menuItems
+                                                  .forEach((element) {
+                                                if (element.isSelected.value ==
+                                                    true) {
+                                                  element.isSelected.value =
+                                                      false;
+                                                }
+                                              });
+
+                                              item.isSelected.value =
+                                                  !item.isSelected.value;
+
+                                              if (item.text == 'Edit') {
+                                                print("Edit click");
+
+                                              }
+
+                                              if (item.text == 'Delete') {
+                                                if (snapshot.drinkableWater
+                                                        .toString() !=
+                                                    '0') {
+                                                  FirebaseFirestore.instance
+                                                      .collection('user')
+                                                      .doc(homeController
+                                                          .userData
+                                                          .first
+                                                          .userId)
+                                                      .update({
+                                                    'drinkableWater':
+                                                        (int.parse(snapshot
+                                                                    .drinkableWater
+                                                                    .toString()) -
+                                                                200)
+                                                            .toString(),
+                                                    'time_records': FieldValue
+                                                        .arrayRemove(snapshot
+                                                            .timeRecords!
+                                                            .where((element) =>
+                                                                snapshot
+                                                                    .timeRecords![
+                                                                        index]
+                                                                    .timeId ==
+                                                                element.timeId)
+                                                            .map<
+                                                                    Map<String,
+                                                                        dynamic>>(
+                                                                (water) =>
+                                                                    WaterRecords
+                                                                        .toJson(
+                                                                            water))
+                                                            .toList())
+                                                  });
+
+                                                  snapshot.timeRecords!
+                                                      .removeWhere((element) =>
+                                                          element.timeId ==
+                                                          snapshot
+                                                              .timeRecords![
+                                                                  index]
+                                                              .timeId);
+                                                  homeController.update();
+                                                  homeController.userData =
+                                                      RxList(
+                                                          await getPrefData());
+
+                                                  homeController.update();
+                                                }
+                                              }
+                                            },
+                                            child: Obx(
+                                              () => Container(
+                                                height: MediaQuery.of(context)
+                                                        .size
+                                                        .height /
+                                                    18,
+                                                color: item.isSelected.value
+                                                    ? ColorConstant.blueFE
+                                                    : ColorConstant.white,
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 20),
+                                                child: Row(
+                                                  children: <Widget>[
+                                                    Image.asset(
+                                                      item.icon!,
+                                                      cacheHeight: 18,
+                                                      cacheWidth: 16,
+                                                      color: !item
+                                                              .isSelected.value
+                                                          ? ColorConstant.blueFE
+                                                          : ColorConstant.white,
+                                                    ),
+                                                    Expanded(
+                                                      child: Container(
+                                                        margin: const EdgeInsets
+                                                            .only(left: 10),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .symmetric(
+                                                                vertical: 10),
+                                                        child: Text(
+                                                          item.text!,
+                                                          style: TextStyle(
+                                                              color: !item
+                                                                      .isSelected
+                                                                      .value
+                                                                  ? ColorConstant
+                                                                      .blueFE
+                                                                  : ColorConstant
+                                                                      .white,
+                                                              fontSize: 16,
+                                                              fontFamily:
+                                                                  'Sora',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600),
                                                         ),
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
+                                                  ],
                                                 ),
                                               ),
-                                            )
-                                            .toList(),
-                                      ),
-                                    ),
+                                            ),
+                                          ),
+                                        )
+                                        .toList(),
                                   ),
                                 ),
-                                pressType: PressType.singleClick,
-                                position: snapshot.timeRecords!.length - 1 == index
-                                    ? PreferredPosition.top
-                                    : PreferredPosition.bottom,
-                                controller: snapshot.timeRecords![index].popUpController,
-                                child: Icon(Icons.more_vert_outlined,
-                                    color: ColorConstant.grey80),
                               ),
-                            ],
+                            ),
+                            pressType: PressType.singleClick,
+                            position: snapshot.timeRecords!.length - 1 == index
+                                ? PreferredPosition.top
+                                : PreferredPosition.bottom,
+                            controller:
+                                snapshot.timeRecords![index].popUpController,
+                            child: Icon(Icons.more_vert_outlined,
+                                color: ColorConstant.grey80),
                           ),
-                        );
-                      },
-                    )
+                        ],
+                      ),
+                    );
+                  },
+                )
             ],
           ),
         ));
@@ -322,42 +407,36 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
+  RxBool enter = false.obs;
+
   Future<void> addWater({UserModel? snapshot}) async {
-    Uuid uuid = const Uuid();
-    snapshot?.timeRecords?.add(WaterRecords(
-        waterMl: '200ml',
-        timeId: uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString(),
-        time: DateTime.now().millisecondsSinceEpoch.toString()));
-    homeController.update();
-
-
-
-
     if (int.parse(snapshot!.drinkableWater.toString()) !=
-        int.parse(snapshot.waterGoal.toString().split('ml').first.trim())&& int.parse(snapshot.drinkableWater.toString()) <=
-        int.parse(snapshot.waterGoal.toString().split('ml').first.trim())) {
-      FirebaseFirestore.instance
-          .collection('user')
-          .doc('${snapshot.userId}')
-          .set({
-        'user_name': snapshot.userName,
-        'email': snapshot.email,
-        "time_records":snapshot.timeRecords!.map<Map<String, dynamic>>((water) => WaterRecords.toJson(water))
-            .toList(),
+            int.parse(snapshot.waterGoal.toString().split('ml').first.trim()) &&
+        int.parse(snapshot.drinkableWater.toString()) <=
+            int.parse(snapshot.waterGoal.toString().split('ml').first.trim())) {
+      Uuid uuid = const Uuid();
+      if (enter.value == false) {
+        enter.value = true;
+        snapshot.timeRecords?.add(WaterRecords(
+            waterMl: '200ml',
+            timeId:
+                uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString(),
+            time: DateTime.now().millisecondsSinceEpoch.toString()));
+        FirebaseFirestore.instance
+            .collection('user')
+            .doc('${snapshot.userId}')
+            .update({
+          "time_records": snapshot.timeRecords!
+              .map<Map<String, dynamic>>((water) => WaterRecords.toJson(water))
+              .toList(),
+          'drinkableWater':
+              (int.parse(snapshot.drinkableWater.toString()) + 200).toString(),
+        });
 
-        'drinkableWater':
-            (int.parse(snapshot.drinkableWater.toString()) + 200).toString(),
-        'password': snapshot.password,
-        'user_id': snapshot.userId,
-        'time': DateTime.now().millisecondsSinceEpoch.toString(),
-        'weight': snapshot.weight,
-        'bed_time': snapshot.bedTime,
-        'wakeup_time': snapshot.wakeUpTime,
-        'gender': snapshot.gender,
-        'water_goal': snapshot.waterGoal,
-      }, SetOptions(merge: true));
-      homeController.userData = RxList(await getPrefData());
-      homeController.update();
+        homeController.userData = RxList(await getPrefData());
+        homeController.update();
+        enter.value = false;
+      }
     } else {
       print("You can not drink more water");
     }

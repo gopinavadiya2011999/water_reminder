@@ -195,7 +195,9 @@ class _WheelChooserState extends State<WheelChooser> {
 
         //  magnification: widget.magnification,
         itemExtent: widget.itemSize,
-        children: _convertListItems() ?? _buildListItems(),
+        children:
+       _convertListItems() ?? _buildListItems()
+
       );
     }
   }

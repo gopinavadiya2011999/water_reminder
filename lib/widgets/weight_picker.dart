@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:infinite_listview/infinite_listview.dart';
+import 'package:sizer/sizer.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/widgets/custom_divider.dart';
@@ -10,8 +10,8 @@ typedef TextMapper = String Function(String numberText);
 
 class NumberPicker extends StatefulWidget {
   final int minValue;
- bool? time =false;
- bool? twoDot =false;
+  bool? time = false;
+  bool? twoDot = false;
   final int maxValue;
 
   final int value;
@@ -42,10 +42,10 @@ class NumberPicker extends StatefulWidget {
 
   final bool infiniteLoop;
 
-   NumberPicker({
+  NumberPicker({
     Key? key,
-    this.time=false,
-    this.twoDot=false,
+    this.time = false,
+    this.twoDot = false,
     required this.minValue,
     required this.maxValue,
     required this.value,
@@ -62,8 +62,7 @@ class NumberPicker extends StatefulWidget {
     this.zeroPad = false,
     this.textMapper,
     this.infiniteLoop = false,
-  })  : assert(minValue <= value),
-
+  })  :
         super(key: key);
 
   @override
@@ -192,27 +191,30 @@ class _NumberPickerState extends State<NumberPicker> {
         (index < additionalItemsOnEachSide ||
             index >= listItemsCount - additionalItemsOnEachSide);
     final itemStyle = value == widget.value
-        ? /*selectedStyle*/ TextStyleConstant.blue50.copyWith(fontSize: 40)
-
-        : TextStyleConstant.blue50
-            .copyWith(fontSize: 40,color: ColorConstant.greyAF.withOpacity(.75)) /*defaultStyle*/;
+        ? /*selectedStyle*/ TextStyleConstant.blue50.copyWith(fontSize:
+            35.sp)
+        : TextStyleConstant.blue50.copyWith(
+            fontSize: 35.sp,
+            color: ColorConstant.greyAF.withOpacity(.75)) /*defaultStyle*/;
 
     final child = isExtra
         ? const SizedBox.shrink()
         : Column(
             children: [
-              if (value == widget.value && widget.time==false)
+              if (value == widget.value && widget.time == false)
                 customDivider(
                     width: MediaQuery.of(context).size.width / 6.5,
                     context: context,
-                    margin:  EdgeInsets.only(left:MediaQuery.of(context).size.width/7.3,right:MediaQuery.of(context).size.width/18)),
+                    margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width / 7.3,
+                        right: MediaQuery.of(context).size.width / 18)),
               Expanded(
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    value == widget.value && widget.time==false
+                    value == widget.value && widget.time == false
                         ? Image.asset(
                             'assets/play.png',
                             cacheWidth: 26,
@@ -220,13 +222,16 @@ class _NumberPickerState extends State<NumberPicker> {
                             fit: BoxFit.fill,
                             color: ColorConstant.blueFE,
                           )
-                    :widget.time==true?const SizedBox()
-                        : const SizedBox(width: 16),
-                     SizedBox(width:widget.time==true?0: 10),
+                        : widget.time == true
+                            ? const SizedBox()
+                            : const SizedBox(width: 16),
+                    SizedBox(width: widget.time == true ? 0 : 10),
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 8),
                       child: Text(
-    value == widget.value && widget.twoDot==true?"${_getDisplayedValue(value)} : ":_getDisplayedValue(value),
+                        value == widget.value && widget.twoDot == true
+                            ? "${_getDisplayedValue(value)} : "
+                            : _getDisplayedValue(value),
                         textAlign: TextAlign.end,
                         style: itemStyle,
                       ),
@@ -234,11 +239,13 @@ class _NumberPickerState extends State<NumberPicker> {
                   ],
                 ),
               ),
-              if (value == widget.value && widget.time==false)
+              if (value == widget.value && widget.time == false)
                 customDivider(
-                  //  width: MediaQuery.of(context).size.width / 6.5,
+                    //  width: MediaQuery.of(context).size.width / 6.5,
                     context: context,
-                    margin:  EdgeInsets.only(left: MediaQuery.of(context).size.width/7.3,right:MediaQuery.of(context).size.width/18 )),
+                    margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width / 7.3,
+                        right: MediaQuery.of(context).size.width / 18)),
             ],
           );
 
