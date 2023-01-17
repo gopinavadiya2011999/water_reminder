@@ -33,11 +33,11 @@ sleepTimeDialog(context, AccountController accountController,
                 timeView(
                   context: context,
                   dayNightTime: ({dayNight}) {
-                    // if (dayNight == 'AM') {
-                    //   hr = '01';
-                    // } else {
-                    //   hr = '12';
-                    // }
+                    if (dayNight == 'AM') {
+                      hr = '01';
+                    } else {
+                      hr = '12';
+                    }
 
                     dn = dayNight!;
                   },

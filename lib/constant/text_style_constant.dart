@@ -53,7 +53,7 @@ class TextStyleConstant {
 
   static TextStyle white16 = TextStyle(
       color: ColorConstant.white,
-      fontSize: 16.sp,
+      fontSize: 14.sp,
       fontFamily: 'Sora',
       letterSpacing: -0.48,
       fontWeight: FontWeight.w600);

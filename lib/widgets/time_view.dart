@@ -11,41 +11,53 @@ timeView(
     {required BuildContext context,
     required Function({int? hour}) hours,
     required Function({int? minute}) minutes,
-    required Function({String? dayNight}) dayNightTime}) {
-  RxString wakeUpType =DateFormat('a').format(DateTime.now()).toString().obs;
-  final RxInt currentHour = int.parse(/*DateTime.now().hour.toString()*/DateFormat.jm().format(DateTime.now()).split(":").first).obs;
-  final RxInt currentMinute = int.parse(DateTime.now().minute.toString()).obs;
+    required Function({String? dayNight}) dayNightTime,
+    DateTime? time}) {
+  RxString wakeUpType = time != null
+      ? DateFormat('a').format(time).toString().obs
+      : DateFormat('a').format(DateTime.now()).toString().obs;
+  final RxInt currentHour = time != null
+      ? int.parse(DateFormat('HH').format(time).toString() == "00"
+              ? '11'
+              : DateFormat('HH').format(time).toString())
+          .obs
+      : int.parse(DateTime.now().hour.toString()).obs;
+  final RxInt currentMinute = time != null
+      ? int.parse(DateFormat('mm').format(time).toString() == "00"
+              ? '60'
+              : DateFormat('mm').format(time).toString())
+          .obs
+      : int.parse(DateTime.now().minute.toString()).obs;
 
 
   return Container(
-    height:25.h,
+    height: 25.h,
     child: Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Obx(() => NumberPicker(
-            value:currentHour.value,
-            minValue:/*wakeUpType.value=='AM'? 01:12*/01,
+            value: currentHour.value,
+            minValue: wakeUpType.value == 'AM' ? 01 : 12,
             zeroPad: true,
             time: true,
             twoDot: true,
             itemHeight: 8.h,
-            itemWidth:26.w,
-            maxValue:/*wakeUpType.value=='AM'?*/ 12/*:23*/,
+            itemWidth: 26.w,
+            maxValue: wakeUpType.value == 'AM' ? 11 : 23,
             onChanged: (value) {
               currentHour.value = value;
-              hours(hour:currentHour.value);
+              hours(hour: currentHour.value);
             })),
         Obx(
           () => NumberPicker(
               value: currentMinute.value,
-              minValue: 0,
+              minValue: 1,
               zeroPad: true,
-
               time: true,
               itemHeight: 8.h,
-              itemWidth:19.w,
+              itemWidth: 19.w,
               maxValue: 60,
               onChanged: (value) {
                 currentMinute.value = value;
@@ -53,30 +65,27 @@ timeView(
               }),
         ),
         const SizedBox(width: 5),
-        Obx(() =>
-          Expanded(
+        Obx(
+          () => Expanded(
             child: WheelChooser(
               horizontal: false,
-              itemSize:(8.5).h,
-
-              selectTextStyle: TextStyleConstant.blue50.copyWith(fontSize: 35.sp),
-              unSelectTextStyle: TextStyleConstant.blue50.copyWith( fontSize: 35.sp)
+              itemSize: (8.5).h,
+              selectTextStyle:
+                  TextStyleConstant.blue50.copyWith(fontSize: 35.sp),
+              unSelectTextStyle: TextStyleConstant.blue50
+                  .copyWith(fontSize: 35.sp)
                   .copyWith(color: ColorConstant.greyAF.withOpacity(.75)),
-              startPosition:  wakeUpType.value=='AM'? 0:1,
+              startPosition: wakeUpType.value == 'AM' ? 0 : 1,
               onValueChanged: (s) {
-                wakeUpType.value=s;
-                // if(wakeUpType.value=='AM'){
-                //   currentHour.value=01;
-                // }
-                // else{
-                //   currentHour.value=12;
-                // }
+                wakeUpType.value = s;
+                if (wakeUpType.value == 'AM') {
+                  currentHour.value = 01;
+                } else {
+                  currentHour.value = 12;
+                }
                 dayNightTime(dayNight: s);
               },
-              datas: [
-               'AM',
-                'PM'
-              ],
+              datas: ['AM', 'PM'],
             ),
           ),
         ),

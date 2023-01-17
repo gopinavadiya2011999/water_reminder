@@ -86,19 +86,20 @@ class WaterRecords {
   String? time;
   String? timeId;
   String? waterMl;
-  CustomPopupMenuController popUpController = CustomPopupMenuController() ;
 
 
   WaterRecords({this.time, this.timeId, this.waterMl});
 
   factory WaterRecords.fromJson(Map<String, dynamic> jsonData) =>
       WaterRecords(
+
           time: jsonData['time'] == null ? null : jsonData['time'],
           waterMl: jsonData['timeId'] == null ? null : jsonData['timeId'],
           timeId: jsonData['waterMl'] == null ? null : jsonData['waterMl']);
 
   static Map<String, dynamic> toJson(WaterRecords timeRecords) =>
       {
+
         'time': timeRecords.time == null ? null : timeRecords.time,
         'timeId': timeRecords.timeId == null ? null : timeRecords.timeId,
         'waterMl': timeRecords.waterMl == null ? null : timeRecords.waterMl,

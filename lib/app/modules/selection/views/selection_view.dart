@@ -30,10 +30,10 @@ class SelectionView extends GetView<SelectionController> {
 
   String weights = '03';
   String weightTypes = 'kg';
-  String bedTimeHour = DateFormat.jm().format(DateTime.now()).split(":").first;
+  String bedTimeHour = DateTime.now().hour.toString() ;
   String bedTimeMinute = DateTime.now().minute.toString();
   String bedTimeType = DateFormat('a').format(DateTime.now()).toString();
-  String wakeUpHour = DateFormat.jm().format(DateTime.now()).split(":").first;
+  String wakeUpHour =  DateTime.now().hour.toString();
   String wakeUpMinute = DateTime.now().minute.toString();
   String wakeUpType = DateFormat('a').format(DateTime.now()).toString();
   String waterGoal = '2000 ml';
@@ -173,11 +173,11 @@ class SelectionView extends GetView<SelectionController> {
                                           ? timeView(
                                               context: context,
                                               dayNightTime: ({dayNight}) {
-                                                // if (dayNight == 'AM') {
-                                                //   bedTimeHour = '01';
-                                                // } else {
-                                                //   bedTimeHour = '12';
-                                                // }
+                                                if (dayNight == 'AM') {
+                                                  bedTimeHour = '01';
+                                                } else {
+                                                  bedTimeHour = '12';
+                                                }
                                                 bedTimeType = dayNight!;
                                               },
                                               hours: ({hour}) {
@@ -192,11 +192,11 @@ class SelectionView extends GetView<SelectionController> {
                                               ? timeView(
                                                   context: context,
                                                   dayNightTime: ({dayNight}) {
-                                                    // if (dayNight == 'AM') {
-                                                    //   wakeUpHour = '01';
-                                                    // } else {
-                                                    //   wakeUpHour = '12';
-                                                    // }
+                                                    if (dayNight == 'AM') {
+                                                      wakeUpHour = '01';
+                                                    } else {
+                                                      wakeUpHour = '12';
+                                                    }
                                                     wakeUpType = dayNight!;
                                                   },
                                                   hours: ({hour}) {

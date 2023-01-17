@@ -6,6 +6,7 @@ inkWell({required Widget child,required GestureTapCallback onTap}){
     splashColor: ColorConstant.transparent,
     highlightColor: ColorConstant.transparent,
     focusColor: ColorConstant.transparent,
+     overlayColor: MaterialStateProperty.all(ColorConstant.transparent),
     onTap: onTap,
     child: child,
   );

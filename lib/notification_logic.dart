@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:waterreminder/app/modules/account/views/account_view.dart';
+import 'package:uuid/uuid.dart';
 import 'package:waterreminder/app/modules/bottom_tab/views/bottom_tab_view.dart';
 import 'package:waterreminder/model/user_model.dart';
 
@@ -23,30 +23,43 @@ class NotificationLogic {
     );
   }
 
-  static Future init(BuildContext context, String uid) async {
+  static Future init(BuildContext context, String uid, UserModel? userModel) async {
     tz.initializeTimeZones();
     final android = AndroidInitializationSettings('app_icon');
     final settings = InitializationSettings(android: android);
     await _notifications.initialize(settings, onSelectNotification: (payload) {
-      Get.to(BottomTabView());
-      try {
-        WaterRecords waterModel = WaterRecords();
-        waterModel.time = Timestamp.fromDate(DateTime.now()).toString();
-        waterModel.waterMl = '200';
-        FirebaseFirestore.instance.collection('user').doc(uid).update({
-          'drinkableWater': '200',
-          'time_records': WaterRecords.toJson(waterModel)
-        });
-        emitter.emit('add');
-        Fluttertoast.showToast(msg: "Addition Successful");
-      } catch (e) {
-        Fluttertoast.showToast(msg: e.toString());
-        print(e);
-      }
+
+
+        if ((int.parse(userModel!.waterGoal.toString().split('ml').first.trim()) !=
+            int.parse(
+                userModel.waterGoal.toString().split('ml').first.trim()) )&&
+           ( int.parse(userModel.drinkableWater.toString()) <=
+                int.parse(
+                    userModel.waterGoal.toString().split('ml').first.trim()))) {
+          Uuid uuid = const Uuid();
+
+          WaterRecords waterModel = WaterRecords();
+          waterModel.time = Timestamp.fromDate(DateTime.now()).toString();
+          waterModel.waterMl = '200';
+          waterModel.timeId=uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString();
+          FirebaseFirestore.instance.collection('user').doc(uid).update({
+            'drinkableWater': (int.parse(userModel.drinkableWater!) + 200).toString(),
+                });
+
+          FirebaseFirestore.instance
+              .collection('user')
+              .doc(uid)
+              .collection('water_records')
+              .doc()
+              .set(WaterRecords.toJson(waterModel));
+          Fluttertoast.showToast(msg: "Addition Successful");
+        }
       onNotifications.add(payload);
+        Get.to(BottomTabView());
     });
   }
 
+  @pragma('vm:entry-point')
   static Future showNotification({
     int id = 0,
     String? title,

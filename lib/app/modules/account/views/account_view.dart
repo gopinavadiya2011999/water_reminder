@@ -10,7 +10,6 @@ import 'package:waterreminder/dialog_boxs/logout_dialog.dart';
 import 'package:waterreminder/dialog_boxs/schedule_dialog.dart';
 import 'package:waterreminder/dialog_boxs/weight_dialog.dart';
 import 'package:waterreminder/schedule_reminder.dart';
-import 'package:waterreminder/widgets/custom_back_button.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/system_overlay_style.dart';
@@ -19,8 +18,6 @@ import '../../../../dialog_boxs/gender_dialog.dart';
 import '../../../../dialog_boxs/sleep_time_dialog.dart';
 import '../../../../dialog_boxs/water_dialog_view.dart';
 import '../controllers/account_controller.dart';
-EventEmitter emitter =  EventEmitter();
-
 
 
 class AccountView extends GetView<AccountController> {

@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:waterreminder/app/modules/account/controllers/account_controller.dart';
-import 'package:waterreminder/app/modules/account/views/account_view.dart';
 import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/water_view.dart';
@@ -23,10 +21,11 @@ void waterDialog(
           mainAxisSize: MainAxisSize.min,
           children: [
             waterView(
-              water:accountController.waterGoal,
+              water: accountController.waterGoal,
               context: context,
               selectedMl: ({waterMl}) {
-                accountController.waterGoal.value = waterMl.toString()+" "+'ml';
+                accountController.waterGoal.value =
+                    waterMl.toString() + " " + 'ml';
                 accountController.update();
               },
             ),
@@ -36,11 +35,9 @@ void waterDialog(
                   FirebaseFirestore.instance
                       .collection('user')
                       .doc(accountController.userData.first.userId)
-                      .update({
-                    'water_goal': accountController.waterGoal.value
-                  });
-                  emitter.emit('add');
-                  accountController.userData=await getPrefData();
+                      .update(
+                          {'water_goal': accountController.waterGoal.value});
+                  accountController.userData = await getPrefData();
                   Get.back();
                 },
                 child: customButton(

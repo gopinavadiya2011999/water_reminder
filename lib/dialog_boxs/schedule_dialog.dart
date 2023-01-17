@@ -10,12 +10,12 @@ import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/time_view.dart';
 
-scheduleDialogDialog(context, {required UserModel userModel}) {
+scheduleDialogDialog(context, {required UserModel userModel, DateTime? time}) {
   bool existTime = false;
   showDialog(
       context: context,
       builder: (context) {
-        String hr = DateFormat.jm().format(DateTime.now()).split(":").first;
+        String hr = DateTime.now().hour.toString();
         String min = DateTime.now().minute.toString();
         String dn = DateFormat('a').format(DateTime.now()).toString();
         DateTime dateTime = DateTime.now();
@@ -33,13 +33,14 @@ scheduleDialogDialog(context, {required UserModel userModel}) {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   timeView(
+                    time: time,
                     context: context,
                     dayNightTime: ({dayNight}) {
-                      // if (dayNight == 'AM') {
-                      //   hr = '01';
-                      // } else {
-                      //   hr = '12';
-                      // }
+                      if (dayNight.toString() == 'AM') {
+                        hr = '01';
+                      } else {
+                        hr = '12';
+                      }
                       dn = dayNight!;
                     },
                     hours: ({hour}) {
@@ -52,7 +53,6 @@ scheduleDialogDialog(context, {required UserModel userModel}) {
                   const SizedBox(height: 24),
                   inkWell(
                       onTap: () async {
-
                         QuerySnapshot<Map<String, dynamic>> snapShots =
                             await FirebaseFirestore.instance
                                 .collection('user')
@@ -73,8 +73,7 @@ scheduleDialogDialog(context, {required UserModel userModel}) {
                             .split(' ')
                             .first
                             .split(':');
-                        List<String> WakeUpTime = userModel.wakeUpTime
-                        !
+                        List<String> WakeUpTime = userModel.wakeUpTime!
                             .toString()
                             .split(' ')
                             .first
@@ -96,12 +95,17 @@ scheduleDialogDialog(context, {required UserModel userModel}) {
                             }
                           });
                         }
-                        if (existTime == false ) {
-
-                          if(dateTime.isBefore(TimeConverter(TimeOfDay(hour: int.parse(sleepTime.first), minute: int.parse(sleepTime.last)))) ||
-                              dateTime.isAfter(TimeConverter(TimeOfDay(hour: int.parse(WakeUpTime.first), minute: int.parse(WakeUpTime.last))))){
-
-                            reminderModel.timeStamp = timestamp;
+                        if (existTime == false) {
+                          if (dateTime.isBefore(TimeConverter(TimeOfDay(
+                                  hour: int.parse(sleepTime.first),
+                                  minute: int.parse(sleepTime.last)))) ||
+                              dateTime.isAfter(TimeConverter(TimeOfDay(
+                                  hour: int.parse(WakeUpTime.first),
+                                  minute: int.parse(WakeUpTime.last))))) {
+                            reminderModel.timeStamp = DateTime.now()
+                                .millisecondsSinceEpoch
+                                .toString();
+                            reminderModel.time = timestamp;
                             reminderModel.onOff = false;
                             FirebaseFirestore.instance
                                 .collection('user')
@@ -110,11 +114,10 @@ scheduleDialogDialog(context, {required UserModel userModel}) {
                                 .doc()
                                 .set(reminderModel.toMap());
                             showBottomLongToast("Reminder added");
+                          } else {
+                            showBottomLongToast(
+                                'Please select reminder after wake and before sleep time');
                           }
-                          else{
-                            showBottomLongToast('Please select reminder after wake and before sleep time');
-                          }
-
                         }
 
                         Get.back();

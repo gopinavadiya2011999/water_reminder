@@ -65,15 +65,15 @@ getUserData() async {
       bedTime: element['bed_time'],
       drinkableWater: element['drinkableWater'],
       time: element['time'],
-      timeRecords:element['time_records']!=null?List<WaterRecords>.from(element['time_records'].map((items) {
-        if (items != null) {
-          return WaterRecords(
-              waterMl: items['waterMl'],
-              time: items['time'],
-              timeId: items['timeId']);
-        }
-        return [];
-      })):[],
+      // timeRecords:element['time_records']!=null?List<WaterRecords>.from(element['time_records'].map((items) {
+      //   if (items != null) {
+      //     return WaterRecords(
+      //         waterMl: items['waterMl'],
+      //         time: items['time'],
+      //         timeId: items['timeId']);
+      //   }
+      //   return [];
+      // })):[],
       userName: element['user_name'],
       userId: element['user_id'],
       password: element['password'],

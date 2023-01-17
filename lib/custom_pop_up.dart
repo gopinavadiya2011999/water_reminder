@@ -1,7 +1,11 @@
 import 'dart:io';
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+
+import 'app/modules/home/controllers/home_controller.dart';
+import 'constant/color_constant.dart';
 
 enum PressType {
   longPress,
@@ -37,9 +41,9 @@ Rect _menuRect = Rect.zero;
 class CustomPopupMenu extends StatefulWidget {
   CustomPopupMenu({
     required this.child,
-    required this.menuBuilder,
+     required this.onTap,
     required this.pressType,
-    this.controller,
+    // this.controller,
     this.arrowColor = const Color(0xFF4C4C4C),
     this.showArrow = true,
     this.barrierColor = Colors.black12,
@@ -59,13 +63,11 @@ class CustomPopupMenu extends StatefulWidget {
   final double horizontalMargin;
   final double verticalMargin;
   final double arrowSize;
-  final CustomPopupMenuController? controller;
-  final Widget Function() menuBuilder;
+  // final CustomPopupMenuController? controller;
+  final  Function({String? item}) onTap;
   final PreferredPosition? position;
   final void Function(bool)? menuOnChange;
 
-  /// Pass tap event to the widgets below the mask.
-  /// It only works when [barrierColor] is transparent.
   final bool enablePassEvent;
 
   @override
@@ -76,8 +78,9 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
   RenderBox? _childBox;
   RenderBox? _parentBox;
   OverlayEntry? _overlayEntry;
-  CustomPopupMenuController? _controller;
+  CustomPopupMenuController? _controller=CustomPopupMenuController();
   bool _canResponse = true;
+
 
   _showMenu() {
     Widget arrow = ClipPath(
@@ -125,8 +128,122 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
+
                       Material(
-                        child: widget.menuBuilder(),
+                        child:/* widget.menuBuilder()*/
+                        Container(
+                          decoration: BoxDecoration(boxShadow: [
+                            BoxShadow(
+                                color: ColorConstant.grey80
+                                    .withOpacity(.2),
+                                blurRadius: 5,
+                                spreadRadius: 3,
+                                offset: const Offset(0, 3))
+                          ]),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: IntrinsicWidth(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.stretch,
+                                children: menuItems
+                                    .map(
+                                      (item) => GestureDetector(
+                                    behavior: HitTestBehavior
+                                        .translucent,
+                                    onTap: () {menuItems
+                                        .forEach((element) {
+                                      if (element.isSelected
+                                          .value ==
+                                          true) {
+                                        element.isSelected
+                                            .value = false;
+                                      }
+                                    });
+
+                                    item.isSelected.value =
+                                    !item.isSelected.value;
+                                    if(item.text=='Edit'){
+                                       widget.onTap(item: 'Edit');
+
+                                    }
+                                    else{
+
+                                       widget.onTap(item: 'Delete');
+                                    }
+                                      _controller!.hideMenu();
+                                    },
+                                    child: Obx(
+                                          () => Container(
+                                        height:
+                                        MediaQuery.of(context)
+                                            .size
+                                            .height /
+                                            18,
+                                        color: item
+                                            .isSelected.value
+                                            ? ColorConstant.blueFE
+                                            : ColorConstant.white,
+                                        padding: const EdgeInsets
+                                            .symmetric(
+                                            horizontal: 20),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Image.asset(
+                                              item.icon!,
+                                              cacheHeight: 18,
+                                              cacheWidth: 16,
+                                              color: !item
+                                                  .isSelected
+                                                  .value
+                                                  ? ColorConstant
+                                                  .blueFE
+                                                  : ColorConstant
+                                                  .white,
+                                            ),
+                                            Expanded(
+                                              child: Container(
+                                                margin:
+                                                const EdgeInsets
+                                                    .only(
+                                                    left: 10),
+                                                padding:
+                                                const EdgeInsets
+                                                    .symmetric(
+                                                    vertical:
+                                                    10),
+                                                child: Text(
+                                                  item.text!,
+                                                  style: TextStyle(
+                                                      color: !item
+                                                          .isSelected
+                                                          .value
+                                                          ? ColorConstant
+                                                          .blueFE
+                                                          : ColorConstant
+                                                          .white,
+                                                      fontSize:
+                                                      16,
+                                                      fontFamily:
+                                                      'Sora',
+                                                      fontWeight:
+                                                      FontWeight
+                                                          .w600),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                                    .toList(),
+                              ),
+                            ),
+                          ),
+                        ),
                         color: Colors.transparent,
                       ),
                     ],
@@ -177,6 +294,7 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
   }
 
   _updateView() {
+
     bool menuIsShowing = _controller?.menuIsShowing ?? false;
     widget.menuOnChange?.call(menuIsShowing);
     if (menuIsShowing) {
@@ -186,10 +304,17 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
     }
   }
 
+  RxList<ItemModel> menuItems = <ItemModel>[].obs;
   @override
   void initState() {
     super.initState();
-    _controller = widget.controller;
+
+    menuItems.value.clear();
+    menuItems.value.addAll([
+      ItemModel(
+          isSelected: false.obs, text: "Delete", icon: 'assets/delete.png'),
+      ItemModel(isSelected: true.obs, text: "Edit", icon: 'assets/edit.png'),
+    ]);
     if (_controller == null) _controller = CustomPopupMenuController();
     _controller?.addListener(_updateView);
     WidgetsBinding.instance.addPostFrameCallback((call) {
