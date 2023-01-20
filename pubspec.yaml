@@ -53,6 +53,7 @@ dependencies:
   rxdart: ^0.27.7
   sizer: ^2.0.15
   firebase_messaging: ^14.2.1
+  flutter_otp_text_field: ^1.1.1
 
 dev_dependencies:
   flutter_test:
@@ -60,12 +61,12 @@ dev_dependencies:
 
 
 flutter_icons:
-  android: "launcher_icon"
   ios: true
-  image_path: "assets/app_icon.png"
-  adaptive_icon_background: "assets/app_icon.png"
-  adaptive_icon_foreground: "assets/app_icon.png"
-#  icon_size: 24
+  android: true
+  image_path_ios: "assets/img.png"
+#  adaptive_icon_foreground: "assets/water.png"
+#  adaptive_icon_background: "assets/background.png"
+  image_path_android: "assets/water.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

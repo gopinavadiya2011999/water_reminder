@@ -10,8 +10,8 @@ import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/time_view.dart';
 
-scheduleDialogDialog(context, {required UserModel userModel, DateTime? time}) {
-  bool existTime = false;
+scheduleDialogDialog(context, {required UserModel userModel, DateTime? time,String? fromEdit, bool? onOff }) {
+
   showDialog(
       context: context,
       builder: (context) {
@@ -52,7 +52,7 @@ scheduleDialogDialog(context, {required UserModel userModel, DateTime? time}) {
                   ),
                   const SizedBox(height: 24),
                   inkWell(
-                      onTap: () async {
+                      onTap:  ()async {
                         QuerySnapshot<Map<String, dynamic>> snapShots =
                             await FirebaseFirestore.instance
                                 .collection('user')
@@ -85,40 +85,81 @@ scheduleDialogDialog(context, {required UserModel userModel, DateTime? time}) {
                             if (convertTimeStamp(
                                     timestamp: element.get('time')) ==
                                 selectedTime) {
-                              existTime = true;
-                              setState(() {});
+
                               showBottomLongToast(
                                   'Selected time is already exist');
                             } else {
-                              existTime = false;
-                              setState(() {});
+
+
+                                if (dateTime.isBefore(TimeConverter(TimeOfDay(
+                                    hour: int.parse(sleepTime.first),
+                                    minute: int.parse(sleepTime.last)))) ||
+                                    dateTime.isAfter(TimeConverter(TimeOfDay(
+                                        hour: int.parse(WakeUpTime.first),
+                                        minute: int.parse(WakeUpTime.last))))) {
+                                  reminderModel.time = timestamp;
+                                  reminderModel.onOff =onOff?? false;
+                                  if(fromEdit!=null){
+                                    FirebaseFirestore.instance
+                                        .collection('user')
+                                        .doc(userModel.userId)
+                                        .collection('reminder')
+                                        .doc(fromEdit)
+                                        .update(reminderModel.toMap());
+                                  }
+                                  else{
+                                    FirebaseFirestore.instance
+                                        .collection('user')
+                                        .doc(userModel.userId)
+                                        .collection('reminder')
+                                        .doc()
+                                        .set(reminderModel.toMap());
+                                  }
+                                  showBottomLongToast("Reminder added");
+
+                                } else {
+                                  showBottomLongToast(
+                                      'Please select reminder after wake and before sleep time');
+                                }
+
                             }
                           });
+                        }else{
+
+                            if (dateTime.isBefore(TimeConverter(TimeOfDay(
+                                hour: int.parse(sleepTime.first),
+                                minute: int.parse(sleepTime.last)))) ||
+                                dateTime.isAfter(TimeConverter(TimeOfDay(
+                                    hour: int.parse(WakeUpTime.first),
+                                    minute: int.parse(WakeUpTime.last))))) {
+                              reminderModel.time = timestamp;
+                              reminderModel.onOff = false;
+                              if(fromEdit!=null){
+                                print("^^^^^ ${timestamp}");
+                                FirebaseFirestore.instance
+                                    .collection('user')
+                                    .doc(userModel.userId)
+                                    .collection('reminder')
+                                    .doc(fromEdit)
+                                    .update(reminderModel.toMap());
+                              }
+                              else{
+                                FirebaseFirestore.instance
+                                    .collection('user')
+                                    .doc(userModel.userId)
+                                    .collection('reminder')
+                                    .doc()
+                                    .set(reminderModel.toMap());
+                              }
+                              showBottomLongToast("Reminder added");
+
+                            } else {
+                              showBottomLongToast(
+                                  'Please select reminder after wake and before sleep time');
+                            }
+
                         }
-                        if (existTime == false) {
-                          if (dateTime.isBefore(TimeConverter(TimeOfDay(
-                                  hour: int.parse(sleepTime.first),
-                                  minute: int.parse(sleepTime.last)))) ||
-                              dateTime.isAfter(TimeConverter(TimeOfDay(
-                                  hour: int.parse(WakeUpTime.first),
-                                  minute: int.parse(WakeUpTime.last))))) {
-                            reminderModel.timeStamp = DateTime.now()
-                                .millisecondsSinceEpoch
-                                .toString();
-                            reminderModel.time = timestamp;
-                            reminderModel.onOff = false;
-                            FirebaseFirestore.instance
-                                .collection('user')
-                                .doc(userModel.userId)
-                                .collection('reminder')
-                                .doc()
-                                .set(reminderModel.toMap());
-                            showBottomLongToast("Reminder added");
-                          } else {
-                            showBottomLongToast(
-                                'Please select reminder after wake and before sleep time');
-                          }
-                        }
+
 
                         Get.back();
                         Get.to(ScheduleReminder(userModel: userModel));

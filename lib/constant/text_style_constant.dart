@@ -5,7 +5,7 @@ import 'package:waterreminder/constant/color_constant.dart';
 class TextStyleConstant {
   static TextStyle titleStyle = TextStyle(
       color: ColorConstant.blueFE,
-      fontSize: 18.sp,
+      fontSize: 16.sp,
       fontFamily: 'Sora',
       letterSpacing: -0.48,
       fontWeight: FontWeight.w600);
@@ -28,7 +28,7 @@ class TextStyleConstant {
       fontWeight: FontWeight.w500);
   static TextStyle grey12 = TextStyle(
       color: ColorConstant.grey80,
-      fontSize: 12.sp,
+      fontSize: 10.sp,
       fontFamily: 'Sora',
       fontWeight: FontWeight.w400);
   static TextStyle black24 = TextStyle(

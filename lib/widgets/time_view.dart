@@ -13,6 +13,8 @@ timeView(
     required Function({int? minute}) minutes,
     required Function({String? dayNight}) dayNightTime,
     DateTime? time}) {
+
+
   RxString wakeUpType = time != null
       ? DateFormat('a').format(time).toString().obs
       : DateFormat('a').format(DateTime.now()).toString().obs;
@@ -29,7 +31,6 @@ timeView(
           .obs
       : int.parse(DateTime.now().minute.toString()).obs;
 
-
   return Container(
     height: 25.h,
     child: Row(
@@ -37,37 +38,42 @@ timeView(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Obx(() => NumberPicker(
-            value: currentHour.value,
-            minValue: wakeUpType.value == 'AM' ? 01 : 12,
-            zeroPad: true,
-            time: true,
-            twoDot: true,
-            itemHeight: 8.h,
-            itemWidth: 26.w,
-            maxValue: wakeUpType.value == 'AM' ? 11 : 23,
-            onChanged: (value) {
-              currentHour.value = value;
-              hours(hour: currentHour.value);
-            })),
+        Obx(() => Flexible(
+              child: NumberPicker(
+                  value: currentHour.value,
+                  minValue: wakeUpType.value == 'AM' ? 01 : 12,
+                  zeroPad: true,
+                  time: true,
+                  twoDot: true,
+                  itemHeight: 8.h,
+                  itemWidth: 26.w,
+                  maxValue: wakeUpType.value == 'AM' ? 11 : 23,
+                  onChanged: (value) {
+                    currentHour.value = value;
+                    hours(hour: currentHour.value);
+                  }),
+            )),
         Obx(
-          () => NumberPicker(
-              value: currentMinute.value,
-              minValue: 1,
-              zeroPad: true,
-              time: true,
-              itemHeight: 8.h,
-              itemWidth: 19.w,
-              maxValue: 60,
-              onChanged: (value) {
-                currentMinute.value = value;
-                minutes(minute: currentMinute.value);
-              }),
+          () => Flexible(
+            child: NumberPicker(
+                value: currentMinute.value,
+                minValue: 1,
+                zeroPad: true,
+                time: true,
+                itemHeight: 8.h,
+                itemWidth: 19.w,
+                maxValue: 60,
+                onChanged: (value) {
+                  currentMinute.value = value;
+                  minutes(minute: currentMinute.value);
+                }),
+          ),
         ),
         const SizedBox(width: 5),
         Obx(
-          () => Expanded(
+          () => Flexible(
             child: WheelChooser(
+              listWidth: 10.h,
               horizontal: false,
               itemSize: (8.5).h,
               selectTextStyle:

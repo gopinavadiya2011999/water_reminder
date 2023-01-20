@@ -94,7 +94,7 @@ class SignUpView extends GetView<SignupController> {
                                 return null;
                               },
                               labelText: 'Name',
-                              hintText: 'Full Name',
+                              hintText: 'Full name',
                               controller: signupController.nameController),
                           customTextField(
                               errorText: signupController.passwordValid.value,
@@ -103,33 +103,30 @@ class SignUpView extends GetView<SignupController> {
                                 if (password!.isEmpty) {
                                   signupController.passwordValid.value =
                                       "Please enter password";
-                                }
-                                else if (password.length < 8) {
+                                } else if (password.length < 8) {
                                   signupController.passwordValid.value =
-                                      "Please Enter at least 8 characters";
+                                      "Please enter at least 8 characters";
                                 }
 
                                 signupController.update();
                                 return null;
                               },
+                              obscureText: true,
                               labelText: 'Password',
                               hintText: 'Password',
                               controller: signupController.passwordController),
                           customTextField(
+                              obscureText: true,
                               errorText: signupController.cPasswordValid.value,
                               validator: (cPassword) {
                                 signupController.cPasswordValid.value = '';
                                 if (cPassword!.isEmpty) {
                                   signupController.cPasswordValid.value =
                                       "Please enter confirm password";
-                                }
-
-                                else if (cPassword.length < 8) {
+                                } else if (cPassword.length < 8) {
                                   signupController.passwordValid.value =
-                                  "Please Enter at least 8 characters";
-                                }
-
-                                else if (signupController
+                                      "Please Enter at least 8 characters";
+                                } else if (signupController
                                         .confirmPwdController.text !=
                                     signupController.passwordController.text) {
                                   signupController.cPasswordValid.value =
@@ -156,21 +153,27 @@ class SignUpView extends GetView<SignupController> {
                         },
                       ),
                       SizedBox(height: MediaQuery.of(context).size.height / 30),
-                      RichText(
-                          text: TextSpan(children: [
-                        TextSpan(
-                            text: "Have an account? ",
-                            style: TextStyleConstant.black13),
-                        TextSpan(
-                            text: 'Login here',
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                Get.to(LoginView());
-                                Get.deleteAll();
-                              },
-                            style: TextStyleConstant.black13
-                                .copyWith(color: ColorConstant.blueFE))
-                      ]))
+                      inkWell(
+                        onTap:() {
+                          Get.to(LoginView());
+                          Get.deleteAll();
+                        },
+                        child: RichText(
+                            text: TextSpan(children: [
+                          TextSpan(
+                              text: "Have an account? ",
+                              style: TextStyleConstant.black13),
+                          TextSpan(
+                              text: 'Login here',
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Get.to(LoginView());
+                                  Get.deleteAll();
+                                },
+                              style: TextStyleConstant.black13
+                                  .copyWith(color: ColorConstant.blueFE))
+                        ])),
+                      )
                     ],
                   ),
                 ),
@@ -182,7 +185,7 @@ class SignUpView extends GetView<SignupController> {
     );
   }
 
-  void _checkValidation(context) {
+  Future<void> _checkValidation(context) async {
     dismissKeyboard(context);
     if (_formKey.currentState!.validate() &&
         signupController.emailValid.value.isEmpty &&
@@ -196,15 +199,30 @@ class SignUpView extends GetView<SignupController> {
       //   }
       // }
       // signupController.passwordController.text = pwd.join("");
-      Uuid uuid = const Uuid();
-      UserModel userModel = UserModel(
-          email: signupController.emailController.text.trim(),
-          password: signupController.passwordController.text.trim(),
-          userId: uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString(),
-          userName: capitalizeAllSentence(
-              signupController.nameController.text.trim()));
 
-      Get.to(SelectionView(userModel: userModel));
+      List<UserModel> userModels = await getUserData();
+      UserModel? userData;
+      if (userModels.isNotEmpty) {
+        userModels.forEach((element) {
+          if (element.email == signupController.emailController.text.trim()) {
+            userData = element;
+            showBottomLongToast('Email Already exist');
+          }
+        });
+      }
+
+      if (userData == null) {
+        Uuid uuid = const Uuid();
+        UserModel userModel = UserModel(
+            email: signupController.emailController.text.trim(),
+            password: signupController.passwordController.text.trim(),
+            userId:
+                uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString(),
+            userName: capitalizeAllSentence(
+                signupController.nameController.text.trim()));
+
+        Get.to(SelectionView(userModel: userModel));
+      }
     }
   }
 }

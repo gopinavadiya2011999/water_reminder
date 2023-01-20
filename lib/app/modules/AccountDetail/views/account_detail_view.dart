@@ -32,7 +32,9 @@ class AccountDetailView extends GetView<AccountDetailController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   inkWell(
-                    onTap: (){Navigator.pop(context);},
+                    onTap: (){
+
+                      Navigator.pop(context);},
                     child: customBackButton(),
                   ),
                   Expanded(

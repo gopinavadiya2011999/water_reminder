@@ -13,6 +13,9 @@ abstract class Routes {
   static const SPLASH = _Paths.SPLASH;
   static const BOTTOM_TAB = _Paths.BOTTOM_TAB;
   static const SCHEDULE_REMINDER = _Paths.SCHEDULE_REMINDER;
+  static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
+  static const OTP = _Paths.OTP;
+  static const RESET_PASSWORD = _Paths.RESET_PASSWORD;
 }
 
 abstract class _Paths {
@@ -27,4 +30,7 @@ abstract class _Paths {
   static const SPLASH = '/splash';
   static const BOTTOM_TAB = '/bottom-tab';
   static const SCHEDULE_REMINDER = '/schedule-reminder';
+  static const FORGOT_PASSWORD = '/forgot-password';
+  static const OTP = '/otp';
+  static const RESET_PASSWORD = '/reset-password';
 }

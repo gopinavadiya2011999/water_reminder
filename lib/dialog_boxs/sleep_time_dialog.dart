@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 import 'package:waterreminder/app/modules/account/controllers/account_controller.dart';
 import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
@@ -10,15 +9,23 @@ import 'package:waterreminder/widgets/time_view.dart';
 
 sleepTimeDialog(context, AccountController accountController,
     {required bool sleepTime}) {
+  DateTime formattedTime = DateTime(
+      DateTime.now().year,
+      DateTime.now().month,
+      DateTime.now().day,
+      int.parse(accountController.sleepTime.value.split(":").first),
+      int.parse(
+          accountController.sleepTime.value.split(":").last.split(" ").first));
   showDialog(
       context: context,
       builder: (context) {
-        String hr = DateFormat.jm().format(DateTime.now()).split(":").first;
-        String min = DateTime.now().minute.toString();
-        String dn = DateFormat('a').format(DateTime.now()).toString();
+        String hr = accountController.sleepTime.value.split(":").first;
+        String min =
+            accountController.sleepTime.value.split(":").last.split(' ').first;
+        String dn =
+            accountController.sleepTime.value.split(":").last.split(' ').last;
 
         return AlertDialog(
-
           shape: OutlineInputBorder(
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(8)),
@@ -31,6 +38,7 @@ sleepTimeDialog(context, AccountController accountController,
               mainAxisSize: MainAxisSize.min,
               children: [
                 timeView(
+                  time: formattedTime,
                   context: context,
                   dayNightTime: ({dayNight}) {
                     if (dayNight == 'AM') {

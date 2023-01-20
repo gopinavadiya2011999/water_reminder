@@ -135,6 +135,7 @@ class SelectionView extends GetView<SelectionController> {
                           SizedBox(
                               height: MediaQuery.of(context).size.height / 30),
                           Container(
+                            alignment: Alignment.center,
                               margin: EdgeInsets.symmetric(
                                   horizontal: index == 0
                                       ? MediaQuery.of(context).size.width / 16
@@ -171,23 +172,23 @@ class SelectionView extends GetView<SelectionController> {
                                         )
                                       : index == 2
                                           ? timeView(
-                                              context: context,
-                                              dayNightTime: ({dayNight}) {
-                                                if (dayNight == 'AM') {
-                                                  bedTimeHour = '01';
-                                                } else {
-                                                  bedTimeHour = '12';
-                                                }
-                                                bedTimeType = dayNight!;
-                                              },
-                                              hours: ({hour}) {
-                                                bedTimeHour = hour.toString();
-                                              },
-                                              minutes: ({minute}) {
-                                                bedTimeMinute =
-                                                    minute.toString();
-                                              },
-                                            )
+                                            context: context,
+                                            dayNightTime: ({dayNight}) {
+                                              if (dayNight == 'AM') {
+                                                bedTimeHour = '01';
+                                              } else {
+                                                bedTimeHour = '12';
+                                              }
+                                              bedTimeType = dayNight!;
+                                            },
+                                            hours: ({hour}) {
+                                              bedTimeHour = hour.toString();
+                                            },
+                                            minutes: ({minute}) {
+                                              bedTimeMinute =
+                                                  minute.toString();
+                                            },
+                                          )
                                           : index == 3
                                               ? timeView(
                                                   context: context,

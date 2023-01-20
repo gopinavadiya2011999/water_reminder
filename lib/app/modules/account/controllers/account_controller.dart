@@ -16,11 +16,14 @@ RxString wakeUpTime =''.obs;
  Future<void> onInit()  async {
 
     userData = await getPrefData();
-    gender.value= userData.first.gender!;
-    weight.value= userData.first.weight!;
-    waterGoal.value= userData.first.waterGoal!;
-    sleepTime.value= userData.first.bedTime!;
-    wakeUpTime.value= userData.first.wakeUpTime!;
+    if(userData.isNotEmpty){
+      gender.value= userData.first.gender!;
+      weight.value= userData.first.weight!;
+      waterGoal.value= userData.first.waterGoal!;
+      sleepTime.value= userData.first.bedTime!;
+      wakeUpTime.value= userData.first.wakeUpTime!;
+
+    }
     update();
 
     super.onInit();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 
@@ -20,8 +21,8 @@ child: buttonView(plusButton, buttonText),
         borderRadius: BorderRadius.circular(50), color: ColorConstant.blueFE),
     padding:padding ??
             EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.height / 22,
-                vertical: MediaQuery.of(context).size.width / 24),
+                horizontal: 3.9.h,
+                vertical: 1.8.h),
     child:buttonView(plusButton,buttonText)
   );
 }
@@ -32,9 +33,9 @@ buttonView(plusButton,buttonText) {
     mainAxisAlignment: MainAxisAlignment.center,
     mainAxisSize: MainAxisSize.min,
     children: [
-      if (!plusButton) Icon(Icons.add, size: 16, color: ColorConstant.white),
+      if (!plusButton) Icon(Icons.add, size: 3.5.h, color: ColorConstant.white),
       if (!plusButton) const SizedBox(width: 14),
-      Text(buttonText, style: TextStyleConstant.white16)
+      Text(buttonText, style: TextStyleConstant.white16.copyWith(fontSize: 13.sp,letterSpacing: .1))
     ],
   );
 }

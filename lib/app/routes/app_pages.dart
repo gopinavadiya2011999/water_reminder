@@ -9,10 +9,16 @@ import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
 import '../modules/bottom_tab/bindings/bottom_tab_binding.dart';
 import '../modules/bottom_tab/views/bottom_tab_view.dart';
+import '../modules/forgot_password/bindings/forgot_password_binding.dart';
+import '../modules/forgot_password/views/forgot_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/otp/bindings/otp_binding.dart';
+import '../modules/otp/views/otp_view.dart';
+import '../modules/reset_password/bindings/reset_password_binding.dart';
+import '../modules/reset_password/views/reset_password_view.dart';
 import '../modules/schedule_reminder/bindings/schedule_reminder_binding.dart';
 import '../modules/schedule_reminder/views/schedule_reminder_view.dart';
 import '../modules/selection/bindings/selection_binding.dart';
@@ -79,6 +85,21 @@ class AppPages {
       name: _Paths.SCHEDULE_REMINDER,
       page: () => const ScheduleReminderView(),
       binding: ScheduleReminderBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD,
+      page: () => ForgotPasswordView(),
+      binding: ForgotPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP,
+      page: () => OtpView(),
+      binding: OtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESET_PASSWORD,
+      page: () =>  ResetPasswordView(),
+      binding: ResetPasswordBinding(),
     ),
   ];
 }

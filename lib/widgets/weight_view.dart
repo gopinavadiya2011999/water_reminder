@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/widgets/weight_picker.dart';
@@ -26,8 +27,8 @@ weightView(
                   : currentWeight.value,
               minValue: 1,
               zeroPad: true,
-              itemHeight: 82,
-              itemWidth: MediaQuery.of(context).size.width / 2.5,
+              itemHeight: 9.h,
+              itemWidth: 32.w,
               maxValue: 100,
               onChanged: (value) {
                 currentWeight.value = value;
@@ -40,12 +41,14 @@ weightView(
         Flexible(
           child: WheelChooser(
             horizontal: false,
-            itemSize: 82,
-            listWidth: MediaQuery.of(context).size.width / 5,
-            listHeight: MediaQuery.of(context).size.height / 1.5,
-            selectTextStyle: TextStyleConstant.blue50,
-            unSelectTextStyle: TextStyleConstant.blue50
-                .copyWith(color: ColorConstant.greyAF.withOpacity(.75)),
+            itemSize: 9.h,
+            listWidth: 10.h,
+
+            // listWidth: MediaQuery.of(context).size.width / 5,
+            //  listHeight: MediaQuery.of(context).size.height / 1.5,
+            selectTextStyle: TextStyleConstant.blue50.copyWith(fontSize: 35.sp),
+            unSelectTextStyle: TextStyleConstant.blue50.copyWith(
+                color: ColorConstant.greyAF.withOpacity(.75), fontSize: 35.sp),
             startPosition: weight != null
                 ? ((weight.value.split(' ').last.toString() == 'kg') ? 0 : 1)
                 : 0,

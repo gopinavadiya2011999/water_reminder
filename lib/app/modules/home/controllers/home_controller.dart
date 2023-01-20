@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:waterreminder/app/modules/home/views/home_view.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/toast.dart';
 
@@ -6,11 +7,25 @@ class HomeController extends GetxController {
   List<WaterRecords> waterRecords = [];
   RxList<UserModel> userData = <UserModel>[].obs;
 
+
+
+
   @override
   Future<void> onInit() async {
     super.onInit();
     userData = RxList(await getPrefData());
     update();
+    emitter.on('getUsers', this, (ev, context) async {
+      print("*****");
+      switch(ev.eventName){
+
+        case "getUsers":
+      print("*****EVENT USER");
+          userData= RxList(await getPrefData());
+          update();
+          break;
+      }
+    });
 
 
   }
@@ -23,6 +38,12 @@ class HomeController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+    emitter.removeListener('getUsers', (ev, context) async {
+      switch(ev.eventName){
+        case "getUsers":
+          userData= RxList(await getPrefData());
+    }
+    });
   }
 }
 

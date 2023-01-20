@@ -1,11 +1,15 @@
+import 'dart:core';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:eventify/eventify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:sizer/sizer.dart';
 import 'package:uuid/uuid.dart';
-import 'package:waterreminder/dialog_boxs/sleep_time_dialog.dart';
-import 'package:waterreminder/model/time_records.dart';
+import 'package:waterreminder/dialog_boxs/edit_dialog.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
@@ -17,6 +21,7 @@ import '../../../../custom_pop_up.dart';
 import '../../AccountDetail/views/account_detail_view.dart';
 import '../controllers/home_controller.dart';
 
+EventEmitter emitter =  EventEmitter();
 class HomeView extends GetView<HomeController> {
   HomeView({Key? key}) : super(key: key);
   final homeController = Get.put(HomeController());
@@ -36,8 +41,16 @@ class HomeView extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset('assets/female.png',
-                      cacheHeight: 40, cacheWidth: 40, fit: BoxFit.fill),
+                  if (homeController.userData.isNotEmpty)
+                    Image.asset(
+                        homeController.userData.first.gender == 'Female'
+                            ? 'assets/female.png'
+                            : homeController.userData.first.gender == 'Male'
+                                ? 'assets/male_small.png'
+                                : 'assets/other_small.png',
+                        cacheHeight: 40,
+                        cacheWidth: 40,
+                        fit: BoxFit.fill),
                   Text('Water Reminder', style: TextStyleConstant.titleStyle),
                   inkWell(
                       onTap: () {
@@ -74,7 +87,7 @@ class HomeView extends GetView<HomeController> {
                         return Container(
                           height: double.infinity,
                           width: double.infinity,
-                          padding: const EdgeInsets.only(bottom: 20),
+                          padding: const EdgeInsets.only(bottom: 8),
                           color: ColorConstant.whiteD9.withOpacity(.3),
                           child: SingleChildScrollView(
                             child: Column(
@@ -86,11 +99,7 @@ class HomeView extends GetView<HomeController> {
                                     children: [
                                       _progressBar(
                                           snapshot: snapshot, context: context),
-                                      SizedBox(
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
-                                              20),
+                                      SizedBox(height: 4.h),
                                       inkWell(
                                           child: customButton(
                                               buttonText: "Add Water",
@@ -100,9 +109,7 @@ class HomeView extends GetView<HomeController> {
                                           }),
                                     ],
                                   ),
-                                SizedBox(
-                                    height: MediaQuery.of(context).size.height /
-                                        28),
+                                SizedBox(height: 3.3.h),
                                 _listView(context, snapshots: snapshot)
                               ],
                             ),
@@ -126,7 +133,7 @@ class HomeView extends GetView<HomeController> {
 
   _progressBar({required BuildContext context, snapshot}) {
     return CircularPercentIndicator(
-        radius: MediaQuery.of(context).size.width / 2.8,
+        radius: 16.5.h,
         animation: true,
         animationDuration: 1200,
         lineWidth: 28,
@@ -225,15 +232,7 @@ class HomeView extends GetView<HomeController> {
                                     cacheWidth: 21,
                                     fit: BoxFit.fill),
                                 const SizedBox(width: 10),
-                                Text(
-                                    snapshot.data!.docs[index]['time'] !=
-                                                null &&
-                                            snapshot.data!.docs[index]['time']!
-                                                .isNotEmpty
-                                        ? readTimestamp(int.parse(snapshot
-                                            .data!.docs[index]['time']!
-                                            .toString()))
-                                        : "",
+                                Text(snapshot.data!.docs[index]['time'] ?? '',
                                     style: TextStyleConstant.black24
                                         .copyWith(fontSize: 18)),
                                 const Spacer(),
@@ -243,7 +242,7 @@ class HomeView extends GetView<HomeController> {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400)),
                                 const SizedBox(width: 10),
-                                  CustomPopupMenu(
+                                CustomPopupMenu(
                                   showArrow: false,
                                   horizontalMargin: 40,
                                   barrierColor: Colors.transparent,
@@ -288,11 +287,18 @@ class HomeView extends GetView<HomeController> {
                                             .collection('water_records')
                                             .doc(snapshot.data!.docs[index].id)
                                             .delete();
-                                        showBottomLongToast("Water record deleted");
+                                        showBottomLongToast(
+                                            "Water record deleted");
                                       }
-                                    }
-                                    else{
-                                     print("EDIT");
+                                    } else {
+                                      editDialog(context,
+                                          userId: homeController
+                                              .userData.first.userId,
+                                          waterId:
+                                              snapshot.data!.docs[index].id,
+                                          time: snapshot
+                                              .data!.docs[index]['time']
+                                              .toString());
                                     }
                                   },
                                   pressType: PressType.singleClick,
@@ -356,7 +362,8 @@ class HomeView extends GetView<HomeController> {
       Uuid uuid = const Uuid();
       if (enter.value == false) {
         enter.value = true;
-        waterRecords.time = DateTime.now().millisecondsSinceEpoch.toString();
+        waterRecords.time =
+            DateFormat('HH:mm a').format(DateTime.now()).toString();
         waterRecords.timeId =
             uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString();
         waterRecords.waterMl = '200ml';

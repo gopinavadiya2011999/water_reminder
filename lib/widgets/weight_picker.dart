@@ -230,7 +230,7 @@ class _NumberPickerState extends State<NumberPicker> {
                       margin: const EdgeInsets.symmetric(vertical: 8),
                       child: Text(
                         value == widget.value && widget.twoDot == true
-                            ? "${_getDisplayedValue(value)} : "
+                            ? "${_getDisplayedValue(value)} :"
                             : _getDisplayedValue(value),
                         textAlign: TextAlign.end,
                         style: itemStyle,

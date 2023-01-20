@@ -3,6 +3,7 @@ import 'package:eventify/eventify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:waterreminder/app/modules/AccountDetail/views/account_detail_view.dart';
 import 'package:waterreminder/app/modules/schedule_reminder/views/schedule_reminder_view.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
@@ -19,7 +20,6 @@ import '../../../../dialog_boxs/sleep_time_dialog.dart';
 import '../../../../dialog_boxs/water_dialog_view.dart';
 import '../controllers/account_controller.dart';
 
-
 class AccountView extends GetView<AccountController> {
   AccountView({Key? key}) : super(key: key);
 
@@ -27,10 +27,9 @@ class AccountView extends GetView<AccountController> {
 
   @override
   Widget build(BuildContext context) {
-
     return GetBuilder<AccountController>(
       init: accountController,
-      builder: (controller) =>  Scaffold(
+      builder: (controller) => Scaffold(
         backgroundColor: ColorConstant.white,
         appBar: appBar(context),
         body: Container(
@@ -41,30 +40,36 @@ class AccountView extends GetView<AccountController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const SizedBox(height: 8),
+                SizedBox(height: (1.5).h),
+                if(accountController.userData.isNotEmpty)
                 _listView(context),
-                const SizedBox(height: 24),
+                SizedBox(height: (2.9).h),
                 inkWell(
                     child: customButton(
-                      plusButton: true,
-                      padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 18),
-                        buttonText: 'Schedule Reminder', context: context),
+                        plusButton: true,
+                        padding: EdgeInsets.symmetric(
+                            horizontal: (2.5).h, vertical: (2.3).h),
+                        buttonText: 'Schedule Reminder',
+                        context: context),
                     onTap: () async {
-                      QuerySnapshot<Map<String, dynamic>> snapShots = await FirebaseFirestore.instance
-                          .collection('user')
-                          .doc(accountController.userData.first.userId)
-                          .collection('reminder')
-                          .get();
-                   if(snapShots.docs.isEmpty){
-
-                       scheduleDialogDialog(context,userModel:accountController.userData.first);
-                   }
-                   else{
-                     Get.to(ScheduleReminder(userModel: accountController.userData.first));
-                   }
+                      QuerySnapshot<Map<String, dynamic>> snapShots =
+                          await FirebaseFirestore.instance
+                              .collection('user')
+                              .doc(accountController.userData.first.userId)
+                              .collection('reminder')
+                              .get();
+                      if (snapShots.docs.isEmpty) {
+                        scheduleDialogDialog(context,
+                            userModel: accountController.userData.first);
+                      } else {
+                        Get.to(ScheduleReminder(
+                            userModel: accountController.userData.first));
+                      }
                     }),
-                const SizedBox(height: 25),
-                _logOut(context)
+                SizedBox(height: 7.h),
+                _logOut(context),
+                SizedBox(height: (1.5).h),
+
               ],
             ),
           ),
@@ -98,10 +103,13 @@ class AccountView extends GetView<AccountController> {
                 Text(title,
                     style: TextStyleConstant.titleStyle.copyWith(
                         fontWeight: FontWeight.w500,
+                        fontSize: (15.5).sp,
                         color: ColorConstant.black24)),
+                SizedBox(height: (0.2).h),
                 Text(
                   value,
-                  style: TextStyleConstant.grey14.copyWith(fontFamily: 'Sora'),
+                  style: TextStyleConstant.grey14
+                      .copyWith(fontFamily: 'Sora', fontSize: (11.5).sp),
                 )
               ],
             )),
@@ -122,10 +130,10 @@ class AccountView extends GetView<AccountController> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
-                Expanded(child: Text('Account',
-                    textAlign: TextAlign.center,
-                    style: TextStyleConstant.titleStyle)),
+                Expanded(
+                    child: Text('Account',
+                        textAlign: TextAlign.center,
+                        style: TextStyleConstant.titleStyle)),
                 inkWell(
                     onTap: () {
                       Navigator.of(context, rootNavigator: true).push(
@@ -145,33 +153,33 @@ class AccountView extends GetView<AccountController> {
     return Column(children: [
       _customBoxView(
           title: 'Gender',
-          value: accountController.gender.value,
+          value: accountController.userData.first.gender!,
           onEditTap: () {
             openGenderDialog(context, accountController);
           }),
       _customBoxView(
           title: 'Weight',
-          value:accountController.weight.value,
+          value: accountController.weight.value,
           onEditTap: () {
-            weightDialog(context,accountController);
+            weightDialog(context, accountController);
           }),
       _customBoxView(
           title: 'Water Intake Goal',
           value: accountController.waterGoal.value,
           onEditTap: () {
-            waterDialog(context: context,accountController:accountController);
+            waterDialog(context: context, accountController: accountController);
           }),
       _customBoxView(
           title: 'Sleep Time',
           value: accountController.sleepTime.value,
           onEditTap: () {
-            sleepTimeDialog(context,accountController,sleepTime:true);
+            sleepTimeDialog(context, accountController, sleepTime: true);
           }),
       _customBoxView(
           title: 'Wake Up Time',
           value: accountController.wakeUpTime.value,
           onEditTap: () {
-            sleepTimeDialog(context,accountController,sleepTime:false);
+            sleepTimeDialog(context, accountController, sleepTime: false);
           }),
     ]);
   }
@@ -182,7 +190,7 @@ class AccountView extends GetView<AccountController> {
         logOutDialog(context);
       },
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.only(left: 20, right: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

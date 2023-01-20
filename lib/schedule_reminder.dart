@@ -92,7 +92,6 @@ class _ScheduleReminderState extends State<ScheduleReminder> {
                   final data = snapshot.data;
                    return ListView.builder(
                     shrinkWrap: true,
-                    // physics: NeverScrollableScrollPhysics(),
                     itemCount: data!.docs.length,
                     itemBuilder: (context, index) {
                       DateTime dateTime = DateTime.fromMicrosecondsSinceEpoch(
@@ -149,7 +148,7 @@ class _ScheduleReminderState extends State<ScheduleReminder> {
                                         ReminderModel reminder =
                                             ReminderModel();
                                         reminder.onOff = value;
-                                        reminder.timeStamp =
+                                        reminder.time =
                                             data.docs[index].get('time');
                                         FirebaseFirestore.instance
                                             .collection('user')
@@ -180,7 +179,7 @@ class _ScheduleReminderState extends State<ScheduleReminder> {
                                       showBottomLongToast("Reminder deleted");
                                     } else {
                                       scheduleDialogDialog(context,
-                                          userModel: widget.userModel!,time: dateTime);
+                                          userModel: widget.userModel!,onOff:data.docs[index].get('onOff'),time: dateTime,fromEdit: data.docs[index].id);
                                     }
                                   },
                                   pressType: PressType.singleClick,

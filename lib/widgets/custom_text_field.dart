@@ -4,6 +4,7 @@ import 'package:waterreminder/constant/text_style_constant.dart';
 
 customTextField({required String hintText,
   String? errorText,
+  bool obscureText=false,
   FormFieldValidator? validator,required String labelText,required TextEditingController controller})  {
   return  Container(
     margin: EdgeInsets.symmetric(vertical: errorText!=null&& errorText.isNotEmpty?5:12),
@@ -16,6 +17,7 @@ customTextField({required String hintText,
         SizedBox(
           height: 48,
           child: TextFormField(
+            obscureText: obscureText,
             validator: validator,
             controller: controller,
             style: TextStyleConstant.titleStyle

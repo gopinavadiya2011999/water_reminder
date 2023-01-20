@@ -2,14 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:sizer/sizer.dart';
 import 'package:waterreminder/app/modules/splash/views/splash_view.dart';
 
-import 'constant/color_constant.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print("dsdsdhsdhshdsu ${message.data}");
@@ -64,8 +62,8 @@ Future<void> main() async {
       sound: true,
     );
   }
-  SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: ColorConstant.blueFE));
+  // SystemChrome.setSystemUIOverlayStyle(
+  //     SystemUiOverlayStyle(statusBarColor: ColorConstant.blueFE));
   runApp(const MyApp());
 }
 

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waterreminder/app/modules/account/controllers/account_controller.dart';
+import 'package:waterreminder/app/modules/home/views/home_view.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/model/gender_model.dart';
@@ -27,6 +28,7 @@ void openGenderDialog(context, AccountController accountController) {
               mainAxisSize: MainAxisSize.min,
               children: [
                 genderView(
+                  accountController:accountController,
                   context: context,
                   onTap: ({int? index}) {
                     for (int i = 0; i < genderList.length; i++) {
@@ -34,6 +36,7 @@ void openGenderDialog(context, AccountController accountController) {
                       accountController.update();
                     }
                     genderList[index!].selected.value = true;
+                    accountController.gender.value=genderList[index].name!;
                     accountController.update();
 
                   },
@@ -54,6 +57,7 @@ void openGenderDialog(context, AccountController accountController) {
                         accountController.update();
 
                       });
+                      emitter.emit('getUsers');
                       Get.back();
                     },
                     child: customButton(
