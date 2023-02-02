@@ -1,4 +1,4 @@
-import 'package:waterreminder/custom_pop_up.dart';
+import 'package:waterreminder/widgets/custom_pop_up.dart';
 
 class TimeRecords {
 

@@ -9,7 +9,7 @@ import 'package:timezone/data/latest.dart' as tz;
 import 'package:uuid/uuid.dart';
 import 'package:waterreminder/app/modules/bottom_tab/views/bottom_tab_view.dart';
 import 'package:waterreminder/model/user_model.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 
 import 'dialog_boxs/schedule_dialog.dart';
 
@@ -85,20 +85,22 @@ class NotificationLogic {
       String? title,
       String? body,
       String? payload,
-    //  required int sec,
+      //  required int sec,
       required DateTime dateTime}) async {
-    if (dateTime.isBefore(DateTime.now())) {
-      dateTime = dateTime.add(Duration(days: 1));
-    }
+    // if (dateTime.isBefore(DateTime.now())) {
+    //   dateTime = dateTime.add(Duration(days: 1));
+    // }
+    print("date time :: $dateTime");
 
     _notifications.zonedSchedule(
-      UniqueKey().hashCode,
+      id,
       title,
       body,
-      tz.TZDateTime.from(
-          dateTime
-          /*DateTime.now().add(Duration(seconds: sec))*/,
-          tz.local),
+      _scheduleDaily(Time(dateTime.hour, dateTime.minute, 00)),
+      /*  tz.TZDateTime.from(
+         */ /*dateTime*/ /*
+          */ /*DateTime.now().add(Duration(seconds: sec))*/ /*,
+          tz.local),*/
       await _notificationDetails(),
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
@@ -112,10 +114,6 @@ class NotificationLogic {
     //   int.parse(DateFormat('mm').format(dateTime)),
     //     int.parse(DateFormat('ss').format(dateTime)),
     // ),await _notificationDetails());
-
-
-
-
 
     // _notifications.zonedSchedule(
     //   UniqueKey().hashCode,
@@ -131,6 +129,17 @@ class NotificationLogic {
     //   androidAllowWhileIdle: true,
     //   matchDateTimeComponents: DateTimeComponents.time,
     // );
+  }
+
+  static tz.TZDateTime _scheduleDaily(Time time) {
+    tz.TZDateTime now = tz.TZDateTime.now(tz.local);
+    tz.TZDateTime schdeuledDate = tz.TZDateTime.from(
+        DateTime(
+            now.year, now.month, now.day, time.hour, time.minute, 00),
+        tz.local);
+    return schdeuledDate.isBefore(now)
+        ? schdeuledDate.add(const Duration(days: 1))
+        : schdeuledDate;
   }
 
   static Future<void> cancelAllNotifications() async {

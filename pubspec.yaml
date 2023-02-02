@@ -48,7 +48,7 @@ dependencies:
   fluttertoast: ^8.1.2
   get_storage: ^2.0.3
   eventify: ^1.0.1
-  flutter_local_notifications:
+  flutter_local_notifications: ^9.7.1
   timezone: ^0.8.0
   rxdart: ^0.27.7
   sizer: ^2.0.15
@@ -60,7 +60,7 @@ dependencies:
   flutter_inappwebview: ^5.7.2+3
   permission_handler: ^10.2.0
   app_settings: ^4.2.0
-  firebase_messaging: ^14.2.1
+#  firebase_messaging: ^14.2.1
   get_it: ^7.2.0
 
 dev_dependencies:

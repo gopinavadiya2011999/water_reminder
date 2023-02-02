@@ -8,7 +8,7 @@ import 'package:waterreminder/app/modules/login/views/login_view.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/no_internet/check_network.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_image.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
@@ -34,7 +34,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
           appBar: AppBar(
             toolbarHeight: 0,
             elevation: 0,
-            // systemOverlayStyle: systemOverlayStyle(),
+             systemOverlayStyle: systemOverlayStyle(),
           ),
           body: WillPopScope(
             onWillPop: () async {

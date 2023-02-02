@@ -8,7 +8,7 @@ import 'package:waterreminder/app/modules/login/views/login_view.dart';
 import 'package:waterreminder/app/modules/selection/views/selection_view.dart';
 import 'package:waterreminder/main.dart';
 import 'package:waterreminder/no_internet/check_network.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/capitalize_sentence.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import '../controllers/signup_controller.dart';
@@ -31,12 +31,12 @@ class SignUpView extends GetView<SignupController> {
       init: signupController,
       builder: (controller) => CheckNetwork(
         child: Scaffold(
-          // resizeToAvoidBottomInset: false,
-          // appBar: AppBar(
-          //   toolbarHeight: 0,
-          //   elevation: 0,
-          //   systemOverlayStyle: systemOverlayStyle(),
-          // ),
+        //  resizeToAvoidBottomInset: false,
+          appBar: AppBar(
+            toolbarHeight: 0,
+            elevation: 0,
+            systemOverlayStyle: systemOverlayStyle(),
+          ),
           body: Stack(
             fit: StackFit.loose,
             children: [
@@ -52,15 +52,22 @@ class SignUpView extends GetView<SignupController> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height:6.5.h),
-                        Text('Welcome to Water Reminder',
-                            maxLines: 2,
-                            style: TextStyleConstant.titleStyle.copyWith(
-                                color: ColorConstant.black24,
-                                fontSize: 25,
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: 'Sora')),
+                        SizedBox(height:3.h),
+                        Align(
+                          alignment: AlignmentDirectional.topStart,
+                          child: Container(
+
+                            width: 60.w,
+                            child: Text('Welcome to Water Reminder',
+                                maxLines: 2,
+                                style: TextStyleConstant.titleStyle.copyWith(
+                                    color: ColorConstant.black24,
+                                    fontSize: 17.sp,
+                                    wordSpacing: 2,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'Sora')),
+                          ),
+                        ),
                         const SizedBox(height: 8),
                         Text(
                             "Enter your name, email and password you’d like to use to sign in to Water Reminder.",

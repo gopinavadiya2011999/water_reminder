@@ -17,7 +17,6 @@ class CommonHelper {
   static bool? interstitialAds() {
 print("object^^^^^^^^^^^^^^^");
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-
     bool? adsOpen;
 
 //  Timer.periodic(const Duration(seconds: 5), (timer) {
@@ -29,7 +28,6 @@ print("object^^^^^^^^^^^^^^^");
           adsOpen = true;
           SystemChrome.setEnabledSystemUIMode(
               SystemUiMode.manual, overlays: []);
-
           break;
         case Yodo1MAS.AD_EVENT_ERROR:
           print('Interstitial AD_EVENT_ERROR$message');

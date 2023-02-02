@@ -34,7 +34,7 @@ class AccountView extends GetView<AccountController> {
       builder: (controller) => CheckNetwork(
         child: Scaffold(
           // backgroundColor: ColorConstant.white,
-          // appBar: appBar(context),
+          appBar: appBar(context),
           body: SafeArea(
             child: Container(
               height: double.infinity,
@@ -44,27 +44,6 @@ class AccountView extends GetView<AccountController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-
-                    Container(
-                        color: ColorConstant.white,
-                        padding: const EdgeInsets.only(top: 15, bottom: 15, left: 20, right: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Expanded(
-                                child: Text('Account',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyleConstant.titleStyle)),
-                            inkWell(
-                                onTap: () {
-                                  Navigator.of(context, rootNavigator: true).push(
-                                      MaterialPageRoute(
-                                          builder: (context) => SettingsView()));
-                                },
-                                child: SvgPicture.asset('assets/settings.svg'))
-                          ],
-                        )),
                     SizedBox(height: (1.5).h),
                     _listView(context),
                     SizedBox(height: (2.9).h),
@@ -174,7 +153,7 @@ class AccountView extends GetView<AccountController> {
             )),
         elevation: 0,
         automaticallyImplyLeading: false,
-       // systemOverlayStyle: systemOverlayStyle(),
+       systemOverlayStyle: systemOverlayStyle(),
         backgroundColor: ColorConstant.white);
   }
 

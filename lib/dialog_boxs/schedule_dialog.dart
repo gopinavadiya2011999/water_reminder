@@ -6,10 +6,13 @@ import 'package:intl/intl.dart';
 import 'package:waterreminder/model/reminder_model.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/schedule_reminder.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/time_view.dart';
+import 'package:yodo1mas/testmasfluttersdktwo.dart';
+
+import '../ads/ads_data.dart';
 
 scheduleDialogDialog(context, User? users,
     {DateTime? time, String? fromEdit, bool? onOff}) {
@@ -63,6 +66,12 @@ scheduleDialogDialog(context, User? users,
                   const SizedBox(height: 24),
                   inkWell(
                       onTap: () async {
+                        bool? adsOpen = CommonHelper.interstitialAds();
+
+                        if (adsOpen == null || adsOpen) {
+                          Yodo1MAS.instance.showInterstitialAd();
+
+                        }
                         added =true;
                         if(added){
                           UserModel userModel = await getUserData(id: users?.uid);

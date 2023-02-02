@@ -2,7 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/color_constant.dart';
-import '../toast.dart';
+import '../constant/toast.dart';
 import '../widgets/custom_inkwell.dart';
 
 class InternetConnectionCheck extends StatefulWidget {

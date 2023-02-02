@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+
 import '../modules/ChangePassword/bindings/change_password_binding.dart';
 import '../modules/ChangePassword/views/change_password_view.dart';
 import '../modules/account/bindings/account_binding.dart';
@@ -14,6 +15,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/otp/bindings/otp_binding.dart';
 import '../modules/otp/views/otp_view.dart';
+import '../modules/report/bindings/report_binding.dart';
+import '../modules/report/views/report_view.dart';
 import '../modules/reset_password/bindings/reset_password_binding.dart';
 import '../modules/reset_password/views/reset_password_view.dart';
 import '../modules/schedule_reminder/bindings/schedule_reminder_binding.dart';
@@ -33,8 +36,6 @@ class AppPages {
   AppPages._();
 
   static const INITIAL = Routes.HOME;
-
-
 
   static final routes = [
     GetPage(
@@ -99,8 +100,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.RESET_PASSWORD,
-      page: () =>  ResetPasswordView(),
+      page: () => ResetPasswordView(),
       binding: ResetPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.REPORT,
+      page: () =>  ReportView(),
+      binding: ReportBinding(),
     ),
   ];
 }

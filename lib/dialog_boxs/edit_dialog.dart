@@ -5,7 +5,7 @@ import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/time_view.dart';
 
-import '../toast.dart';
+import '../constant/toast.dart';
 
 editDialog(context, {String? time, String? userId, required String waterId}) {
   DateTime formattedTime = DateTime(

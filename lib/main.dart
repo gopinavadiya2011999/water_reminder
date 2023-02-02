@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
@@ -18,17 +18,18 @@ import 'ads/setup.dart';
 FirebaseAuth auth = FirebaseAuth.instance;
 
 final getIt = GetIt.instance;
-
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-
-}
+//
+// Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+//
+// }
 
 
 Future<void> main() async {
   await GetStorage.init();
   WidgetsFlutterBinding.ensureInitialized();
   Yodo1MAS.instance.init(
-      "jopV935IZE",
+      // "jopV935IZE",
+      "p75wClF0kV",
       true,
           (successful) =>
       {});
@@ -36,8 +37,8 @@ Future<void> main() async {
   setUp();
 
   NotificationLogic.init( );
-   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
+  //  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  Yodo1MAS.instance.showRewardAd();
   runApp(const MyApp());
 }
 

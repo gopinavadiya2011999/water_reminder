@@ -1,49 +1,22 @@
 import 'dart:io';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:sizer/sizer.dart';
+import 'package:waterreminder/constant/color_constant.dart';
+import 'package:waterreminder/model/report_dialog_list.dart';
 
-import 'app/modules/home/controllers/home_controller.dart';
-import 'constant/color_constant.dart';
-
-enum PressType {
-  longPress,
-  singleClick,
-}
-
-enum PreferredPosition {
-  top,
-  bottom,
-}
-
-class CustomPopupMenuController extends ChangeNotifier {
-  bool menuIsShowing = false;
-
-  void showMenu() {
-    menuIsShowing = true;
-    notifyListeners();
-  }
-
-  void hideMenu() {
-    menuIsShowing = false;
-    notifyListeners();
-  }
-
-  void toggleMenu() {
-    menuIsShowing = !menuIsShowing;
-    notifyListeners();
-  }
-}
+import 'custom_pop_up.dart';
 
 Rect _menuRect = Rect.zero;
 
-class CustomPopupMenu extends StatefulWidget {
-  CustomPopupMenu({
+class CustomDropDownPopup extends StatefulWidget {
+  CustomDropDownPopup({
     required this.child,
-     required this.onTap,
+    required this.onTap,
     required this.pressType,
     // this.controller,
+    required this.menuItem,
     this.arrowColor = const Color(0xFF4C4C4C),
     this.showArrow = true,
     this.barrierColor = Colors.black12,
@@ -63,24 +36,25 @@ class CustomPopupMenu extends StatefulWidget {
   final double horizontalMargin;
   final double verticalMargin;
   final double arrowSize;
+  List<ReportDialogModel> menuItem = [];
+
   // final CustomPopupMenuController? controller;
-  final  Function({String? item}) onTap;
+  final Function({String? item}) onTap;
   final PreferredPosition? position;
   final void Function(bool)? menuOnChange;
 
   final bool enablePassEvent;
 
   @override
-  _CustomPopupMenuState createState() => _CustomPopupMenuState();
+  _CustomDropDownPopupState createState() => _CustomDropDownPopupState();
 }
 
-class _CustomPopupMenuState extends State<CustomPopupMenu> {
+class _CustomDropDownPopupState extends State<CustomDropDownPopup> {
   RenderBox? _childBox;
   RenderBox? _parentBox;
   OverlayEntry? _overlayEntry;
-  CustomPopupMenuController? _controller=CustomPopupMenuController();
+  CustomPopupMenuController? _controller = CustomPopupMenuController();
   bool _canResponse = true;
-
 
   _showMenu() {
     Widget arrow = ClipPath(
@@ -128,14 +102,11 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-
                       Material(
-                        child:/* widget.menuBuilder()*/
-                        Container(
+                        child: Container(
                           decoration: BoxDecoration(boxShadow: [
                             BoxShadow(
-                                color: ColorConstant.grey80
-                                    .withOpacity(.2),
+                                color: ColorConstant.grey80.withOpacity(.2),
                                 blurRadius: 5,
                                 spreadRadius: 3,
                                 offset: const Offset(0, 3))
@@ -145,100 +116,47 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
                             child: IntrinsicWidth(
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment:
-                                CrossAxisAlignment.stretch,
-                                children: menuItems
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: widget.menuItem
                                     .map(
                                       (item) => GestureDetector(
-                                    behavior: HitTestBehavior
-                                        .translucent,
-                                    onTap: () {menuItems
-                                        .forEach((element) {
-                                      if (element.isSelected
-                                          .value ==
-                                          true) {
-                                        element.isSelected
-                                            .value = false;
-                                      }
-                                    });
 
-                                    item.isSelected.value =
-                                    !item.isSelected.value;
-                                    if(item.text=='Edit'){
-                                       widget.onTap(item: 'Edit');
+                                        behavior: HitTestBehavior.translucent,
+                                        onTap: () {
+                                          widget.menuItem.forEach((element) {
+                                            if (element.selected!.value ==
+                                                true) {
+                                              element.selected!.value = false;
+                                            }
+                                          });
 
-                                    }
-                                    else{
+                                          item.selected!.value =
+                                              !item.selected!.value;
 
-                                       widget.onTap(item: 'Delete');
-                                    }
-                                      _controller!.hideMenu();
-                                    },
-                                    child: Obx(
+                                          widget.onTap(item: item.text!.value);
+                                          _controller!.hideMenu();
+                                        },
+                                        child: Obx(
                                           () => Container(
-                                        height:
-                                        MediaQuery.of(context)
-                                            .size
-                                            .height /
-                                            18,
-                                        color: item
-                                            .isSelected.value
-                                            ? ColorConstant.blueFE
-                                            : ColorConstant.white,
-                                        padding: const EdgeInsets
-                                            .symmetric(
-                                            horizontal: 20),
-                                        child: Row(
-                                          children: <Widget>[
-                                            Image.asset(
-                                              item.icon!,
-                                              cacheHeight: 18,
-                                              cacheWidth: 16,
-                                              color: !item
-                                                  .isSelected
-                                                  .value
-                                                  ? ColorConstant
-                                                  .blueFE
-                                                  : ColorConstant
-                                                  .white,
+                                            color:
+                                                ColorConstant.white,
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 20,vertical: 8),
+                                            child: Text(
+                                              item.text!.value,
+                                              style: TextStyle(
+                                                  color: !item.selected!.value
+                                                      ? ColorConstant.greyAF
+                                                      : ColorConstant.black24,
+                                                  fontSize: 11.sp,
+                                                  fontFamily: 'Sora',
+                                                  fontWeight:
+                                                      FontWeight.w600),
                                             ),
-                                            Expanded(
-                                              child: Container(
-                                                margin:
-                                                const EdgeInsets
-                                                    .only(
-                                                    left: 10),
-                                                padding:
-                                                const EdgeInsets
-                                                    .symmetric(
-                                                    vertical:
-                                                    10),
-                                                child: Text(
-                                                  item.text!,
-                                                  style: TextStyle(
-                                                      color: !item
-                                                          .isSelected
-                                                          .value
-                                                          ? ColorConstant
-                                                          .blueFE
-                                                          : ColorConstant
-                                                          .white,
-                                                      fontSize:
-                                                      16,
-                                                      fontFamily:
-                                                      'Sora',
-                                                      fontWeight:
-                                                      FontWeight
-                                                          .w600),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ),
-                                )
+                                    )
                                     .toList(),
                               ),
                             ),
@@ -275,9 +193,9 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
           child: widget.barrierColor == Colors.transparent
               ? menu
               : Container(
-            color: widget.barrierColor,
-            child: menu,
-          ),
+                  color: widget.barrierColor,
+                  child: menu,
+                ),
         );
       },
     );
@@ -294,7 +212,6 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
   }
 
   _updateView() {
-
     bool menuIsShowing = _controller?.menuIsShowing ?? false;
     widget.menuOnChange?.call(menuIsShowing);
     if (menuIsShowing) {
@@ -304,24 +221,17 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
     }
   }
 
-  RxList<ItemModel> menuItems = <ItemModel>[].obs;
   @override
   void initState() {
     super.initState();
 
-    menuItems.value.clear();
-    menuItems.value.addAll([
-      ItemModel(
-          isSelected: false.obs, text: "Delete", icon: 'assets/delete.png'),
-      ItemModel(isSelected: true.obs, text: "Edit", icon: 'assets/edit.png'),
-    ]);
     if (_controller == null) _controller = CustomPopupMenuController();
     _controller?.addListener(_updateView);
     WidgetsBinding.instance.addPostFrameCallback((call) {
       if (mounted) {
         _childBox = context.findRenderObject() as RenderBox?;
         _parentBox =
-        Overlay.of(context)?.context.findRenderObject() as RenderBox?;
+            Overlay.of(context)?.context.findRenderObject() as RenderBox?;
       }
     });
   }
@@ -441,7 +351,7 @@ class _MenuLayoutDelegate extends MultiChildLayoutDelegate {
       menuPosition = isTop ? _MenuPosition.topRight : _MenuPosition.bottomRight;
     } else {
       menuPosition =
-      isTop ? _MenuPosition.topCenter : _MenuPosition.bottomCenter;
+          isTop ? _MenuPosition.topCenter : _MenuPosition.bottomCenter;
     }
 
     switch (menuPosition) {

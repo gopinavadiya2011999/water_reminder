@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:waterreminder/app/modules/login/views/login_view.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/custom_text_field.dart';
@@ -32,7 +32,7 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
         appBar: AppBar(
           toolbarHeight: 0,
           elevation: 0,
-          // systemOverlayStyle: systemOverlayStyle(),
+          systemOverlayStyle: systemOverlayStyle(),
         ),
         body: WillPopScope(
           onWillPop: () async {

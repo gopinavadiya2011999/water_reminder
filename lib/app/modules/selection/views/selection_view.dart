@@ -12,7 +12,7 @@ import 'package:waterreminder/model/gender_model.dart';
 import 'package:waterreminder/model/on_boarding_model.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/no_internet/check_network.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/custom_back_button.dart';
 import 'package:waterreminder/widgets/custom_image.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
@@ -88,7 +88,7 @@ class SelectionView extends GetView<SelectionController> {
                 automaticallyImplyLeading: false,
                 title: containerList(context: context),
                 elevation: 0,
-                // systemOverlayStyle: systemOverlayStyle(),
+                 systemOverlayStyle: systemOverlayStyle(),
                 backgroundColor: ColorConstant.white,
               ),
               body: Stack(

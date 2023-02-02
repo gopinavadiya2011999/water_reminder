@@ -14,7 +14,7 @@ import 'package:uuid/uuid.dart';
 import 'package:waterreminder/ads/ads_data.dart';
 import 'package:waterreminder/dialog_boxs/edit_dialog.dart';
 import 'package:waterreminder/model/user_model.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/system_overlay_style.dart';
@@ -22,7 +22,7 @@ import 'package:yodo1mas/Yodo1MAS.dart';
 import 'package:yodo1mas/Yodo1MasBannerAd.dart';
 import '../../../../constant/color_constant.dart';
 import '../../../../constant/text_style_constant.dart';
-import '../../../../custom_pop_up.dart';
+import '../../../../widgets/custom_pop_up.dart';
 import '../../../../main.dart';
 import '../../../../no_internet/check_network.dart';
 import '../../../../ads/timer_service.dart';
@@ -43,7 +43,7 @@ class HomeView extends GetView<HomeController> {
         child: Scaffold(
           backgroundColor: ColorConstant.white,
           appBar: AppBar(
-
+            systemOverlayStyle: systemOverlayStyle(),
             automaticallyImplyLeading: false,
             title: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
@@ -65,8 +65,7 @@ class HomeView extends GetView<HomeController> {
                                 snapshot.data?.docs.first.get('gender') ==
                                         'Female'
                                     ? 'assets/female.png'
-                                    : snapshot.data?.docs.first
-                                                .get('gender') ==
+                                    : snapshot.data?.docs.first.get('gender') ==
                                             'Male'
                                         ? 'assets/male_small.png'
                                         : 'assets/other_small.png',
@@ -77,10 +76,9 @@ class HomeView extends GetView<HomeController> {
                               style: TextStyleConstant.titleStyle),
                           inkWell(
                               onTap: () {
-                                Navigator.of(context, rootNavigator: true)
-                                    .push(MaterialPageRoute(
-                                        builder: (context) =>
-                                            SettingsView()));
+                                Navigator.of(context, rootNavigator: true).push(
+                                    MaterialPageRoute(
+                                        builder: (context) => SettingsView()));
                               },
                               child: SvgPicture.asset('assets/settings.svg'))
                         ],
@@ -88,7 +86,6 @@ class HomeView extends GetView<HomeController> {
                 }),
             elevation: 0,
 
-           // systemOverlayStyle: systemOverlayStyle(),
             backgroundColor: ColorConstant.transparent,
           ),
           body: homeController.user != null
@@ -140,8 +137,7 @@ class HomeView extends GetView<HomeController> {
                                             context: context),
                                         onTap: () {
                                           addWater(
-                                              id: snapshot
-                                                  .data?.docs.first.id,
+                                              id: snapshot.data?.docs.first.id,
                                               snapshot:
                                                   snapshot.data!.docs.first);
                                         }),
@@ -260,7 +256,7 @@ class HomeView extends GetView<HomeController> {
                         itemCount: snapshot.data!.docs.length,
                         physics: const NeverScrollableScrollPhysics(),
                         itemBuilder: (context, index) {
-                           if (snapshot.data!.docs[index].get('time') != null &&
+                          if (snapshot.data!.docs[index].get('time') != null &&
                               DateFormat('dd/MM/yyyy').format(DateTime.now()) !=
                                   DateFormat('dd/MM/yyyy').format(
                                       DateTime.fromMicrosecondsSinceEpoch(
@@ -428,27 +424,16 @@ class HomeView extends GetView<HomeController> {
   RxBool enter = false.obs;
   WaterRecords waterRecords = WaterRecords();
 
-   addWater(
-      {DocumentSnapshot<Map<String, dynamic>>? snapshot, String? id})  {
-
-     bool? adsOpen = CommonHelper.interstitialAds();
+  addWater({DocumentSnapshot<Map<String, dynamic>>? snapshot, String? id}) {
+    bool? adsOpen = CommonHelper.interstitialAds();
 
     if (adsOpen == null || adsOpen) {
-
-    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-    //  print("ads open %%% ${adsOpen}");
-
       Yodo1MAS.instance.showInterstitialAd();
-    addWaterCode(snapshot: snapshot, id: id);
-   }
-  //else{
-   // addWaterCode(snapshot: snapshot, id: id);
-  //}
-    print("&&&&&");
-   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-    print("&&&&&");
-
-   }
+      addWaterCode(snapshot: snapshot, id: id);
+    } else {
+      addWaterCode(snapshot: snapshot, id: id);
+    }
+  }
 
   void addWaterCode(
       {DocumentSnapshot<Map<String, dynamic>>? snapshot, String? id}) {
@@ -493,8 +478,6 @@ class HomeView extends GetView<HomeController> {
       showBottomLongToast('You have completed your goal');
     }
     //SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-
-
   }
 }
 // String readTimestamp(int timestamp) {

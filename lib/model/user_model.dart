@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../custom_pop_up.dart';
+import '../widgets/custom_pop_up.dart';
 
 class UserModel {
   String? email;

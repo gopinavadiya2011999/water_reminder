@@ -12,7 +12,7 @@ import 'package:waterreminder/app/modules/selection/views/selection_view.dart';
 import 'package:waterreminder/app/modules/signup/views/signup_view.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/main.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_image.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
@@ -35,11 +35,11 @@ class LoginView extends GetView<LoginController> {
       builder: (controller) => CheckNetwork(
         child: Scaffold(
           resizeToAvoidBottomInset: false,
-          // appBar: AppBar(
-          //   toolbarHeight: 0,
-          //   elevation: 0,
-          //   systemOverlayStyle: systemOverlayStyle(),
-          // ),
+          appBar: AppBar(
+            toolbarHeight: 0,
+            elevation: 0,
+            systemOverlayStyle: systemOverlayStyle(),
+          ),
           body: Stack(
             children: [
               customImage(context),
@@ -47,7 +47,7 @@ class LoginView extends GetView<LoginController> {
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
-                    SizedBox(height: 6.5.h),
+                    SizedBox(height: 3.h),
                     Text('Welcome back to Water Reminder',
                         maxLines: 2,
                         style: TextStyleConstant.titleStyle.copyWith(

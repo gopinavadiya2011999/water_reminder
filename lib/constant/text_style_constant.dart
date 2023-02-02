@@ -44,8 +44,8 @@ class TextStyleConstant {
       fontFamily: 'Sora',
       fontWeight: FontWeight.w500);
 
-  static TextStyle black22 = TextStyle(
-      color: ColorConstant.black24,
+    static TextStyle black22 = TextStyle(
+        color: ColorConstant.black24,
       fontSize: 22.sp,
       fontFamily: 'Sora',
       fontWeight: FontWeight.w600);
@@ -66,6 +66,7 @@ class TextStyleConstant {
 
   static TextStyle blue60 = TextStyle(
 
+      color: ColorConstant.blueFE,
 
       fontSize: 45.sp,
       fontFamily: 'Sora',

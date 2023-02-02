@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:waterreminder/model/user_model.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/constant/toast.dart';
 
 
 

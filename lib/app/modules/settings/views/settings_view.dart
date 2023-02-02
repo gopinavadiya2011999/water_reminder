@@ -28,7 +28,7 @@ class SettingsView extends GetView<SettingsController> {
         appBar: AppBar(
             elevation: 0,
             automaticallyImplyLeading: false,
-            // systemOverlayStyle: systemOverlayStyle(),
+             systemOverlayStyle: systemOverlayStyle(),
             backgroundColor: ColorConstant.white,
             title: Container(
                 color: ColorConstant.white,
@@ -40,7 +40,14 @@ class SettingsView extends GetView<SettingsController> {
                   children: [
                     inkWell(
                       onTap: () {
-                        Navigator.pop(context);
+                        bool? adsOpen = CommonHelper.interstitialAds();
+
+                        if (adsOpen == null || adsOpen) {
+                          Yodo1MAS.instance.showInterstitialAd();
+                          Navigator.pop(context);
+                        } else {
+                          Navigator.pop(context);
+                        }
                       },
                       child: customBackButton(),
                     ),
@@ -50,50 +57,52 @@ class SettingsView extends GetView<SettingsController> {
                             textAlign: TextAlign.center)),
                   ],
                 ))),
-        body: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              const SizedBox(height: 8),
-              customRow(
-                  backTap: () {},
-                  title: 'Notification',
-                  image: 'assets/notification.png',
-                  isSwitch: true),
-              customRow(
-                  title: 'Change Password',
-                  image: 'assets/lock.png',
-                  backTap: () {
-                    bool? adsOpen = CommonHelper.interstitialAds();
+        body: WillPopScope(
+          onWillPop: ()async {
+            bool? adsOpen = CommonHelper.interstitialAds();
 
-                    if (adsOpen == null || adsOpen) {
+            if (adsOpen == null || adsOpen) {
+              Yodo1MAS.instance.showInterstitialAd();
 
-                      Yodo1MAS.instance.showInterstitialAd();
-                      SystemChrome.setEnabledSystemUIMode(
-                          SystemUiMode.edgeToEdge);
-
+            }
+            return true;
+          },
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                const SizedBox(height: 8),
+                customRow(
+                    backTap: () {},
+                    title: 'Notification',
+                    image: 'assets/notification.png',
+                    isSwitch: true),
+                customRow(
+                    title: 'Change Password',
+                    image: 'assets/lock.png',
+                    backTap: () {
                       Navigator.of(context, rootNavigator: true).push(
                           MaterialPageRoute(
                               builder: (context) => ChangePasswordView()));
-                    }
-                  }),
-              // customRow(
-              //     title: 'About Us',
-              //     backTap: () {},
-              //     image: 'assets/person.png'),
-              customRow(
-                  title: 'Privacy Policy',
-                  image: 'assets/person.png',
-                  backTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => WebViewScreen(
-                              url:
-                                  'https://sites.google.com/view/mobapp-privacy-policy/policy?pli=1'),
-                        ));
-                  }),
-            ],
+                    }),
+                // customRow(
+                //     title: 'About Us',
+                //     backTap: () {},
+                //     image: 'assets/person.png'),
+                customRow(
+                    title: 'Privacy Policy',
+                    image: 'assets/person.png',
+                    backTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => WebViewScreen(
+                                url:
+                                    'https://sites.google.com/view/mobapp-privacy-policy/policy?pli=1'),
+                          ));
+                    }),
+              ],
+            ),
           ),
         ),
       ),

@@ -27,7 +27,7 @@ class OtpView extends GetView<OtpController> {
           appBar: AppBar(
             toolbarHeight: 0,
             elevation: 0,
-            // systemOverlayStyle: systemOverlayStyle(),
+             systemOverlayStyle: systemOverlayStyle(),
           ),
           body: WillPopScope(
             onWillPop: () async {

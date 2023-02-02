@@ -31,8 +31,7 @@ class _SplashScreenState extends State<SplashScreen>
 
 
   timer() async {
-    // String? token = await FirebaseMessaging.instance.getToken();
-    // print("Token :: ${token}");
+
     await Future.delayed(Duration(milliseconds: 15));
     isStared = true;
     Timer(const Duration(seconds: 4), () {
@@ -44,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen>
       if (isLogin) {
         Get.offAll(BottomTabView());
       } else {
-     Yodo1MAS.instance.showRewardAd();
+     // Yodo1MAS.instance.showRewardAd();
         Get.offAll(LoginView());
       }
 

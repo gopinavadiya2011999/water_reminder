@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:waterreminder/app/modules/account/views/account_view.dart';
 import 'package:waterreminder/app/modules/home/views/home_view.dart';
+import 'package:waterreminder/app/modules/report/views/report_view.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/main_bottom_nav.dart';
 import 'package:waterreminder/no_internet/check_network.dart';
@@ -29,6 +30,8 @@ class BottomTabView extends GetView<BottomTabController> {
               pages: [
                     (navKey) =>
                     HomeMainView(navKey: navKey, initialPage:  HomeView()),
+                    (navKey) =>
+                    HomeMainView(navKey: navKey, initialPage:  ReportView()),
                     (navKey) =>
                     HomeMainView(navKey: navKey, initialPage:  AccountView()),
               ],
@@ -55,13 +58,18 @@ class BottomTabView extends GetView<BottomTabController> {
                     currentIndex: currentIndex,
                     iconIndex: 0,
                     label: 'Home',
-                    iconData: 'assets/profile.svg',
+                    iconData: currentIndex==0?'assets/profile.svg':'assets/profile_grey.svg',
+                  ),  bottomIcon(
+                    currentIndex: currentIndex,
+                    iconIndex: 1,
+                    label: 'Report',
+                    iconData:currentIndex==1?'assets/reports_blue.svg': 'assets/report.svg',
                   ),
                   bottomIcon(
                     currentIndex: currentIndex,
-                    iconIndex: 1,
+                    iconIndex: 2,
                     label: 'Account',
-                    iconData: 'assets/accounts.svg',
+                    iconData: currentIndex==2?'assets/accounts_blue.svg':'assets/accounts.svg',
                   ),
                 ],
               ),
@@ -82,7 +90,7 @@ class BottomTabView extends GetView<BottomTabController> {
     return BottomNavigationBarItem(
       icon: Container(
         padding: const EdgeInsets.only(bottom: 2, top: 5),
-        child: SvgPicture.asset(iconData,color: currentIndex==iconIndex? ColorConstant.blueFE: ColorConstant.greyAF,),
+        child: SvgPicture.asset(iconData,/*color: currentIndex==iconIndex? ColorConstant.blueFE: ColorConstant.greyAF,*/),
       ),
       label: label,
     );
