@@ -2,14 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waterreminder/app/modules/account/controllers/account_controller.dart';
-import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/water_view.dart';
+import 'package:yodo1mas/testmasfluttersdktwo.dart';
+import '../ads/ads_data.dart';
 import '../widgets/custom_button.dart';
 
 void waterDialog(
     {required BuildContext context,
-    required AccountController accountController}) {
+    required AccountController accountController, String? id}) {
   showDialog(
     context: context,
     builder: (context) {
@@ -24,6 +25,7 @@ void waterDialog(
               water: accountController.waterGoal,
               context: context,
               selectedMl: ({waterMl}) {
+
                 accountController.waterGoal.value =
                     waterMl.toString() + " " + 'ml';
                 accountController.update();
@@ -31,13 +33,20 @@ void waterDialog(
             ),
             const SizedBox(height: 8),
             inkWell(
-                onTap: () async {
+                onTap: ()  {
+                  bool? adsOpen = CommonHelper.interstitialAds();
+
+                  if (adsOpen == null || adsOpen) {
+                    Yodo1MAS.instance.showInterstitialAd();
+                  }
                   FirebaseFirestore.instance
                       .collection('user')
-                      .doc(accountController.userData.first.userId)
+                      .doc(accountController.user?.uid)
+                      .collection('user-info')
+                      .doc(id)
                       .update(
                           {'water_goal': accountController.waterGoal.value});
-                  accountController.userData = await getPrefData();
+
                   Get.back();
                 },
                 child: customButton(

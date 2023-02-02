@@ -1,3 +1,5 @@
+
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class BottomTabController extends GetxController {
@@ -6,6 +8,7 @@ class BottomTabController extends GetxController {
   final count = 0.obs;
   @override
  void onInit()  {
+
 
     super.onInit();
   }

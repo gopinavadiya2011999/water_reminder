@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:waterreminder/model/user_model.dart';
 
@@ -15,9 +14,10 @@ class LoginController extends GetxController {
   final count = 0.obs;
 
   @override
-  void onInit() {
+  Future<void> onInit() async {
     super.onInit();
- SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
+
   }
 
   @override

@@ -1,4 +1,4 @@
-package com.example.waterreminder
+package com.mobileappxperts.drinkwater.waterreminder
 
 import io.flutter.embedding.android.FlutterActivity
 

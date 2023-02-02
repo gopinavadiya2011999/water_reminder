@@ -34,10 +34,11 @@ logOutDialog(context) {
                         width: 1, color: ColorConstant.grey80.withOpacity(.5)),
                     logOutAlertButton(
                         buttonText: 'Logout',
-                        onTap: () {
+                        onTap: () async {
                           box.write('login', false);
                           box.write('save','');
                           Get.deleteAll();
+                          await auth.signOut();
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(

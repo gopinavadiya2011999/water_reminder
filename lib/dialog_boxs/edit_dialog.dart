@@ -1,17 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
-import 'package:waterreminder/dialog_boxs/schedule_dialog.dart';
-import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/time_view.dart';
 
+import '../toast.dart';
+
 editDialog(context, {String? time, String? userId, required String waterId}) {
-
-
-  DateTime formattedTime = DateTime(   DateTime.now().year,
+  DateTime formattedTime = DateTime(
+      DateTime.now().year,
       DateTime.now().month,
       DateTime.now().day,
       int.parse(time!.split(":").first),
@@ -21,9 +19,9 @@ editDialog(context, {String? time, String? userId, required String waterId}) {
       context: context,
       builder: (context) {
         String hr = time.toString().split(':').first.toString();
-        String min = time.toString().split(':').last.split(' ').first.toString();
+        String min =
+            time.toString().split(':').last.split(' ').first.toString();
         String dn = time.toString().split(':').last.split(' ').last.toString();
-
 
         return AlertDialog(
           shape: OutlineInputBorder(
@@ -38,7 +36,7 @@ editDialog(context, {String? time, String? userId, required String waterId}) {
               mainAxisSize: MainAxisSize.min,
               children: [
                 timeView(
-time: formattedTime,
+                  time: formattedTime,
                   context: context,
                   dayNightTime: ({dayNight}) {
                     if (dayNight == 'AM') {
@@ -50,27 +48,36 @@ time: formattedTime,
                     dn = dayNight!;
                   },
                   hours: ({hour}) {
-                    hr = hour.toString();
+                    hr =hour
+                        .toString()
+                        .length ==
+                        1
+                        ? '0${hour}'
+                        :  hour.toString();
                   },
                   minutes: ({minute}) {
-                    min = minute.toString();
+                    min =minute.toString().length == 1
+                        ? '0${minute}'
+                        : minute.toString();
                   },
                 ),
                 const SizedBox(height: 24),
                 inkWell(
-                    onTap: ()  {
-
+                    onTap: () {
+                     DateTime dateTime = DateTime(
+                          DateTime.now().year,
+                          DateTime.now().month,
+                          DateTime.now().day,
+                          int.parse(hr),
+                          int.parse(min));
+                      Timestamp timestamp = Timestamp.fromDate(dateTime);
                       FirebaseFirestore.instance
                           .collection('user')
                           .doc(userId)
                           .collection('water_records')
                           .doc(waterId)
-                          .update({
-                        'time':"$hr:$min $dn"
-                      });
-                      showBottomLongToast(
-                          "Water updated successfully");
-
+                          .update({'time':timestamp });
+                      showBottomLongToast("Water updated successfully");
 
                       Get.back();
                     },

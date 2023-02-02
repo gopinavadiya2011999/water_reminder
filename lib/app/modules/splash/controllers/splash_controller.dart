@@ -5,8 +5,7 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: []);
+
   }
 
   @override
@@ -17,7 +16,7 @@ class SplashController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
   }
 
 

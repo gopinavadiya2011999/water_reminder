@@ -11,6 +11,7 @@ weightView(
     required Function({int? weight}) weightFunc,
     RxString? weight,
     required Function({String? weightType}) weightTypeFunc}) {
+
   final RxInt currentWeight = 3.obs;
   return SizedBox(
     width: double.infinity,
@@ -22,13 +23,14 @@ weightView(
       children: [
         Obx(
           () => NumberPicker(
-              value: weight != null
+              value: weight != null && weight.value!=" kg"
                   ? int.parse(weight.value.split(' ').first.toString())
+
                   : currentWeight.value,
               minValue: 1,
               zeroPad: true,
               itemHeight: 9.h,
-              itemWidth: 32.w,
+              itemWidth: 33.w,
               maxValue: 100,
               onChanged: (value) {
                 currentWeight.value = value;
@@ -38,24 +40,21 @@ weightView(
                 weightFunc(weight: value);
               }),
         ),
-        Flexible(
+   Flexible(
           child: WheelChooser(
             horizontal: false,
             itemSize: 9.h,
             listWidth: 10.h,
-
-            // listWidth: MediaQuery.of(context).size.width / 5,
-            //  listHeight: MediaQuery.of(context).size.height / 1.5,
-            selectTextStyle: TextStyleConstant.blue50.copyWith(fontSize: 35.sp),
+            selectTextStyle: TextStyleConstant.blue50.copyWith(fontSize: 31.5.sp),
             unSelectTextStyle: TextStyleConstant.blue50.copyWith(
-                color: ColorConstant.greyAF.withOpacity(.75), fontSize: 35.sp),
+                color: ColorConstant.greyAF.withOpacity(.75), fontSize: 31.5.sp),
             startPosition: weight != null
                 ? ((weight.value.split(' ').last.toString() == 'kg') ? 0 : 1)
                 : 0,
             onValueChanged: (s) => weightTypeFunc(weightType: s),
             datas: ['kg', 'lbs'],
           ),
-        ),
+        )
       ],
     ),
   );

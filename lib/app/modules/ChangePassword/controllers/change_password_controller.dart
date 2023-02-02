@@ -1,11 +1,10 @@
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:waterreminder/model/user_model.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:waterreminder/main.dart';
 
 class ChangePasswordController extends GetxController {
-  RxList<UserModel> userData = <UserModel>[].obs;
   RxString currentPwdValid = ''.obs;
   RxString newPwd = ''.obs;
   RxString confirmNewPwdValid = ''.obs;
@@ -23,17 +22,18 @@ class ChangePasswordController extends GetxController {
     confirmNewPwdValid.value='';
   }
   final count = 0.obs;
+  User? user;
   @override
-  Future<void> onInit() async {
+  void onInit()  {
+    user = auth.currentUser;
+
+
     super.onInit();
-    clearController();
-    userData = RxList(await getPrefData());
   }
 
   @override
   void onReady() {
 
-    print("(((((");
     super.onReady();
   }
 

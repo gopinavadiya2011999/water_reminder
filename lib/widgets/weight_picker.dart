@@ -192,9 +192,9 @@ class _NumberPickerState extends State<NumberPicker> {
             index >= listItemsCount - additionalItemsOnEachSide);
     final itemStyle = value == widget.value
         ? /*selectedStyle*/ TextStyleConstant.blue50.copyWith(fontSize:
-            35.sp)
+            31.5.sp)
         : TextStyleConstant.blue50.copyWith(
-            fontSize: 35.sp,
+            fontSize: 31.5.sp,
             color: ColorConstant.greyAF.withOpacity(.75)) /*defaultStyle*/;
 
     final child = isExtra

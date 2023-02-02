@@ -9,6 +9,7 @@ waterView(
     {required BuildContext context,
     required Function({int? waterMl}) selectedMl,
     RxString? water}) {
+
   final RxInt currentValueWater = 2000.obs;
   return SizedBox(
     height: MediaQuery.of(context).size.height / 3,
@@ -32,7 +33,8 @@ waterView(
               maxValue: 9000,
               onChanged: (value) {
                 currentValueWater.value = value;
-                selectedMl(waterMl: currentValueWater.value);
+                water!.value=value.toString();
+                selectedMl(waterMl: value);
               }),
         ),
         Flexible(

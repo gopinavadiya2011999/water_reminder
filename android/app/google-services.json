@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795126391015:android:29a78b54657f82b978c242",
+        "mobilesdk_app_id": "1:795126391015:android:52158883143c569e78c242",
         "android_client_info": {
-          "package_name": "com.example.waterreminder"
+          "package_name": "com.mobileappxperts.drinkwater.waterreminder"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "795126391015-75ae324v2413hg834p9csp5qmenr7kba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobileappxperts.drinkwater.waterreminder",
+            "certificate_hash": "21818dc6feef7355fffd9233fbd4c2985d934c3b"
+          }
+        },
         {
           "client_id": "795126391015-tmpavecu7no0usoql193mknjavt8ellv.apps.googleusercontent.com",
           "client_type": 3

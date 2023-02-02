@@ -2,26 +2,35 @@ import 'dart:core';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eventify/eventify.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:sizer/sizer.dart';
 import 'package:uuid/uuid.dart';
+import 'package:waterreminder/ads/ads_data.dart';
 import 'package:waterreminder/dialog_boxs/edit_dialog.dart';
 import 'package:waterreminder/model/user_model.dart';
 import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/system_overlay_style.dart';
+import 'package:yodo1mas/Yodo1MAS.dart';
+import 'package:yodo1mas/Yodo1MasBannerAd.dart';
 import '../../../../constant/color_constant.dart';
 import '../../../../constant/text_style_constant.dart';
 import '../../../../custom_pop_up.dart';
-import '../../AccountDetail/views/account_detail_view.dart';
+import '../../../../main.dart';
+import '../../../../no_internet/check_network.dart';
+import '../../../../ads/timer_service.dart';
+import '../../settings/views/settings_view.dart';
 import '../controllers/home_controller.dart';
 
-EventEmitter emitter =  EventEmitter();
+EventEmitter emitter = EventEmitter();
+
 class HomeView extends GetView<HomeController> {
   HomeView({Key? key}) : super(key: key);
   final homeController = Get.put(HomeController());
@@ -30,113 +39,145 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
       init: homeController,
-      builder: (controller) => Scaffold(
-        backgroundColor: ColorConstant.white,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: Container(
-              color: ColorConstant.white,
-              padding: const EdgeInsets.only(top: 5, bottom: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  if (homeController.userData.isNotEmpty)
-                    Image.asset(
-                        homeController.userData.first.gender == 'Female'
-                            ? 'assets/female.png'
-                            : homeController.userData.first.gender == 'Male'
-                                ? 'assets/male_small.png'
-                                : 'assets/other_small.png',
-                        cacheHeight: 40,
-                        cacheWidth: 40,
-                        fit: BoxFit.fill),
-                  Text('Water Reminder', style: TextStyleConstant.titleStyle),
-                  inkWell(
-                      onTap: () {
-                        Navigator.of(context, rootNavigator: true).push(
-                            MaterialPageRoute(
-                                builder: (context) => AccountDetailView()));
-                      },
-                      child: SvgPicture.asset('assets/settings.svg'))
-                ],
-              )),
-          elevation: 0,
-          systemOverlayStyle: systemOverlayStyle(),
+      builder: (controller) => CheckNetwork(
+        child: Scaffold(
           backgroundColor: ColorConstant.white,
-        ),
-        body: homeController.userData.isNotEmpty
-            ? Obx(
-                () => StreamBuilder(
-                    stream: FirebaseFirestore.instance
-                        .collection('user')
-                        .doc(homeController.userData.first.userId)
-                        .snapshots(),
-                    builder: (context, snapshot) {
-                      // if (snapshot.connectionState ==
-                      //     ConnectionState.waiting) {
-                      //   return Center(
-                      //     child: CircularProgressIndicator(
-                      //       valueColor: AlwaysStoppedAnimation<Color>(
-                      //           ColorConstant.blueFE),
-                      //     ),
-                      //   );
-                      // }
+          appBar: AppBar(
 
-                      if (snapshot.hasData) {
-                        return Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          padding: const EdgeInsets.only(bottom: 8),
-                          color: ColorConstant.whiteD9.withOpacity(.3),
-                          child: SingleChildScrollView(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                const SizedBox(height: 24),
-                                if (homeController.userData.isNotEmpty)
-                                  Column(
-                                    children: [
+            automaticallyImplyLeading: false,
+            title: StreamBuilder<QuerySnapshot>(
+                stream: FirebaseFirestore.instance
+                    .collection('user')
+                    .doc(homeController.user?.uid)
+                    .collection('user-info')
+                    .snapshots(),
+                builder: (BuildContext context, snapshot) {
+                  return Container(
+                      color: ColorConstant.white,
+                      padding: const EdgeInsets.only(top: 5, bottom: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          if (homeController.user != null &&
+                              snapshot.data != null)
+                            Image.asset(
+                                snapshot.data?.docs.first.get('gender') ==
+                                        'Female'
+                                    ? 'assets/female.png'
+                                    : snapshot.data?.docs.first
+                                                .get('gender') ==
+                                            'Male'
+                                        ? 'assets/male_small.png'
+                                        : 'assets/other_small.png',
+                                cacheHeight: 40,
+                                cacheWidth: 40,
+                                fit: BoxFit.fill),
+                          Text('Water Reminder',
+                              style: TextStyleConstant.titleStyle),
+                          inkWell(
+                              onTap: () {
+                                Navigator.of(context, rootNavigator: true)
+                                    .push(MaterialPageRoute(
+                                        builder: (context) =>
+                                            SettingsView()));
+                              },
+                              child: SvgPicture.asset('assets/settings.svg'))
+                        ],
+                      ));
+                }),
+            elevation: 0,
+
+           // systemOverlayStyle: systemOverlayStyle(),
+            backgroundColor: ColorConstant.transparent,
+          ),
+          body: homeController.user != null
+              ? StreamBuilder(
+                  stream: FirebaseFirestore.instance
+                      .collection('user')
+                      .doc(homeController.user?.uid)
+                      .collection('user-info')
+                      .snapshots(),
+                  builder: (context, snapshot) {
+                    // if (snapshot.connectionState ==
+                    //     ConnectionState.waiting) {
+                    //   return Center(
+                    //     child: CircularProgressIndicator(
+                    //       valueColor: AlwaysStoppedAnimation<Color>(
+                    //           ColorConstant.blueFE),
+                    //     ),
+                    //   );
+                    // }
+
+                    if (snapshot.hasData) {
+                      return Container(
+                        height: double.infinity,
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(bottom: 8),
+                        color: ColorConstant.whiteD9.withOpacity(.3),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 24),
+                              if (homeController.user != null)
+                                Column(
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.only(bottom: 20),
+                                        child: bannerAds()),
+                                    if (snapshot.data != null)
                                       _progressBar(
-                                          snapshot: snapshot, context: context),
-                                      SizedBox(height: 4.h),
-                                      inkWell(
-                                          child: customButton(
-                                              buttonText: "Add Water",
-                                              context: context),
-                                          onTap: () {
-                                            addWater(snapshot: snapshot.data);
-                                          }),
-                                    ],
-                                  ),
-                                SizedBox(height: 3.3.h),
-                                _listView(context, snapshots: snapshot)
-                              ],
-                            ),
+                                          snapshot: snapshot.data?.docs.first,
+                                          context: context),
+                                    SizedBox(height: 2.5.h),
+                                    Padding(
+                                        padding: EdgeInsets.only(bottom: 20),
+                                        child: bannerAds()),
+                                    inkWell(
+                                        child: customButton(
+                                            buttonText: "Add Water",
+                                            context: context),
+                                        onTap: () {
+                                          addWater(
+                                              id: snapshot
+                                                  .data?.docs.first.id,
+                                              snapshot:
+                                                  snapshot.data!.docs.first);
+                                        }),
+                                  ],
+                                ),
+                              SizedBox(height: 3.3.h),
+                              _listView(context,
+                                  snapshots: snapshot.data!.docs.first)
+                            ],
                           ),
-                        );
-                      }
+                        ),
+                      );
+                    }
 
-                      return Container();
-                    }),
-              )
-            : Container(),
+                    return Container();
+                  })
+              : Container(),
+        ),
       ),
     );
   }
 
   double getPercentage(snapshot) {
-    return int.parse(snapshot.data!['drinkableWater'].toString()) /
-        int.parse(
-            snapshot.data!['water_goal'].toString().split('ml').first.trim());
+    return int.parse(snapshot!['drinkableWater'].toString()) /
+        int.parse(snapshot!['water_goal'].toString().split('ml').first.trim());
   }
 
-  _progressBar({required BuildContext context, snapshot}) {
+  _progressBar(
+      {required BuildContext context,
+      DocumentSnapshot<Map<String, dynamic>>? snapshot}) {
     return CircularPercentIndicator(
         radius: 16.5.h,
-        animation: true,
+        // animation: true,
         animationDuration: 1200,
         lineWidth: 28,
+        startAngle: 20,
         percent: getPercentage(snapshot) <= 1 ? getPercentage(snapshot) : 1,
         center: Align(
           alignment: Alignment.center,
@@ -156,17 +197,17 @@ class HomeView extends GetView<HomeController> {
                         style: TextStyleConstant.black24.copyWith(fontSize: 22),
                         children: [
                       TextSpan(
-                          text: snapshot.data!['drinkableWater'],
+                          text: snapshot!['drinkableWater'],
                           style: TextStyleConstant.black24.copyWith(
                               fontSize: 22, color: ColorConstant.blueFE)),
                       const TextSpan(text: '/'),
-                      TextSpan(text: snapshot.data!['water_goal']),
+                      TextSpan(text: snapshot['water_goal']),
                     ])),
                 Divider(
                     height: 2, thickness: 1.2, color: ColorConstant.whiteD9),
                 const SizedBox(height: 5),
                 Text(
-                  "You have completed ${(int.parse(snapshot.data!['drinkableWater'].toString()) / int.parse(snapshot.data!['water_goal'].toString().split('ml').first.trim()) * 100).floor()}% of your daily drink target",
+                  "You have completed ${(int.parse(snapshot['drinkableWater'].toString()) / int.parse(snapshot['water_goal'].toString().split('ml').first.trim()) * 100).floor()}% of your daily drink target",
                   maxLines: 3,
                   textAlign: TextAlign.center,
                   style: TextStyleConstant.grey14.copyWith(fontSize: 12),
@@ -181,8 +222,7 @@ class HomeView extends GetView<HomeController> {
   }
 
   _listView(context,
-      {required AsyncSnapshot<DocumentSnapshot<Map<String, dynamic>>>
-          snapshots}) {
+      {required QueryDocumentSnapshot<Map<String, dynamic>> snapshots}) {
     return Align(
         alignment: Alignment.topLeft,
         child: Container(
@@ -197,8 +237,9 @@ class HomeView extends GetView<HomeController> {
               StreamBuilder(
                   stream: FirebaseFirestore.instance
                       .collection('user')
-                      .doc(homeController.userData.first.userId)
+                      .doc(homeController.user!.uid)
                       .collection('water_records')
+                      .orderBy('time')
                       .snapshots(),
                   builder: (context, snapshot) {
                     // if (snapshot.connectionState == ConnectionState.waiting) {
@@ -219,6 +260,26 @@ class HomeView extends GetView<HomeController> {
                         itemCount: snapshot.data!.docs.length,
                         physics: const NeverScrollableScrollPhysics(),
                         itemBuilder: (context, index) {
+                           if (snapshot.data!.docs[index].get('time') != null &&
+                              DateFormat('dd/MM/yyyy').format(DateTime.now()) !=
+                                  DateFormat('dd/MM/yyyy').format(
+                                      DateTime.fromMicrosecondsSinceEpoch(
+                                          snapshot.data!.docs[index]
+                                              .get('time')
+                                              .microsecondsSinceEpoch))) {
+                            FirebaseFirestore.instance
+                                .collection('user')
+                                .doc(homeController.user?.uid)
+                                .collection('water_records')
+                                .doc(snapshot.data!.docs[index].id)
+                                .delete();
+                            FirebaseFirestore.instance
+                                .collection('user')
+                                .doc(homeController.user?.uid)
+                                .collection('user-info')
+                                .doc(snapshots.id)
+                                .update({'drinkableWater': "0"});
+                          }
                           return Container(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 20),
@@ -232,7 +293,15 @@ class HomeView extends GetView<HomeController> {
                                     cacheWidth: 21,
                                     fit: BoxFit.fill),
                                 const SizedBox(width: 10),
-                                Text(snapshot.data!.docs[index]['time'] ?? '',
+                                Text(
+                                    snapshot.data!.docs[index].get('time') !=
+                                            null
+                                        ? DateFormat('HH:mm a').format(
+                                            DateTime.fromMicrosecondsSinceEpoch(
+                                                snapshot.data!.docs[index]
+                                                    .get('time')
+                                                    .microsecondsSinceEpoch))
+                                        : '',
                                     style: TextStyleConstant.black24
                                         .copyWith(fontSize: 18)),
                                 const Spacer(),
@@ -248,17 +317,19 @@ class HomeView extends GetView<HomeController> {
                                   barrierColor: Colors.transparent,
                                   onTap: ({String? item}) {
                                     if (item == 'Delete') {
-                                      if (snapshots.data!['drinkableWater']
+                                      if (snapshots['drinkableWater']
                                               .toString() !=
                                           '0') {
                                         FirebaseFirestore.instance
                                             .collection('user')
-                                            .doc(homeController
-                                                .userData.first.userId)
+                                            .doc(homeController.user?.uid)
+                                            .collection('user-info')
+                                            .doc(snapshots.id)
                                             .update({
-                                          'drinkableWater': (int.parse(snapshots
-                                                      .data!['drinkableWater']
-                                                      .toString()) -
+                                          'drinkableWater': (int.parse(
+                                                      snapshots[
+                                                              'drinkableWater']
+                                                          .toString()) -
                                                   200)
                                               .toString(),
                                           // 'time_records': FieldValue
@@ -282,8 +353,7 @@ class HomeView extends GetView<HomeController> {
 
                                         FirebaseFirestore.instance
                                             .collection('user')
-                                            .doc(homeController
-                                                .userData.first.userId)
+                                            .doc(homeController.user?.uid)
                                             .collection('water_records')
                                             .doc(snapshot.data!.docs[index].id)
                                             .delete();
@@ -292,13 +362,14 @@ class HomeView extends GetView<HomeController> {
                                       }
                                     } else {
                                       editDialog(context,
-                                          userId: homeController
-                                              .userData.first.userId,
+                                          userId: homeController.user?.uid,
                                           waterId:
                                               snapshot.data!.docs[index].id,
-                                          time: snapshot
-                                              .data!.docs[index]['time']
-                                              .toString());
+                                          time: DateFormat('HH:mm a').format(
+                                              DateTime.fromMicrosecondsSinceEpoch(
+                                                  snapshot.data!.docs[index]
+                                                      .get('time')
+                                                      .microsecondsSinceEpoch)));
                                     }
                                   },
                                   pressType: PressType.singleClick,
@@ -348,11 +419,39 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
+  User? user;
+
+  double idealIntake = 0;
+  double intakePercentage = 0;
+  int length = 0;
+
   RxBool enter = false.obs;
   WaterRecords waterRecords = WaterRecords();
 
-  Future<void> addWater(
-      {DocumentSnapshot<Map<String, dynamic>>? snapshot}) async {
+   addWater(
+      {DocumentSnapshot<Map<String, dynamic>>? snapshot, String? id})  {
+
+     bool? adsOpen = CommonHelper.interstitialAds();
+
+    if (adsOpen == null || adsOpen) {
+
+    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    //  print("ads open %%% ${adsOpen}");
+
+      Yodo1MAS.instance.showInterstitialAd();
+    addWaterCode(snapshot: snapshot, id: id);
+   }
+  //else{
+   // addWaterCode(snapshot: snapshot, id: id);
+  //}
+    print("&&&&&");
+   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    print("&&&&&");
+
+   }
+
+  void addWaterCode(
+      {DocumentSnapshot<Map<String, dynamic>>? snapshot, String? id}) {
     if ((int.parse(snapshot!['drinkableWater'].toString()) !=
             int.parse(
                 snapshot['water_goal'].toString().split('ml').first.trim())) &&
@@ -362,33 +461,58 @@ class HomeView extends GetView<HomeController> {
       Uuid uuid = const Uuid();
       if (enter.value == false) {
         enter.value = true;
-        waterRecords.time =
-            DateFormat('HH:mm a').format(DateTime.now()).toString();
+        waterRecords.time = Timestamp.now();
         waterRecords.timeId =
             uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString();
         waterRecords.waterMl = '200ml';
+
         FirebaseFirestore.instance
             .collection('user')
-            .doc('${snapshot['user_id']}')
+            .doc(homeController.user?.uid)
+            .collection('water_records')
+            .doc()
+            .set(WaterRecords.toJson(waterRecords));
+        FirebaseFirestore.instance
+            .collection('user')
+            .doc(homeController.user?.uid)
+            .collection('user-info')
+            .doc(id)
             .update({
           /* snapshot['time_records']!
-              .map<Map<String, dynamic>>((water) => WaterRecords.toJson(water))
-              .toList()*/
+               .map<Map<String, dynamic>>((water) => WaterRecords.toJson(water))
+               .toList()*/
           'drinkableWater':
               (int.parse(snapshot['drinkableWater'].toString()) + 200)
                   .toString(),
         });
-        FirebaseFirestore.instance
-            .collection('user')
-            .doc(snapshot['user_id'])
-            .collection('water_records')
-            .doc()
-            .set(WaterRecords.toJson(waterRecords));
 
         enter.value = false;
+        showBottomLongToast("Addition Successful");
       }
     } else {
       showBottomLongToast('You have completed your goal');
     }
+    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
+
   }
 }
+// String readTimestamp(int timestamp) {
+//   var now = new DateTime.now();
+//   var format = new DateFormat('HH:mm a');
+//   var date = new DateTime.fromMicrosecondsSinceEpoch(timestamp * 1000);
+//   var diff = date.difference(now);
+//   var time = '';
+//
+//   if (diff.inSeconds <= 0 || diff.inSeconds > 0 && diff.inMinutes == 0 || diff.inMinutes > 0 && diff.inHours == 0 || diff.inHours > 0 && diff.inDays == 0) {
+//     time = format.format(date);
+//   } else {
+//     if (diff.inDays == 1) {
+//       time = diff.inDays.toString() + 'DAY AGO';
+//     } else {
+//       time = diff.inDays.toString() + 'DAYS AGO';
+//     }
+//   }
+//
+//   return time;
+// }

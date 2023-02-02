@@ -9,16 +9,12 @@ class ResetPasswordController extends GetxController {
   TextEditingController passwordController = TextEditingController();
   RxString cpValid = ''.obs;
   RxString pwdValid = ''.obs;
-  List<UserModel> userModel = [];
 
   final count = 0.obs;
   @override
   Future<void> onInit() async {
 
     super.onInit();
-    userModel = await getUserData();
-
-    print("user moderl :: ${userModel.map((e) => e.email)}");
 
   }
 

@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
+import 'package:waterreminder/no_internet/check_network.dart';
 
 import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_back_button.dart';
@@ -12,6 +14,7 @@ import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/custom_text_field.dart';
 import 'package:waterreminder/widgets/system_overlay_style.dart';
 
+import '../../../../main.dart';
 import '../controllers/change_password_controller.dart';
 
 class ChangePasswordView extends GetView<ChangePasswordController> {
@@ -24,19 +27,16 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        dismissKeyboard(context);
+        changePwdController.clearController();
         return true;
       },
-      child: WillPopScope(
-        onWillPop: () async {
-          changePwdController.clearController();
-          return true;
-        },
+      child: CheckNetwork(
         child: Scaffold(
+            resizeToAvoidBottomInset: false,
             appBar: AppBar(
                 automaticallyImplyLeading: false,
                 elevation: 0,
-                systemOverlayStyle: systemOverlayStyle(),
+                // systemOverlayStyle: systemOverlayStyle(),
                 backgroundColor: ColorConstant.white,
                 title: Container(
                     color: ColorConstant.white,
@@ -75,7 +75,7 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                             return;
                           } else if (cp.length < 8) {
                             changePwdController.currentPwdValid.value =
-                                "Please Enter at least 8 characters";
+                                "Please enter at least 8 characters";
                             return;
                           }
                           changePwdController.update();
@@ -96,7 +96,7 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                             return;
                           } else if (np.length < 8) {
                             changePwdController.newPwd.value =
-                                "Please Enter at least 8 characters";
+                                "Please enter at least 8 characters";
                             return;
                           }
                           changePwdController.update();
@@ -117,7 +117,7 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                             return;
                           } else if (cnp.length < 8) {
                             changePwdController.confirmNewPwdValid.value =
-                                "Please Enter at least 8 characters";
+                                "Please enter at least 8 characters";
                             return;
                           } else if (cnp.toString() !=
                               changePwdController.newPwdController.text) {
@@ -136,19 +136,21 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                         controller:
                             changePwdController.confirmNewPwdController),
                     const SizedBox(height: 30),
-                    inkWell(
-                        child: customButton(
-                            padding: EdgeInsets.symmetric(
-                                horizontal:
-                                    MediaQuery.of(context).size.height / 15,
-                                vertical:
-                                    MediaQuery.of(context).size.width / 25),
-                            buttonText: "Update Password",
-                            context: context,
-                            plusButton: true),
-                        onTap: () {
-                          checkValidation(context);
-                        })
+                    cp.value
+                        ? progressView()
+                        : inkWell(
+                            child: customButton(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal:
+                                        MediaQuery.of(context).size.height / 15,
+                                    vertical:
+                                        MediaQuery.of(context).size.width / 25),
+                                buttonText: "Update Password",
+                                context: context,
+                                plusButton: true),
+                            onTap: () {
+                              checkValidation(context);
+                            })
                   ],
                 ),
               ),
@@ -157,23 +159,62 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
     );
   }
 
-  void checkValidation(context) {
+  RxBool cp = false.obs;
+
+  Future<void> checkValidation(context) async {
+    String? password = box.read('password');
     dismissKeyboard(context);
     if (_formKey.currentState!.validate() &&
         changePwdController.newPwdController.text.isNotEmpty &&
         changePwdController.passwordController.text.isNotEmpty &&
         changePwdController.confirmNewPwdController.text.isNotEmpty) {
-        if (changePwdController.userData.first.password !=
-          changePwdController.passwordController.text.trim()) {
+      cp = true.obs;
+      changePwdController.update();
+      if (password != null &&
+          password != changePwdController.passwordController.text.trim()) {
+        cp = false.obs;
+        changePwdController.update();
         showBottomLongToast("Current password doesn't match older password");
+      } else if (password != null &&
+          password == changePwdController.confirmNewPwdController.text.trim()) {
+        cp = false.obs;
+        changePwdController.update();
+        showBottomLongToast(
+            "Your password is same as older password please enter new password");
       } else {
-        FirebaseFirestore.instance
-            .collection('user')
-            .doc(changePwdController.userData.first.userId)
-            .update(
-                {'password': changePwdController.newPwdController.text.trim()});
-        showBottomLongToast("Password updated successfully");
-        Get.back();
+        final cred = await EmailAuthProvider.credential(
+            email: changePwdController.user!.email.toString(),
+            password: password!);
+        await changePwdController.user
+            ?.reauthenticateWithCredential(cred)
+            .then((value) async {
+          await changePwdController.user
+              ?.updatePassword(
+                  changePwdController.confirmNewPwdController.text.trim())
+              .then((_) {
+            box.write('password',
+                changePwdController.confirmNewPwdController.text.trim());
+            cp = false.obs;
+            changePwdController.update();
+            showBottomLongToast('Password updated successfully');
+            Get.back();
+            Get.deleteAll();
+          }).catchError((error) {
+            cp = false.obs;
+            changePwdController.update();
+            showBottomLongToast(error.toString());
+          });
+        }).catchError((err) {
+          cp = false.obs;
+          changePwdController.update();
+          if (err ==
+              '[firebase_auth/wrong-password] The password is invalid or the user does not have a password.') {
+            showBottomLongToast(
+                "Current password doesn't match older password");
+          } else {
+            showBottomLongToast(err.toString());
+          }
+        });
       }
     }
   }

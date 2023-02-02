@@ -1,8 +1,5 @@
 import 'package:get/get.dart';
-
-import '../../model/user_model.dart';
-import '../modules/AccountDetail/bindings/account_detail_binding.dart';
-import '../modules/AccountDetail/views/account_detail_view.dart';
+import 'package:provider/provider.dart';
 import '../modules/ChangePassword/bindings/change_password_binding.dart';
 import '../modules/ChangePassword/views/change_password_view.dart';
 import '../modules/account/bindings/account_binding.dart';
@@ -23,6 +20,8 @@ import '../modules/schedule_reminder/bindings/schedule_reminder_binding.dart';
 import '../modules/schedule_reminder/views/schedule_reminder_view.dart';
 import '../modules/selection/bindings/selection_binding.dart';
 import '../modules/selection/views/selection_view.dart';
+import '../modules/settings/bindings/settings_binding.dart';
+import '../modules/settings/views/settings_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
@@ -34,6 +33,8 @@ class AppPages {
   AppPages._();
 
   static const INITIAL = Routes.HOME;
+
+
 
   static final routes = [
     GetPage(
@@ -48,8 +49,8 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.ACCOUNT_DETAIL,
-      page: () => AccountDetailView(),
-      binding: AccountDetailBinding(),
+      page: () => SettingsView(),
+      binding: SettingsBinding(),
     ),
     GetPage(
       name: _Paths.CHANGE_PASSWORD,
@@ -68,7 +69,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SELECTION,
-      page: () => SelectionView(userModel: UserModel()),
+      page: () => SelectionView(),
       binding: SelectionBinding(),
     ),
     GetPage(

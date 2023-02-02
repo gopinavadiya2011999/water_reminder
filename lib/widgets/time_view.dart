@@ -38,21 +38,19 @@ timeView(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Obx(() => Flexible(
-              child: NumberPicker(
-                  value: currentHour.value,
-                  minValue: wakeUpType.value == 'AM' ? 01 : 12,
-                  zeroPad: true,
-                  time: true,
-                  twoDot: true,
-                  itemHeight: 8.h,
-                  itemWidth: 26.w,
-                  maxValue: wakeUpType.value == 'AM' ? 11 : 23,
-                  onChanged: (value) {
-                    currentHour.value = value;
-                    hours(hour: currentHour.value);
-                  }),
-            )),
+        Obx(() => NumberPicker(
+            value: currentHour.value,
+            minValue: wakeUpType.value == 'AM' ? 01 : 12,
+            zeroPad: true,
+            time: true,
+            twoDot: true,
+            itemHeight: 8.h,
+            itemWidth: 25.w,
+            maxValue: wakeUpType.value == 'AM' ? 11 : 23,
+            onChanged: (value) {
+              currentHour.value = value;
+              hours(hour: currentHour.value);
+            })),
         Obx(
           () => Flexible(
             child: NumberPicker(
@@ -77,9 +75,9 @@ timeView(
               horizontal: false,
               itemSize: (8.5).h,
               selectTextStyle:
-                  TextStyleConstant.blue50.copyWith(fontSize: 35.sp),
+                  TextStyleConstant.blue50.copyWith(fontSize: 30.sp),
               unSelectTextStyle: TextStyleConstant.blue50
-                  .copyWith(fontSize: 35.sp)
+                  .copyWith(fontSize: 30.sp)
                   .copyWith(color: ColorConstant.greyAF.withOpacity(.75)),
               startPosition: wakeUpType.value == 'AM' ? 0 : 1,
               onValueChanged: (s) {

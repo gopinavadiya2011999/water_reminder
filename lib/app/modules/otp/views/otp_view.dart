@@ -27,7 +27,7 @@ class OtpView extends GetView<OtpController> {
           appBar: AppBar(
             toolbarHeight: 0,
             elevation: 0,
-            systemOverlayStyle: systemOverlayStyle(),
+            // systemOverlayStyle: systemOverlayStyle(),
           ),
           body: WillPopScope(
             onWillPop: () async {
@@ -45,7 +45,7 @@ class OtpView extends GetView<OtpController> {
                     SizedBox(height: 3.h),
                     SizedBox(
                       width: 15.h,
-                      child: Text('Enter the OTP',
+                      child: Text('enter the OTP',
                           maxLines: 2,
                           style: TextStyleConstant.titleStyle.copyWith(
                               color: ColorConstant.black24,

@@ -1,49 +1,25 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:waterreminder/app/modules/home/views/home_view.dart';
+import 'package:waterreminder/main.dart';
 import 'package:waterreminder/model/user_model.dart';
-import 'package:waterreminder/toast.dart';
+import 'package:yodo1mas/Yodo1MAS.dart';
+
+import '../../../../ads/timer_service.dart';
 
 class HomeController extends GetxController {
   List<WaterRecords> waterRecords = [];
-  RxList<UserModel> userData = <UserModel>[].obs;
 
-
-
+  User? user;
 
   @override
-  Future<void> onInit() async {
+ onInit()  {
     super.onInit();
-    userData = RxList(await getPrefData());
+
+    user = auth.currentUser;
+
     update();
-    emitter.on('getUsers', this, (ev, context) async {
-      print("*****");
-      switch(ev.eventName){
-
-        case "getUsers":
-      print("*****EVENT USER");
-          userData= RxList(await getPrefData());
-          update();
-          break;
-      }
-    });
-
-
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-    emitter.removeListener('getUsers', (ev, context) async {
-      switch(ev.eventName){
-        case "getUsers":
-          userData= RxList(await getPrefData());
-    }
-    });
   }
 }
 

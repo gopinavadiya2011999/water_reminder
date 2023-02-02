@@ -10,8 +10,12 @@ import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/gender_view.dart';
+import 'package:yodo1mas/Yodo1MAS.dart';
 
-void openGenderDialog(context, AccountController accountController) {
+import '../ads/ads_data.dart';
+
+void openGenderDialog(
+    context, AccountController accountController, String? id) {
   showDialog(
     context: context,
     builder: (context) {
@@ -28,7 +32,7 @@ void openGenderDialog(context, AccountController accountController) {
               mainAxisSize: MainAxisSize.min,
               children: [
                 genderView(
-                  accountController:accountController,
+                  accountController: accountController,
                   context: context,
                   onTap: ({int? index}) {
                     for (int i = 0; i < genderList.length; i++) {
@@ -36,28 +40,33 @@ void openGenderDialog(context, AccountController accountController) {
                       accountController.update();
                     }
                     genderList[index!].selected.value = true;
-                    accountController.gender.value=genderList[index].name!;
+                    accountController.gender.value = genderList[index].name!;
                     accountController.update();
-
                   },
                 ),
                 const SizedBox(height: 20),
                 inkWell(
                     onTap: () {
                       genderList.forEach((element) async {
+
+                        bool? adsOpen = CommonHelper.interstitialAds();
+
+                        if (adsOpen == null || adsOpen) {
+                          Yodo1MAS.instance.showInterstitialAd();
+                        }
+
                         if (element.selected.value) {
                           accountController.gender.value = element.name!;
                           accountController.update();
                         }
 
-                        FirebaseFirestore.instance.collection('user').doc(accountController.userData.first.userId).update({
-                          'gender':accountController.gender.value
-                        });
-                          accountController.userData =await  getPrefData();
-                        accountController.update();
-
+                        FirebaseFirestore.instance
+                            .collection('user')
+                            .doc(accountController.user?.uid)
+                            .collection('user-info')
+                            .doc(id)
+                            .update({'gender': accountController.gender.value});
                       });
-                      emitter.emit('getUsers');
                       Get.back();
                     },
                     child: customButton(

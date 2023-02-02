@@ -39,3 +39,22 @@ buttonView(plusButton,buttonText) {
     ],
   );
 }
+progressView()
+{
+
+  return       Container(
+width: double.infinity,
+padding: EdgeInsets.symmetric(vertical: 10),
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(50), color: ColorConstant.blueFE),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      SizedBox(
+        child: CircularProgressIndicator(color:ColorConstant.white,
+
+        ),
+      ),
+    ],
+  ),);
+}

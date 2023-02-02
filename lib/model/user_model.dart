@@ -1,29 +1,31 @@
 import 'dart:convert';
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 import '../custom_pop_up.dart';
 
 class UserModel {
   String? email;
   String? userId;
   String? userName;
-  String? password;
   String? time;
   String? gender;
+  bool ?notification;
   String? weight;
   String? bedTime;
   String? wakeUpTime;
   String? waterGoal;
   String? drinkableWater;
-  List<WaterRecords>? timeRecords;
+  // List<WaterRecords>? timeRecords;
 
 
   UserModel({this.email,
     this.userId,
-    this.timeRecords,
+     this.notification,
+    // this.timeRecords,
     this.drinkableWater,
     this.userName,
-    this.password,
     this.time,
     this.gender,
     this.weight,
@@ -35,19 +37,19 @@ class UserModel {
     return UserModel(
         email: jsonData['email'],
         userId: jsonData['userId'],
+      notification: jsonData['notification'],
         userName: jsonData['userName'],
         time: jsonData['time'],
         gender: jsonData['gender'],
         weight: jsonData['weight'],
         bedTime: jsonData['bedTime'],
-        password: jsonData['password'],
         wakeUpTime: jsonData['wakeUpTime'],
         waterGoal: jsonData['waterGoal'],
         drinkableWater: jsonData['drinkableWater'],
-        timeRecords: jsonData['timeRecords'] == null
+       /* timeRecords: jsonData['timeRecords'] == null
             ? null
             : List<WaterRecords>.from(
-            jsonData['timeRecords'].map((e) => WaterRecords.fromJson(e))));
+            jsonData['timeRecords'].map((e) => WaterRecords.fromJson(e)))*/);
   }
 
   static Map<String, dynamic> toMap(UserModel userModel) =>
@@ -58,15 +60,15 @@ class UserModel {
         'time': userModel.time,
         'gender': userModel.gender,
         'weight': userModel.weight,
+        'notification':userModel.notification,
         'bedTime': userModel.bedTime,
-        'password': userModel.password,
         'wakeUpTime': userModel.wakeUpTime,
         'waterGoal': userModel.waterGoal,
         'drinkableWater': userModel.drinkableWater,
-        'timeRecords': userModel.timeRecords == null
+       /* 'timeRecords': userModel.timeRecords == null
             ? null
             : List<dynamic>.from(
-            userModel.timeRecords!.map((e) => WaterRecords.toJson(e)))
+            userModel.timeRecords!.map((e) => WaterRecords.toJson(e)))*/
       };
 
   static String encode(List<UserModel> userModel) =>
@@ -83,7 +85,7 @@ class UserModel {
 }
 
 class WaterRecords {
-  String? time;
+  Timestamp? time;
   String? timeId;
   String? waterMl;
 
@@ -114,3 +116,5 @@ class WaterRecords {
       (json.decode(water) as List<dynamic>).map<WaterRecords>((e) =>
           WaterRecords.fromJson(e)).toList();
 }
+
+

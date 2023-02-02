@@ -3,6 +3,7 @@ import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 
 customTextField({required String hintText,
+  TextInputType? keyboardType,
   String? errorText,
   bool obscureText=false,
   FormFieldValidator? validator,required String labelText,required TextEditingController controller})  {
@@ -17,6 +18,8 @@ customTextField({required String hintText,
         SizedBox(
           height: 48,
           child: TextFormField(
+keyboardType: keyboardType??TextInputType.text,
+            // enableInteractiveSelection: false,
             obscureText: obscureText,
             validator: validator,
             controller: controller,

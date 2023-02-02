@@ -32,7 +32,7 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
         appBar: AppBar(
           toolbarHeight: 0,
           elevation: 0,
-          systemOverlayStyle: systemOverlayStyle(),
+          // systemOverlayStyle: systemOverlayStyle(),
         ),
         body: WillPopScope(
           onWillPop: () async {
@@ -77,7 +77,7 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
                                     "Please enter new password";
                               } else if (password.length < 8) {
                                 resetController.pwdValid.value =
-                                    "Please Enter at least 8 characters";
+                                    "Please enter at least 8 characters";
                               }
                               resetController.update();
                               return null;
@@ -95,7 +95,7 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
                                     "Please enter confirm password";
                               } else if (password.length < 8) {
                                 resetController.cpValid.value =
-                                    "Please Enter at least 8 characters";
+                                    "Please enter at least 8 characters";
                               } else if (password !=
                                   resetController.passwordController.text
                                       .trim()) {
@@ -133,23 +133,23 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
 
   void checkValidation(BuildContext context) {
     dismissKeyboard(context);
-    if (_formKey.currentState!.validate() &&
-        resetController.cpValid.value.isEmpty &&
-        resetController.pwdValid.value.isEmpty) {
-      if (resetController.userModel
-          .where((element) => element.email == email!.trim())
-          .toList()
-          .isNotEmpty) {
-        FirebaseFirestore.instance
-            .collection('user')
-            .doc(resetController.userModel
-                .where((element) => element.email == email)
-                .first
-                .userId)
-            .update({'password': resetController.cpController.text.trim()});
-        showBottomLongToast("Your password has been updated successfully");
-         Get.offAll(LoginView());
-      }
-    }
+    // if (_formKey.currentState!.validate() &&
+    //     resetController.cpValid.value.isEmpty &&
+    //     resetController.pwdValid.value.isEmpty) {
+    //   if (resetController.userModel
+    //       .where((element) => element.email == email!.trim())
+    //       .toList()
+    //       .isNotEmpty) {
+    //     FirebaseFirestore.instance
+    //         .collection('user')
+    //         .doc(resetController.userModel
+    //             .where((element) => element.email == email)
+    //             .first
+    //             .userId)
+    //         .update({'password': resetController.cpController.text.trim()});
+    //     showBottomLongToast("Your password has been updated successfully");
+    //      Get.offAll(LoginView());
+    //   }
+    // }
   }
 }

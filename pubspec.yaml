@@ -40,7 +40,7 @@ dependencies:
   percent_indicator: ^4.2.2
   infinite_listview: ^1.1.0
   expandable_page_view: ^1.0.17
-  flutter_launcher_icons: ^0.11.0
+#  flutter_launcher_icons: ^0.11.0
   firebase_core: ^2.4.1
   cloud_firestore: ^4.3.1
   uuid: ^3.0.7
@@ -48,12 +48,20 @@ dependencies:
   fluttertoast: ^8.1.2
   get_storage: ^2.0.3
   eventify: ^1.0.1
-  flutter_local_notifications: ^9.7.1
+  flutter_local_notifications:
   timezone: ^0.8.0
   rxdart: ^0.27.7
   sizer: ^2.0.15
-  firebase_messaging: ^14.2.1
   flutter_otp_text_field: ^1.1.1
+  firebase_auth: ^4.2.2
+  connectivity_plus: ^3.0.2
+  provider: ^6.0.5
+  yodo1mas: ^0.1.1
+  flutter_inappwebview: ^5.7.2+3
+  permission_handler: ^10.2.0
+  app_settings: ^4.2.0
+  firebase_messaging: ^14.2.1
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
@@ -62,11 +70,11 @@ dev_dependencies:
 
 flutter_icons:
   ios: true
-  android: true
-  image_path_ios: "assets/img.png"
+#  android: true
+#  image_path_ios: "assets/img.png"
 #  adaptive_icon_foreground: "assets/water.png"
 #  adaptive_icon_background: "assets/background.png"
-  image_path_android: "assets/water.png"
+#  image_path_android: "assets/water.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

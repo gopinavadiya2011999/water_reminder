@@ -2,17 +2,22 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waterreminder/app/modules/account/controllers/account_controller.dart';
-import 'package:waterreminder/toast.dart';
 import 'package:waterreminder/widgets/custom_button.dart';
 import 'package:waterreminder/widgets/custom_inkwell.dart';
 import 'package:waterreminder/widgets/weight_view.dart';
+import 'package:yodo1mas/Yodo1MAS.dart';
 
-void weightDialog(context, AccountController accountController) {
+import '../ads/ads_data.dart';
+
+void weightDialog(context, AccountController accountController, String? id) {
+
   showDialog(
     context: context,
     builder: (context) {
-      String weights = '';
-      String weightTypes = 'kg';
+      String weights = accountController.weight.value.split(' ').first;
+      String weightTypes = (accountController.weight.value.split(' ').last!='kg'||accountController.weight.value.split(' ').last!= 'lbs')?
+          'kg'
+          :accountController.weight.value.split(' ').last;
       return AlertDialog(
         shape: OutlineInputBorder(
             borderSide: BorderSide.none,
@@ -24,7 +29,9 @@ void weightDialog(context, AccountController accountController) {
               weight: accountController.weight,
               context: context,
               weightFunc: ({int? weight}) {
-                weights = weight.toString();
+                weights = weight.toString().length == 1
+                    ? '0${weight}'
+                    :weight.toString();
               },
               weightTypeFunc: ({weightType}) {
                 weightTypes = weightType.toString();
@@ -32,16 +39,23 @@ void weightDialog(context, AccountController accountController) {
             ),
             const SizedBox(height: 8),
             inkWell(
-                onTap: () async {
-                  accountController.weight.value =
-                      weights + " " + weightTypes;
+                onTap: () {
+                  bool? adsOpen = CommonHelper.interstitialAds();
+
+                  if (adsOpen == null || adsOpen) {
+                    Yodo1MAS.instance.showInterstitialAd();
+                  }
+
+                  accountController.weight.value = weights + " " + weightTypes;
+
                   accountController.update();
                   FirebaseFirestore.instance
                       .collection('user')
-                      .doc(accountController.userData.first.userId)
+                      .doc(accountController.user?.uid)
+                      .collection('user-info')
+                      .doc(id)
                       .update({'weight': accountController.weight.value});
-                  accountController.userData = await getPrefData();
-                  accountController.update();
+
                   Get.back();
                 },
                 child: customButton(
