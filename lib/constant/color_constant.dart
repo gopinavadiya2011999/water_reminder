@@ -10,7 +10,7 @@ class ColorConstant{
   static Color blueFe=const Color(0xff199afe);
   static Color blueFF=const Color(0xffA1D6FF);
   static Color whiteDA=const Color(0xffD2D5DA);
-
+  static Color greyCD=const Color(0xffC9CBCD);
   static Color white=Colors.white;
   static Color black=Colors.black;
   static Color transparent=Colors.transparent;

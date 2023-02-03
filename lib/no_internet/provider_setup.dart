@@ -9,5 +9,5 @@ List<SingleChildWidget> providers = [
 ];
 
 List<SingleChildWidget> uiConsumableProviders = [
-  ChangeNotifierProvider(create: (_) => ConnectivityProvider())
+  ChangeNotifierProvider(create: (_) => ConnectivityProvider()),
 ];

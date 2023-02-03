@@ -16,7 +16,7 @@ class UserModel {
   String? bedTime;
   String? wakeUpTime;
   String? waterGoal;
-  String? drinkableWater;
+  // String? drinkableWater;
   // List<WaterRecords>? timeRecords;
 
 
@@ -24,7 +24,7 @@ class UserModel {
     this.userId,
      this.notification,
     // this.timeRecords,
-    this.drinkableWater,
+    // this.drinkableWater,
     this.userName,
     this.time,
     this.gender,
@@ -45,7 +45,7 @@ class UserModel {
         bedTime: jsonData['bedTime'],
         wakeUpTime: jsonData['wakeUpTime'],
         waterGoal: jsonData['waterGoal'],
-        drinkableWater: jsonData['drinkableWater'],
+        // drinkableWater: jsonData['drinkableWater'],
        /* timeRecords: jsonData['timeRecords'] == null
             ? null
             : List<WaterRecords>.from(
@@ -64,7 +64,7 @@ class UserModel {
         'bedTime': userModel.bedTime,
         'wakeUpTime': userModel.wakeUpTime,
         'waterGoal': userModel.waterGoal,
-        'drinkableWater': userModel.drinkableWater,
+        // 'drinkableWater': userModel.drinkableWater,
        /* 'timeRecords': userModel.timeRecords == null
             ? null
             : List<dynamic>.from(
@@ -88,15 +88,17 @@ class WaterRecords {
   Timestamp? time;
   String? timeId;
   String? waterMl;
+  String ?totalWaterMl;
 
 
-  WaterRecords({this.time, this.timeId, this.waterMl});
+  WaterRecords({this.time, this.totalWaterMl, this.timeId, this.waterMl});
 
   factory WaterRecords.fromJson(Map<String, dynamic> jsonData) =>
       WaterRecords(
 
           time: jsonData['time'] == null ? null : jsonData['time'],
           waterMl: jsonData['timeId'] == null ? null : jsonData['timeId'],
+          totalWaterMl: jsonData['totalWaterMl'] == null ? null : jsonData['totalWaterMl'],
           timeId: jsonData['waterMl'] == null ? null : jsonData['waterMl']);
 
   static Map<String, dynamic> toJson(WaterRecords timeRecords) =>
@@ -105,6 +107,7 @@ class WaterRecords {
         'time': timeRecords.time == null ? null : timeRecords.time,
         'timeId': timeRecords.timeId == null ? null : timeRecords.timeId,
         'waterMl': timeRecords.waterMl == null ? null : timeRecords.waterMl,
+        'totalWaterMl': timeRecords.totalWaterMl == null ? null : timeRecords.totalWaterMl,
       };
 
   static String encode(List<WaterRecords> waterRecords) =>

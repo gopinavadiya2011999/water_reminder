@@ -1,5 +1,8 @@
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+
+import '../dialog_boxs/schedule_dialog.dart';
 
 class ConnectivityProvider with ChangeNotifier {
   bool _isOnline = true;
@@ -9,7 +12,7 @@ class ConnectivityProvider with ChangeNotifier {
   ConnectivityProvider() {
     Connectivity _connectivity = Connectivity();
     _connectivity.onConnectivityChanged.listen((result) async {
-    if (result == ConnectivityResult.none) {
+      if (result == ConnectivityResult.none) {
         _isOnline = false;
         notifyListeners();
       } else {
@@ -19,3 +22,4 @@ class ConnectivityProvider with ChangeNotifier {
     });
   }
 }
+

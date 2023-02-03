@@ -49,21 +49,10 @@ class NotificationLogic {
       WaterRecords waterModel = WaterRecords();
       waterModel.time = Timestamp.now();
       waterModel.waterMl = '200ml';
+      waterModel.totalWaterMl=userModel!.waterGoal!;
       waterModel.timeId =
           uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString();
       if (userModel != null) {
-        FirebaseFirestore.instance
-            .collection('user')
-            .doc(uid)
-            .collection('user-info')
-            .doc(userModel.userId)
-            .update({
-          /* snapshot['time_records']!
-              .map<Map<String, dynamic>>((water) => WaterRecords.toJson(water))
-              .toList()*/
-          'drinkableWater':
-              (int.parse(userModel.drinkableWater.toString()) + 200).toString()
-        });
 
         FirebaseFirestore.instance
             .collection('user')
@@ -93,7 +82,7 @@ class NotificationLogic {
     print("date time :: $dateTime");
 
     _notifications.zonedSchedule(
-      id,
+      UniqueKey().hashCode,
       title,
       body,
       _scheduleDaily(Time(dateTime.hour, dateTime.minute, 00)),

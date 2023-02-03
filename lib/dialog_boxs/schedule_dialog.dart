@@ -191,18 +191,20 @@ getUserData({String? id}) async {
       userId: snapshot.docs.first.id,
       wakeUpTime: snapshot.docs.first['wakeup_time'],
       bedTime: snapshot.docs.first['bed_time'],
-      drinkableWater: snapshot.docs.first['drinkableWater'],
+      // drinkableWater: snapshot.docs.first['drinkableWater'],
       time: snapshot.docs.first['time'],
       notification: snapshot.docs.first['notification']);
 }
 
-getWaterData({String? id}) async {
-  QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
-      .instance
-      .collection('user')
-      .doc(id)
-      .collection('water_records')
-      .get();
-
-  return snapshot.docs.length;
-}
+// getWaterData({String? id}) async {
+//   QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
+//       .instance
+//       .collection('user')
+//       .doc(id)
+//       .collection('water_records')
+//       .get();
+//
+//
+//
+//   return snapshot.docs;
+// }

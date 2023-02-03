@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:waterreminder/app/modules/account/views/account_view.dart';
 import 'package:waterreminder/app/modules/home/views/home_view.dart';
 import 'package:waterreminder/app/modules/report/views/report_view.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/main_bottom_nav.dart';
 import 'package:waterreminder/no_internet/check_network.dart';
+import 'package:waterreminder/no_internet/connectivity_provider.dart';
 import '../controllers/bottom_tab_controller.dart';
 
 class BottomTabView extends GetView<BottomTabController> {
@@ -39,6 +41,7 @@ class BottomTabView extends GetView<BottomTabController> {
                 currentIndex: currentIndex,
                 onTap: (index)  {
                   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
 
                    onTap(index);
                 } ,

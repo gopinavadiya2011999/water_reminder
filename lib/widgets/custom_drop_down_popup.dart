@@ -104,7 +104,8 @@ class _CustomDropDownPopupState extends State<CustomDropDownPopup> {
                     children: <Widget>[
                       Material(
                         child: Container(
-                          decoration: BoxDecoration(boxShadow: [
+                          decoration: BoxDecoration(
+                              boxShadow: [
                             BoxShadow(
                                 color: ColorConstant.grey80.withOpacity(.2),
                                 blurRadius: 5,
@@ -120,7 +121,6 @@ class _CustomDropDownPopupState extends State<CustomDropDownPopup> {
                                 children: widget.menuItem
                                     .map(
                                       (item) => GestureDetector(
-
                                         behavior: HitTestBehavior.translucent,
                                         onTap: () {
                                           widget.menuItem.forEach((element) {
