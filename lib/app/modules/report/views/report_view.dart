@@ -157,6 +157,7 @@ class ReportView extends GetView<ReportController> {
                                                     },
                                                   ),
                                                 ),
+
                                                 rightTitles: AxisTitles(),
                                                 topTitles: AxisTitles(),
                                               ),
