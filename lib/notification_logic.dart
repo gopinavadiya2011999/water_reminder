@@ -120,6 +120,7 @@ class NotificationLogic {
     // );
   }
 
+
   static tz.TZDateTime _scheduleDaily(Time time) {
     tz.TZDateTime now = tz.TZDateTime.now(tz.local);
     tz.TZDateTime schdeuledDate = tz.TZDateTime.from(
