@@ -465,6 +465,8 @@ class ReportView extends GetView<ReportController> {
   }
 
   lastWeekData(snapshotData) {
+
+
     final values = <String, double>{};
 
     for (int i = 0;
