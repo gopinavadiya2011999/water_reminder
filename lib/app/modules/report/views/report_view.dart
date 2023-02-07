@@ -1,13 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:sizer/sizer.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:waterreminder/constant/color_constant.dart';
 import 'package:waterreminder/constant/text_style_constant.dart';
 import 'package:waterreminder/no_internet/check_network.dart';
@@ -17,46 +15,17 @@ import 'package:waterreminder/widgets/system_overlay_style.dart';
 import 'dart:math' as math;
 import '../controllers/report_controller.dart';
 
+class ChartData {
+  ChartData({this.y, this.xData});
+
+  final double? y;
+  final String? xData;
+}
+
 class ReportView extends GetView<ReportController> {
   ReportView({Key? key}) : super(key: key);
 
   final reportController = Get.put(ReportController());
-
-  // final shadowColor = const Color(0xFFCCCCCC);
-
-  // final dataList = [
-  //   _BarData(ColorConstant.blueFF, 18, 18),
-  //   _BarData(ColorConstant.greyAF, 17, 8),
-  //   _BarData(ColorConstant.bluF7, 10, 15),
-  //   _BarData(ColorConstant.black, 2.5, 5),
-  //   _BarData(ColorConstant.blueFe, 2, 2.5),
-  //   _BarData(ColorConstant.grey80, 2, 2),
-  // ];
-
-  BarChartGroupData generateBarGroup({
-    required int x,
-    required double toY,
-    // double shadowValue,
-  }) {
-    return BarChartGroupData(
-      x: x,
-      barRods: [
-        BarChartRodData(
-          toY: toY,
-          color: ColorConstant.blueFe,
-          width: 6,
-        ),
-        // BarChartRodData(
-        //   toY: shadowValue,
-        //   color: shadowColor,
-        //   width: 6,
-        // ),
-      ],
-      showingTooltipIndicators: touchedGroupIndex.value == x ? [0] : [],
-    );
-  }
-
-  RxInt touchedGroupIndex = (-1).obs;
 
   @override
   Widget build(BuildContext context) {
@@ -101,166 +70,130 @@ class ReportView extends GetView<ReportController> {
                                         .snapshots(),
                                     builder: (context, snapshotData) {
                                       if (snapshotData.hasData) {
-                                        return AspectRatio(
-                                          aspectRatio: 1.4,
-                                          child: BarChart(
-                                            BarChartData(
+                                        if (reportController.chartValue ==
+                                            'Last Week') {
+                                          reportController.chartData.clear();
 
-                                              alignment: BarChartAlignment
-                                                  .spaceBetween,
-                                              borderData: FlBorderData(
-                                                show: true,
-                                                border: Border.symmetric(
-                                                  horizontal: BorderSide(
-                                                    color: ColorConstant.greyCD,
-                                                  ),
-                                                ),
-                                              ),
-                                              titlesData: FlTitlesData(
-                                                show: true,
-                                                leftTitles: AxisTitles(
-                                                  drawBehindEverything: true,
-                                                  sideTitles: SideTitles(
-                                                    showTitles: true,
-                                                    reservedSize: 8.5.w,
-                                                    getTitlesWidget:
-                                                        (value, meta) {
-                                                      return Text(
-                                                        value
-                                                            .toInt()
-                                                            .toString(),
-                                                        textAlign:
-                                                            TextAlign.right,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                                bottomTitles: AxisTitles(
-                                                  sideTitles: SideTitles(
-                                                    showTitles: true,
-                                                    reservedSize: 4.5.h,
-                                                    getTitlesWidget:
-                                                        (value, meta) {
-                                                      final index =
-                                                          value.toInt();
-                                                      return SideTitleWidget(
-                                                        axisSide: meta.axisSide,
-                                                        child: _IconWidget(
-                                                          color: ColorConstant
-                                                              .blueFe,
-                                                          isSelected:
-                                                              touchedGroupIndex
-                                                                      .value ==
-                                                                  index,
-                                                        ),
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
+                                          if (differenceInDays(snapshotData) !=
+                                              null) {
+                                            differenceInDays(snapshotData)
+                                                .forEach((element) {
+                                              reportController.chartData.add(ChartData(
+                                                  xData: DateFormat('EE')
+                                                      .format(DateTime
+                                                          .fromMicrosecondsSinceEpoch(
+                                                              element
+                                                                  .get('time')
+                                                                  .microsecondsSinceEpoch)),
+                                                  y: double.parse(
+                                                      element['waterMl']
+                                                          .split('ml')
+                                                          .first)));
+                                            });
+                                          }
+                                        } else if (reportController
+                                                .chartValue ==
+                                            'Last Month') {
+                                          reportController.chartData.clear();
+                                          if (differenceInMonth(snapshotData) !=
+                                              null) {
+                                            differenceInMonth(snapshotData)
+                                                .forEach((element) {
+                                              reportController.chartData.add(ChartData(
+                                                  xData: DateFormat('MMMM')
+                                                      .format(DateTime
+                                                          .fromMicrosecondsSinceEpoch(
+                                                              element
+                                                                  .get('time')
+                                                                  .microsecondsSinceEpoch)),
+                                                  y: double.parse(
+                                                      element['waterMl']
+                                                          .split('ml')
+                                                          .first)));
+                                            });
+                                          }
+                                        } else if (reportController
+                                                .chartValue ==
+                                            'Last Year') {
+                                          reportController.chartData.clear();
+                                          if (differenceInYear(snapshotData) !=
+                                              null) {
+                                            differenceInYear(snapshotData)
+                                                .forEach((element) {
+                                              reportController.chartData.add(ChartData(
+                                                  xData: DateFormat('yyyy')
+                                                      .format(DateTime
+                                                          .fromMicrosecondsSinceEpoch(
+                                                              element
+                                                                  .get('time')
+                                                                  .microsecondsSinceEpoch)),
+                                                  y: double.parse(
+                                                      element['waterMl']
+                                                          .split('ml')
+                                                          .first)));
+                                            });
+                                          }
+                                        }
 
-                                                rightTitles: AxisTitles(),
-                                                topTitles: AxisTitles(),
-                                              ),
-                                              gridData: FlGridData(
-                                                show: true,
-                                                drawVerticalLine: false,
-                                                getDrawingHorizontalLine:
-                                                    (value) => FlLine(
-                                                  color: ColorConstant.greyCD,
-                                                  strokeWidth: 1,
+                                        return reportController
+                                                .chartData.isNotEmpty
+                                            ? SfCartesianChart(
+                                                primaryXAxis:
+                                                    CategoryAxis(
+                                                  // isVisible: false,
+                                                  majorTickLines:
+                                                      const MajorTickLines(
+                                                          width: 0),
+                                                  majorGridLines:
+                                                      const MajorGridLines(
+                                                          width: 0),
                                                 ),
-                                              ),
-                                              barGroups: snapshotData.data!.docs
-                                                  .where((element) =>
-                                              DateFormat("yyyy-MM-dd")
-                                                  .parse(DateTime(
-                                                  DateTime.now()
-                                                      .year,
-                                                  DateTime.now()
-                                                      .month,
-                                                  DateTime.now()
-                                                      .day)
-                                                  .toString())
-                                                  .difference(DateFormat(
-                                                  'yyyy-MM-dd')
-                                                  .parse((DateTime.fromMicrosecondsSinceEpoch(element
-                                                  .get(
-                                                  'time')
-                                                  .microsecondsSinceEpoch)
-                                                  .toString())))
-                                                  .inDays <=
-                                                  7).toList()
-                                                  .asMap()
-                                                  .entries
-                                                  .map((e) {
-                                                final index = 0 /*e.key*/;
-                                                final data = e.value;
-                                                return generateBarGroup(
-                                                  x: index,
-                                                  toY:
-                                                       double.parse(
-                                                    data['waterMl']
-                                                        .toString()
-                                                        .split("ml")
-                                                        .first)
-                                                  ,
-                                                );
-                                              }).toList(),
-
-                                              maxY: maxBy(snapshotData.data!.docs.map((e) => double.parse(e['totalWaterMl'].split(' ').first)), (e) =>  e),
-                                              minY: 0,
-                                              barTouchData: BarTouchData(
-                                                enabled: true,
-                                                handleBuiltInTouches: false,
-                                                touchTooltipData:
-                                                    BarTouchTooltipData(
-                                                  tooltipBgColor:
-                                                      Colors.transparent,
-                                                  tooltipMargin: 0,
-                                                  getTooltipItem: (
-                                                    BarChartGroupData group,
-                                                    int groupIndex,
-                                                    BarChartRodData rod,
-                                                    int rodIndex,
-                                                  ) {
-                                                    return BarTooltipItem(
-                                                      rod.toY.toString(),
-                                                      TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        color: rod.color,
-                                                        fontSize: 18,
-                                                        shadows: const [
-                                                          Shadow(
-                                                            color:
-                                                                Colors.black26,
-                                                            blurRadius: 12,
-                                                          )
-                                                        ],
-                                                      ),
-                                                    );
-                                                  },
-                                                ),
-                                                touchCallback:
-                                                    (event, response) {
-                                                  if (event
-                                                          .isInterestedForInteractions &&
-                                                      response != null &&
-                                                      response.spot != null) {
-                                                    touchedGroupIndex.value =
-                                                        response.spot!
-                                                            .touchedBarGroupIndex;
-                                                    reportController.update();
-                                                  } else {
-                                                    touchedGroupIndex.value =
-                                                        -1;
-                                                    reportController.update();
-                                                  }
-                                                },
-                                              ),
-                                            ),
-                                          ),
-                                        );
+                                                title: ChartTitle(
+                                                    text: 'ml',
+                                                    alignment:
+                                                        ChartAlignment
+                                                            .near,
+                                                    textStyle: TextStyleConstant
+                                                        .blue20
+                                                        .copyWith(
+                                                            fontSize:
+                                                                10.sp,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal)),
+                                                series: <
+                                                    CartesianSeries>[
+                                              ColumnSeries<ChartData, String>(
+                                                  dataSource:
+                                                      reportController
+                                                          .chartData,
+                                                  color:
+                                                      ColorConstant
+                                                          .blueFe,
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(
+                                                                  15),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  15)),
+                                                  xValueMapper:
+                                                      (ChartData data,
+                                                              _) =>
+                                                          data.xData,
+                                                  yValueMapper: (ChartData
+                                                              data,
+                                                          _) =>
+                                                      data.y /* maxBy(snapshotData.data!.docs.map((e) => double.parse(e['totalWaterMl'].split(' ').first)), (e) =>  e)*/,
+                                                  width: 0.25,
+                                                  spacing: 0.4),
+                                            ])
+                                            : Center(
+                                                child: Text(
+                                                    "No ${reportController.chartValue.value.toLowerCase()} record found",
+                                                style: TextStyleConstant.black13),
+                                              );
                                       }
                                       return Container();
                                     }),
@@ -315,52 +248,21 @@ class ReportView extends GetView<ReportController> {
           if (snapshotData.hasData) {
             ///Today's progress
             if (reportController.progressValue == "Today's" &&
-                snapshotData.data!.docs
-                        .where((element) =>
-                            element.get('time') != null &&
-                            DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
-                                DateFormat('dd/MM/yyyy').format(
-                                    DateTime.fromMicrosecondsSinceEpoch(element
-                                        .get('time')
-                                        .microsecondsSinceEpoch)))
-                        .toList()
-                        .length !=
-                    0) {
-              drinkableWater = (snapshotData.data!.docs
-                  .where((element) =>
-                      element.get('time') != null &&
-                      DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
-                          DateFormat('dd/MM/yyyy').format(
-                              DateTime.fromMicrosecondsSinceEpoch(
-                                  element.get('time').microsecondsSinceEpoch)))
-                  .toList()
+
+                     differenceInToday(snapshotData)!=null) {
+              drinkableWater = (differenceInToday(snapshotData)
                   .length);
             }
 
             ///Last week Progress
             else if (reportController.progressValue == "Last Week" &&
-                differenceInDays(snapshotData)
-                        .length !=
-                    0) {
+                differenceInDays(snapshotData)!=null) {
               lastWeekData(snapshotData);
             }
 
             ///Last Month Progress
             else if (reportController.progressValue == "Last Month" &&
-                snapshotData.data!.docs
-                        .where((element) =>
-                            DateFormat("yyyy-MM").parse(DateTime(
-                                    DateTime.now().year,
-                                    DateTime.now().month - 1)
-                                .toString()) ==
-                            (DateFormat('yyyy-MM').parse(
-                                (DateTime.fromMicrosecondsSinceEpoch(element
-                                        .get('time')
-                                        .microsecondsSinceEpoch)
-                                    .toString()))))
-                        .toList()
-                        .length !=
-                    0) {
+                differenceInMonth(snapshotData) != null) {
               lastMonthData(snapshotData);
             } else {
               drinkableWater = 0;
@@ -460,23 +362,15 @@ class ReportView extends GetView<ReportController> {
                 reportController.update();
               },
               showArrow: false,
+              position:PreferredPosition.bottom ,
               pressType: PressType.singleClick)),
         ]);
   }
 
   lastWeekData(snapshotData) {
-
-
     final values = <String, double>{};
-
-    for (int i = 0;
-        i <
-            differenceInDays(snapshotData)
-                .toList()
-                .length;
-        i++) {
-      final item = differenceInDays(snapshotData)
-          .toList()[i];
+    for (int i = 0; i < differenceInDays(snapshotData).toList().length; i++) {
+      final item = differenceInDays(snapshotData).toList()[i];
       final itemName = DateFormat('yyyy-MM-dd')
           .parse((DateTime.fromMicrosecondsSinceEpoch(
                   item.get('time').microsecondsSinceEpoch)
@@ -494,7 +388,6 @@ class ReportView extends GetView<ReportController> {
     Iterable<double> result = values.values;
 
     double sum = result.sum;
-
     lastWeekPer = ((sum / 7));
   }
 
@@ -502,29 +395,8 @@ class ReportView extends GetView<ReportController> {
       AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshotData) {
     final values = <String, double>{};
 
-    for (int i = 0;
-        i <
-            snapshotData.data!.docs
-                .where((element) =>
-                    DateFormat("yyyy-MM").parse(
-                        DateTime(DateTime.now().year, DateTime.now().month - 1)
-                            .toString()) ==
-                    (DateFormat('yyyy-MM').parse(
-                        (DateTime.fromMicrosecondsSinceEpoch(
-                                element.get('time').microsecondsSinceEpoch)
-                            .toString()))))
-                .toList()
-                .length;
-        i++) {
-      final item = snapshotData.data!.docs
-          .where((element) =>
-              DateFormat("yyyy-MM").parse(
-                  DateTime(DateTime.now().year, DateTime.now().month - 1)
-                      .toString()) ==
-              (DateFormat('yyyy-MM').parse((DateTime.fromMicrosecondsSinceEpoch(
-                      element.get('time').microsecondsSinceEpoch)
-                  .toString()))))
-          .toList()[i];
+    for (int i = 0; i < differenceInMonth(snapshotData).length; i++) {
+      final item = differenceInMonth(snapshotData)[i];
       final itemName = DateFormat('yyyy-MM-dd')
           .parse((DateTime.fromMicrosecondsSinceEpoch(
                   item.get('time').microsecondsSinceEpoch)
@@ -545,92 +417,111 @@ class ReportView extends GetView<ReportController> {
 
     lastMonthPer = sum / 12;
   }
-}
 
-extension DateOnlyCompare on DateTime {
-  bool isSameDate(DateTime other) {
-    return year == other.year && month == other.month && day == other.day;
-  }
-}
-//
-// class _BarData {
-//   const _BarData(this.color, this.value, this.shadowValue);
-//
-//   final Color color;
-//   final double value;
-//   final double shadowValue;
-// }
+  differenceInToday(AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshotData) {
+    if(snapshotData.data!.docs
+        .where((element) =>
+    element.get('time') != null &&
+        DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
+            DateFormat('dd/MM/yyyy').format(
+                DateTime.fromMicrosecondsSinceEpoch(element
+                    .get('time')
+                    .microsecondsSinceEpoch)))
+        .toList().length!=0){
 
-class _IconWidget extends ImplicitlyAnimatedWidget {
-  const _IconWidget({
-    required this.color,
-    required this.isSelected,
-  }) : super(duration: const Duration(milliseconds: 300));
-  final Color color;
-  final bool isSelected;
-
-  @override
-  ImplicitlyAnimatedWidgetState<ImplicitlyAnimatedWidget> createState() =>
-      _IconWidgetState();
-}
-
-class _IconWidgetState extends AnimatedWidgetBaseState<_IconWidget> {
-  Tween<double>? _rotationTween;
-
-  @override
-  Widget build(BuildContext context) {
-    final rotation = math.pi * 4 * _rotationTween!.evaluate(animation);
-    final scale = 1 + _rotationTween!.evaluate(animation) * 0.5;
-    return Transform(
-      transform: Matrix4.rotationZ(rotation).scaled(scale, scale),
-      origin: const Offset(14, 14),
-      child: Column(
-        children: [
-          // Icon(
-          //   widget.isSelected ? Icons.face_retouching_natural : Icons.face,
-          //   color: widget.color,
-          //   size: 28,
-          // ),
-          RotatedBox(
-              quarterTurns: /*widget.isSelected ?0:*/ -1, child: Text("Mon"))
-        ],
-      ),
-    );
-  }
-
-  @override
-  void forEachTween(TweenVisitor<dynamic> visitor) {
-    _rotationTween = visitor(
-      _rotationTween,
-      widget.isSelected ? 1.0 : 0.0,
-      (dynamic value) => Tween<double>(
-        begin: value as double,
-        end: widget.isSelected ? 1.0 : 0.0,
-      ),
-    ) as Tween<double>?;
+      return  snapshotData.data!.docs
+          .where((element) =>
+      element.get('time') != null &&
+          DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
+              DateFormat('dd/MM/yyyy').format(
+                  DateTime.fromMicrosecondsSinceEpoch(element
+                      .get('time')
+                      .microsecondsSinceEpoch)))
+          .toList();
+    }
+    return null;
   }
 }
 
-differenceInDays(snapshotData){
-  return snapshotData.data!.docs
-      .where((element) =>
-  DateFormat("yyyy-MM-dd")
-      .parse(DateTime(
-      DateTime.now()
-          .year,
-      DateTime.now()
-          .month,
-      DateTime.now()
-          .day)
-      .toString())
-      .difference(DateFormat(
-      'yyyy-MM-dd')
-      .parse((DateTime.fromMicrosecondsSinceEpoch(element
-      .get(
-      'time')
-      .microsecondsSinceEpoch)
-      .toString())))
-      .inDays <=
-      7)
-      .toList();
+differenceInDays(snapshotData) {
+  if (snapshotData.data!.docs
+          .where((element) =>
+              DateFormat("yyyy-MM-dd")
+                  .parse(DateTime(DateTime.now().year, DateTime.now().month,
+                          DateTime.now().day)
+                      .toString())
+                  .difference(DateFormat('yyyy-MM-dd').parse(
+                      (DateTime.fromMicrosecondsSinceEpoch(
+                              element.get('time').microsecondsSinceEpoch)
+                          .toString())))
+                  .inDays <=
+              7)
+          .toList()
+          .length !=
+      0) {
+    return snapshotData.data!.docs
+        .where((element) =>
+            DateFormat("yyyy-MM-dd")
+                .parse(DateTime(DateTime.now().year, DateTime.now().month,
+                        DateTime.now().day)
+                    .toString())
+                .difference(DateFormat('yyyy-MM-dd').parse(
+                    (DateTime.fromMicrosecondsSinceEpoch(
+                            element.get('time').microsecondsSinceEpoch)
+                        .toString())))
+                .inDays <=
+            7)
+        .toList();
+  }
+  return null;
+}
+
+differenceInMonth(snapshotData) {
+  if (snapshotData.data!.docs
+          .where((element) =>
+              DateFormat("yyyy-MM").parse(
+                  DateTime(DateTime.now().year, DateTime.now().month - 1)
+                      .toString()) ==
+              (DateFormat('yyyy-MM').parse((DateTime.fromMicrosecondsSinceEpoch(
+                      element.get('time').microsecondsSinceEpoch)
+                  .toString()))))
+          .toList()
+          .length !=
+      0) {
+    return snapshotData.data!.docs
+        .where((element) =>
+            DateFormat("yyyy-MM").parse(
+                DateTime(DateTime.now().year, DateTime.now().month - 1)
+                    .toString()) ==
+            (DateFormat('yyyy-MM').parse((DateTime.fromMicrosecondsSinceEpoch(
+                    element.get('time').microsecondsSinceEpoch)
+                .toString()))))
+        .toList();
+  }
+  return null;
+}
+
+differenceInYear(snapshotData) {
+  if (snapshotData.data!.docs
+          .where((element) =>
+              DateFormat("yyyy").parse(
+                  DateTime((DateTime.now().year - 1), DateTime.now().month)
+                      .toString()) ==
+              (DateFormat('yyyy').parse((DateTime.fromMicrosecondsSinceEpoch(
+                      element.get('time').microsecondsSinceEpoch)
+                  .toString()))))
+          .toList()
+          .length !=
+      0) {
+    return snapshotData.data!.docs
+        .where((element) =>
+            DateFormat("yyyy").parse(
+                DateTime((DateTime.now().year - 1), DateTime.now().month)
+                    .toString()) ==
+            (DateFormat('yyyy').parse((DateTime.fromMicrosecondsSinceEpoch(
+                    element.get('time').microsecondsSinceEpoch)
+                .toString()))))
+        .toList();
+  }
+  return null;
 }

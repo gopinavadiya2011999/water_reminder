@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:waterreminder/main.dart';
 
 import '../../../../model/report_dialog_list.dart';
+import '../views/report_view.dart';
 
 class ReportController extends GetxController {
   User? user;
@@ -20,10 +22,14 @@ class ReportController extends GetxController {
   RxString chartValue = "Last Week".obs;
   final count = 0.obs;
 
+  final List<ChartData> chartData = [];
+
   @override
   void onInit() {
     super.onInit();
+
     user = auth.currentUser;
+
     update();
   }
 

@@ -85,7 +85,7 @@ class NotificationLogic {
       UniqueKey().hashCode,
       title,
       body,
-      _scheduleDaily(Time(dateTime.hour, dateTime.minute, 00)),
+      _scheduleDaily(Time(dateTime.hour, dateTime.minute, dateTime.second)),
       /*  tz.TZDateTime.from(
          */ /*dateTime*/ /*
           */ /*DateTime.now().add(Duration(seconds: sec))*/ /*,
@@ -124,7 +124,7 @@ class NotificationLogic {
     tz.TZDateTime now = tz.TZDateTime.now(tz.local);
     tz.TZDateTime schdeuledDate = tz.TZDateTime.from(
         DateTime(
-            now.year, now.month, now.day, time.hour, time.minute, 00),
+            now.year, now.month, now.day, time.hour, time.minute, time.second),
         tz.local);
     return schdeuledDate.isBefore(now)
         ? schdeuledDate.add(const Duration(days: 1))
