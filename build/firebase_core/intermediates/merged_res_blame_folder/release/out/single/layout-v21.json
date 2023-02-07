@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_core\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]

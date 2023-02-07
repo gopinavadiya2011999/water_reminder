@@ -1,0 +1,534 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_rewarded_feedback.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_rewarded_feedback.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_off_fullscreen_content_v1.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_off_fullscreen_content_v1.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_star_half_black_16dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_star_half_black_16dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_subtitle_on.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_subtitle_on.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_on_default.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_on_default.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_play_circle_filled.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_play_circle_filled.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_skip_next.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_skip_next.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\applovin_ic_x_mark.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\drawable-mdpi-v4\\applovin_ic_x_mark.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_app_install_feedback_grey.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_app_install_feedback_grey.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_app_install_close_white.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_app_install_close_white.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_audiotrack.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_audiotrack.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_fullscreen_enter.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_fullscreen_enter.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_off_default.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_off_default.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_rewarded_close.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_rewarded_close.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_fastforward.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_fastforward.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_fullscreen_content_v1_close_disabled.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_fullscreen_content_v1_close_disabled.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_instream_internal_advertiser.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_instream_internal_advertiser.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_pause.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_pause.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_more_vert_white_24dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\ic_more_vert_white_24dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_fullscreen_exit.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_fullscreen_exit.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_on_app_install.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_on_app_install.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_app_install_feedback_white.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_app_install_feedback_white.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\applovin_ic_check_mark_bordered.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\drawable-mdpi-v4\\applovin_ic_check_mark_bordered.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_chevron_left.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_chevron_left.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_multibanner_left_button_icon.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_multibanner_left_button_icon.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_check.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_check.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_adtune_white.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_adtune_white.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_next.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_next.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_circular_play.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_circular_play.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_speed.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_speed.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_shuffle_off.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_shuffle_off.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_chevron_right.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_chevron_right.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_fullscreen_content_v1_background_tile.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_fullscreen_content_v1_background_tile.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\applovin_ic_disclosure_arrow.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\drawable-mdpi-v4\\applovin_ic_disclosure_arrow.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_pause_circle_filled.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_pause_circle_filled.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_video_ic_replay.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_video_ic_replay.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_default_adtune_feedback_icon.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_default_adtune_feedback_icon.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_previous.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_previous.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_fullscreen_exit.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_fullscreen_exit.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_fullscreen_content_v1_close_enabled.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_fullscreen_content_v1_close_enabled.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_repeat_one.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_repeat_one.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_play.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_play.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_close_light.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_close_light.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_forward.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_forward.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_multibanner_right_button_icon.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_multibanner_right_button_icon.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_stop.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_stop.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_default_album_image.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_default_album_image.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_icon_empty.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_icon_empty.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_close_gray.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_close_gray.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_repeat_off.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_repeat_off.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\applovin_ic_share.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\drawable-mdpi-v4\\applovin_ic_share.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_edit_mode_logo.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_skip_previous.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_skip_previous.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_vr.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_vr.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_star_black_16dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_star_black_16dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_off_app_install.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_off_app_install.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_notify.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\55e8f967d5d2e28122ca3d13aa6bb6bb\\transformed\\jetified-tapjoy-android-sdk-12.10.0\\res\\drawable-mdpi-v4\\ic_notify.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\applovin_ic_warning.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\drawable-mdpi-v4\\applovin_ic_warning.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_subtitle_off.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_subtitle_off.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_rewind.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_rewind.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_instream_internal_skip.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_instream_internal_skip.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_landscape_close_button.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_landscape_close_button.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_rewind.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_rewind.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_app_install_close_grey.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_app_install_close_grey.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_repeat_all.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_repeat_all.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\overflow_menu_button.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\overflow_menu_button.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_on_fullscreen_content_v1.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_ic_sound_on_fullscreen_content_v1.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_ic_settings.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_ic_settings.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_instream_internal_click_button.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_instream_internal_click_button.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_fullscreen_enter.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_fullscreen_enter.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_ads_internal_google_play_icon_white.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_ads_internal_google_play_icon_white.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\exo_icon_shuffle_on.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\drawable-mdpi-v4\\exo_icon_shuffle_on.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\applovin_ic_check_mark_borderless.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\drawable-mdpi-v4\\applovin_ic_check_mark_borderless.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\yandex_instream_internal_advertiser_social.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\drawable-mdpi-v4\\yandex_instream_internal_advertiser_social.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\55e8f967d5d2e28122ca3d13aa6bb6bb\\transformed\\jetified-tapjoy-android-sdk-12.10.0\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+    }
+]

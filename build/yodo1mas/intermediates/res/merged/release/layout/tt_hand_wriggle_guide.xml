@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tt_interact_splash_wriggle_layout"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.bytedance.sdk.component.adexpress.widget.WriggleGuideView
+            android:id="@+id/tt_interact_splash_progress_img"
+            android:layout_width="60dp"
+            android:layout_height="20dp"/>
+
+        <ImageView
+            android:id="@+id/tt_interact_splash_top_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/tt_splash_twist" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tt_interact_splash_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/tt_splash_wriggle_top_text"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:shadowColor="#4D000000"
+        android:shadowDx="0"
+        android:shadowDy="0.5"
+        android:shadowRadius="2"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tt_interact_splash_click_bar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#4D000000"
+        android:shadowDx="0"
+        android:shadowDy="0.5"
+        android:shadowRadius="2"
+        android:singleLine="true"
+        android:text="@string/tt_splash_wriggle_text"
+        android:textColor="@android:color/white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+</LinearLayout>

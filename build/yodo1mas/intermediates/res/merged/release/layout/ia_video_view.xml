@@ -1,0 +1,139 @@
+<!-- note, background and layout params are set in IAbaseVideoView, this is an optimization to avoid dummy relative layout root  -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ia_video_background_color"
+    >
+
+    <!-- Actual surface view should reside below all overlays -->
+    <FrameLayout
+        android:id="@+id/ia_texture_view_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="0dp"
+    />
+
+    <!-- Last frame image should reside above surface view host, and below other layout controls
+        It is shown before attaching a real video surface, and looks like a paused video display
+         Its size is determined from the code, and is based on the received video size -->
+
+    <ImageView
+        android:id="@+id/ia_iv_last_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:padding="0dp"
+      />
+
+    <!-- The next layer includes all video playing controls. This should only be enabled when a video is actually playing -->
+
+    <!-- mute and unmute state button
+        Default location: Top-Left corner
+    -->
+    <ImageView
+        android:id="@+id/ia_iv_mute_button"
+        style="@style/ia_mute_button_style"
+    />
+
+    <!-- Time remaining indicator
+        Important Note: Text view width and height must be fixed. using wrap_content, cause unnecessary video view layouting
+        Default location: Bottom-Left corner
+    -->
+    <TextView
+        android:id="@+id/ia_tv_remaining_time"
+        style="@style/ia_tv_remaining_time_style"
+        android:visibility="gone"
+    />
+
+    <!-- AppInfo button, relevant for ignite trueSingleTap flow
+        Default location: Bottom-Left corner
+    -->
+    <TextView
+            android:id="@+id/ia_tv_app_info_button"
+            style="@style/ia_tv_app_info_btn_style"
+            android:visibility="gone"
+            />
+
+    <!-- Above all layout parameters, show the paused / completed video overlay -->
+    <FrameLayout
+        android:id="@+id/ia_paused_video_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ia_video_transparent_overlay"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/ia_iv_play_button"
+            style="@style/ia_play_button_style"
+            />
+    </FrameLayout>
+
+    <!-- Default end card overlay is displayed if no end card is received within the VAST response -->
+    <include
+      layout="@layout/ia_default_video_end_card"
+      android:id="@+id/ia_default_endcard_video_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+    />
+
+    <!-- Placeholder for non default end card overlay -->
+    <FrameLayout
+        android:id="@+id/ia_endcard_video_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/ia_video_transparent_overlay"
+        android:visibility="gone"
+        android:contentDescription="ia_endcard_video_overlay"/>
+
+    <!-- Showed in case the video started playing, but got into buffering mode -->
+    <include
+        android:id="@+id/ia_buffering_overlay"
+        layout="@layout/ia_buffering_overlay"
+        android:visibility="gone" />
+
+    <!-- CTA overlay button - May also be activted when paused, so reside above play overlay
+        Default location: Top-Right corner
+    -->
+    <!-- TODO: Calculate text size, with a maximum, from within code, in order to prevent additional layouting for wrap content -->
+    <TextView
+        android:id="@+id/ia_tv_call_to_action"
+        style="@style/ia_tv_call_to_action_style"
+    />
+
+    <!-- expand or collapse button. Its drawable selector supports both types
+    Default location: Bottom-Right corner
+-->
+    <ImageView
+        android:id="@+id/ia_iv_expand_collapse_button"
+        style="@style/ia_expand_collapse_button_style"
+        android:visibility="gone"
+    />
+
+    <!-- Skip countdown and action text view. Pre-roll is not supported, and it is currently only active in interstitial video
+    Default location: Bottom-Right corner
+-->
+    <!-- TODO: Calculate text size, with a maximum, from within code, in order to prevent additional layouting for wrap content. For now, hard coded 100dp -->
+    <TextView
+        android:id="@+id/ia_tv_skip"
+        style="@style/ia_tv_skip_style"
+        android:text="@string/ia_video_skip_text"
+        android:enabled="false"
+        android:visibility="gone"
+        />
+
+    <!-- bottom progress bar -->
+  <com.fyber.inneractive.sdk.ui.IAsmoothProgressBar
+    android:id="@+id/ia_video_progressbar"
+    style="@style/ia_video_progressbar_style"
+    android:layoutDirection="ltr" />
+
+    <include
+            layout="@layout/ia_click_overlay"
+            android:id="@+id/ia_click_overlay"
+            android:visibility="gone" />
+
+</merge>

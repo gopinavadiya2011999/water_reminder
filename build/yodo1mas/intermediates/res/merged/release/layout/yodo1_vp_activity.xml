@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/yodo1_rel_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/yodo1_surfaceview_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.yodo1.mas.mediation.yodo1.kit.Yodo1CountDownView
+            android:id="@+id/yodo1_view_countdowm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/yodo1_rel_closepage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/yodo1_iv_bgimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+            android:id="@+id/yodo1_iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_yodo1_close" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

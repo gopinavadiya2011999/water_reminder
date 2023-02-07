@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\connectivity_plus\\intermediates\\res\\merged\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\connectivity_plus\\intermediates\\res\\merged\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\connectivity_plus\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\connectivity_plus\\intermediates\\res\\merged\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable\\notification_bg.xml"
+    }
+]

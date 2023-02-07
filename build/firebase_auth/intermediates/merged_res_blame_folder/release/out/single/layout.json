@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\browser_actions_context_menu_page.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\139bf962852b8959a6c0c01b7c8dae01\\transformed\\browser-1.4.0\\res\\layout\\browser_actions_context_menu_page.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout\\custom_dialog.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\notification_action.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\firebase_auth\\intermediates\\res\\merged\\release\\layout\\browser_actions_context_menu_row.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\139bf962852b8959a6c0c01b7c8dae01\\transformed\\browser-1.4.0\\res\\layout\\browser_actions_context_menu_row.xml"
+    }
+]

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pangle="http://schemas.android.com/apk/com.bytedance.sdk.component"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/tt_video_reward_bar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        android:background="@color/tt_download_bar_background_new"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp">
+
+        <com.bytedance.sdk.openadsdk.core.widget.TTRoundRectImageView
+            android:id="@+id/tt_reward_ad_icon"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/tt_reward_ad_download"
+            android:layout_toLeftOf="@+id/tt_reward_ad_download"
+            android:layout_toEndOf="@+id/tt_reward_ad_icon"
+            android:layout_toRightOf="@+id/tt_reward_ad_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tt_reward_ad_appname"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="RelativeOverlap" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.bytedance.sdk.openadsdk.core.widget.TTRatingBar2
+                    android:id="@+id/tt_rb_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tt_comment_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/tt_comment_num"
+                    android:textColor="#4A4A4A"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tt_reward_ad_download"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/tt_download_corner_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxWidth="105dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/tt_video_download_apk"
+            android:textColor="@color/tt_white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tt_lp_new_style_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+    <com.bytedance.sdk.component.widget.SSWebView
+        android:id="@+id/tt_reward_browser_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layerType="hardware"
+        pangle:tt_delay_init="true"
+        android:visibility="invisible" />
+
+    <com.bytedance.sdk.component.widget.SSWebView
+        android:id="@+id/tt_browser_webview_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        pangle:tt_delay_init="true"
+        android:visibility="gone" />
+
+    <include layout="@layout/tt_activity_reward_and_full_endcard" />
+
+    <RelativeLayout
+        android:id="@+id/tt_video_ad_close_layout"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/tt_mute_btn_bg"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/tt_video_ad_close"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/tt_video_close_drawable" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tt_ad_logo"
+        android:layout_width="32dp"
+        android:layout_height="14dp"
+        android:layout_gravity="start|bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/tt_ad_logo_new"
+        android:gravity="center"
+        tools:ignore="RtlSymmetry" />
+
+</merge>

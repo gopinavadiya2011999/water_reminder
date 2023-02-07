@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/tt_open_ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="84">
+            <ImageView
+                android:id="@+id/tt_open_ad_back_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+            <!--视频-->
+            <FrameLayout
+                android:id="@+id/tt_open_ad_video_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"/>
+            <!--图片-->
+            <ImageView
+                android:id="@+id/tt_open_ad_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--logo-->
+            <TextView
+                android:id="@+id/tt_ad_logo"
+                android:layout_width="31dp"
+                android:layout_height="14dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/tt_ad_logo_new"
+                android:gravity="center"
+                tools:ignore="RtlSymmetry" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="53" />
+                <!--button-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="47">
+
+                    <com.bytedance.sdk.openadsdk.component.view.ButtonFlash
+                        android:id="@+id/tt_open_ad_click_button"
+                        android:layout_width="236dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/tt_button_back"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="DOWNLOAD"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--TOP-->
+            <include layout="@layout/tt_top_app_open_dislike" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/tt_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="16"
+            android:background="#FFFFFF"
+            android:clickable="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <com.bytedance.sdk.openadsdk.core.widget.TTRoundRectImageView
+                android:id="@+id/tt_app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="22dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tt_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#161823"
+                android:textSize="22dp"
+                tools:text="Pangle Demo" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

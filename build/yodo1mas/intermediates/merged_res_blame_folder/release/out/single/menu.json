@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\menu\\example_menu.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\menu\\example_menu.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\menu\\mediation_debugger_activity_menu.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\menu\\mediation_debugger_activity_menu.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\menu\\example_menu2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\menu\\example_menu2.xml"
+    }
+]

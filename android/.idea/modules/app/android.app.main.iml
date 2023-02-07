@@ -13,19 +13,6 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
-                <arg>$MODULE_DIR$/../../../../build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/af8b6e0ae276ea2002a7d8f8a302564d/transformed/jetified-libs.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/firebase_auth/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/cloud_firestore/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/firebase_core/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/permission_handler_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/flutter_inappwebview/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/yodo1mas/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/app_settings/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/flutter_local_notifications/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/fluttertoast/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/path_provider_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
-                <arg>$MODULE_DIR$/../../../../build/connectivity_plus/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/e744e0166d8b6d96d934cb138c65d389/transformed/jetified-armeabi_v7a_debug-1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/209139e564ae8a69b45f8d43e1bda467/transformed/jetified-arm64_v8a_debug-1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/56e1dc192748c600d1906a3415be7b51/transformed/jetified-x86_64_debug-1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a.jar</arg>

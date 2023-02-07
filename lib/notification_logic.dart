@@ -82,7 +82,7 @@ class NotificationLogic {
 
 
     _notifications.zonedSchedule(
-      UniqueKey().hashCode,
+      /*0*/UniqueKey().hashCode,
       title,
       body,
       _scheduleDaily(Time(dateTime.hour, dateTime.minute, dateTime.second)),

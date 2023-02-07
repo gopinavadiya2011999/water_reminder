@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tt_reward_full_endcard_backup_container"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:id="@+id/tt_reward_full_endcard_backup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tt_white"
+        android:gravity="center_vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.bytedance.sdk.openadsdk.core.widget.TTRoundRectImageView
+                android:id="@+id/tt_reward_ad_icon_backup"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/tt_reward_ad_appname_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:maxWidth="180dp"
+                android:singleLine="true"
+                android:text="pangle"
+                android:textColor="#ff333333"
+                android:textSize="20sp" />
+
+            <com.bytedance.sdk.openadsdk.core.widget.TTRatingBar2
+                android:id="@+id/tt_rb_score_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tt_comment_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/tt_comment_num_backup"
+                android:textColor="#ff93959a"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tt_reward_ad_download_backup"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/tt_reward_full_video_backup_btn_bg"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:text="@string/tt_video_download_apk"
+                android:textColor="@color/tt_white"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tt_ad_endcard_logo"
+                android:layout_width="32dp"
+                android:layout_height="14dp"
+                android:layout_gravity="start|bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/tt_ad_logo_new"
+                android:gravity="center"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    for vast web endcard-->
+    <FrameLayout
+        android:id="@+id/tt_reward_full_endcard_vast"
+        android:background="@color/tt_black"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/tt_reward_full_endcard_vast_image"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.bytedance.sdk.component.widget.SSWebView
+            android:id="@+id/tt_reward_full_endcard_vast_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

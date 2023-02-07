@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/yodo1_mas_card_background">
+
+    <TextView
+        android:id="@+id/yodo1_mas_dialog_uc_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/yodo1_mas_lite_blue"
+        android:gravity="center"
+        android:text="@string/yodo1_mas_string_uc_age"
+        android:textColor="@color/yodo1_mas_card_background"
+        android:textSize="17sp" />
+
+
+    <ScrollView
+        android:id="@+id/yodo1_mas_dialog_uc_sc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yodo1_mas_dialog_uc_title"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/yodo1_mas_dialog_uc_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yodo1_mas_dialog_uc_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/yodo1_mas_cashier_color_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/yodo1_mas_dialog_uc_year_suffix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yodo1_mas_string_age"
+                    android:textColor="@color/yodo1_mas_cashier_color_text" />
+            </LinearLayout>
+
+            <com.yodo1.mas.ui.seekbar.RangeSeekBar
+                android:id="@+id/yodo1_mas_dialog_uc_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yodo1_mas_dialog_uc_age"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:yodo1_mas_rsb_gravity="center"
+                app:yodo1_mas_rsb_max="120"
+                app:yodo1_mas_rsb_mode="single"
+                app:yodo1_mas_rsb_progress_drawable="@drawable/yodo1_mas_progress"
+                app:yodo1_mas_rsb_progress_drawable_default="@drawable/yodo1_mas_progress_defalut"
+                app:yodo1_mas_rsb_thumb_drawable="@drawable/yodo1_mas_thumb_gradient"
+                app:yodo1_mas_rsb_tick_mark_mode="number"
+                app:yodo1_mas_rsb_tick_mark_text_array="@array/yodo1_mas_markArray" />
+
+
+            <TextView
+                android:id="@+id/yodo1_mas_dialog_uc_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yodo1_mas_dialog_uc_seekbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/yodo1_mas_string_uc_prompt"
+                android:textColor="@color/yodo1_mas_cashier_color_text"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/yodo1_mas_dialog_uc_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yodo1_mas_dialog_uc_prompt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/yodo1_mas_string_uc_msg"
+                android:textColor="@color/yodo1_mas_cashier_color_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/yodo1_mas_dialog_uc_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/yodo1_mas_dialog_uc_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/yodo1_mas_button_uc"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/yodo1_mas_string_uc_accept"
+                android:textColor="@color/yodo1_mas_card_background"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/tt_splash_slide_up_circle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/tt_splash_slide_up_guide_bar"
+        android:background="@drawable/tt_splash_slide_up_circle"
+        android:layout_marginBottom="-24dp"
+        android:alpha="0" />
+
+    <ImageView
+        android:id="@+id/tt_splash_slide_up_finger"
+        android:layout_width="67dp"
+        android:layout_height="51dp"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/tt_splash_slide_up_guide_bar"
+        android:layout_alignBottom="@id/tt_splash_slide_up_guide_bar"
+        android:background="@drawable/tt_splash_slide_up_finger"
+        android:layout_marginBottom="-20dp"
+        android:layout_marginLeft="-7dp"
+        android:alpha="0" />
+    <ImageView
+        android:id="@+id/tt_splash_slide_up_bg"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/tt_splash_slide_up_guide_bar"
+        android:background="@drawable/tt_splash_slide_up_bg" />
+
+    <ImageView
+        android:id="@+id/tt_splash_slide_up_guide_bar"
+        android:layout_width="14dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tt_splash_slide_up_arrow" />
+
+    <TextView
+        android:id="@+id/slide_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tt_splash_slide_up_guide_bar"
+        android:textColor="@android:color/white"
+        android:text="wipe up"
+        android:textSize="18dp"
+        android:shadowColor="#99000000"
+        android:shadowRadius="4"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/slide_guide_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slide_text"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"
+        android:shadowColor="#99000000"
+        android:shadowRadius="4"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:gravity="center_horizontal"
+        />
+</RelativeLayout>

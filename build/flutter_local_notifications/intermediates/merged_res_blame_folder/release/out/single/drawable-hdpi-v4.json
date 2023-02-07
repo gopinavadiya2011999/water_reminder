@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\flutter_local_notifications\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\flutter_local_notifications\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\flutter_local_notifications\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\flutter_local_notifications\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\flutter_local_notifications\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    }
+]

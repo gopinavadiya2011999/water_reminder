@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tt_ad_report_info_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_width="191dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Ad Report"
+            android:textColor="#161823"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/tt_ad_report_close_button"
+            android:layout_width="40dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="14dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="14dp"
+            android:src="@drawable/tt_ad_xmark" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#1F161823" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:text="SDK version"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt_ad_report_sdk_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    tools:text="4.4.0.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:text="App"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt_ad_report_app_package_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    tools:text="package.name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:text="App version"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt_ad_report_app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    tools:text="4.4.0.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:text="OS"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt_ad_report_os"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    tools:text="Android 10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:text="Device"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt_ad_report_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    tools:text="google test" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:includeFontPadding="false"
+                    android:text="Creative info"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tt_ad_report_creative_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    tools:text="3ZSJ949b8b0458c2b363749b888458c2cAD38cijYT9MxqZSJHro93pHKrskhFza048J4FgBlb0VPm/aarcYvygtzSysZxPRm2bEmPfQ5iNDOQLqWvbgkjjLp/YUxHNQ9U8hVgAVsEqIPgHKB1Dn99YnL0tILfru0yDNvUcPQBbGYecOyvHNP6WTThpz1ujW6bC9TDtVOxBY+BX3pp/nobKffPR2WDdsRmVJWIVYzDxr2T6kXxdcUA7aGn1/K0j4xQQB9IqGt1LA5ZqDj0SrPPht+A9q00c/ha//lmd9bKDP9wN3ueKkEubmf4HcxHRO2NapcSDafxsMAh1LctdxuG2yXW9ViKPV" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="#ffffff">
+
+        <Button
+            android:id="@+id/tt_ad_report_copy_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:background="@drawable/tt_ad_report_info_button_bg"
+            android:text="copy all"
+            android:textColor="#333333"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>

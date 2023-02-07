@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state indicates collapsed image -->
+<item
+    android:state_selected="true"
+    android:drawable="@drawable/ia_collapse" />
+
+    <!-- Not selected state indicates expand image -->
+<item
+    android:state_selected="false"
+    android:drawable="@drawable/ia_expand" />
+</selector>

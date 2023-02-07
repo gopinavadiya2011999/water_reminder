@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pangle="http://schemas.android.com/apk/com.bytedance.sdk.component"
+    android:id="@+id/tt_reward_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/tt_reward_loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.bytedance.sdk.component.widget.SSWebView
+            android:id="@+id/tt_reward_browser_webview_loading"
+            pangle:tt_delay_init="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layerType="hardware" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99161823"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/tt_up_slide">
+            <ImageView
+                android:id="@+id/tt_up_slide_image"
+                android:layout_marginTop="45dp"
+                android:layout_width="18dp"
+                android:layout_height="16dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/tt_up_slide"/>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/tt_browser_webview_page_loading"
+            layout="@layout/tt_full_reward_video_landing_page_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/tt_video_container_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/tt_video_container_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/tt_video_reward_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#000000"
+                    android:scaleType="centerCrop" />
+                <FrameLayout
+                    android:id="@+id/tt_image_reward_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:background="#000000"
+                    android:scaleType="centerCrop" >
+                    <ImageView
+                        android:id="@+id/tt_image_reward"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"/>
+                </FrameLayout>
+            </FrameLayout>
+
+            <include layout="@layout/tt_activity_reward_and_full_video_no_bar" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <com.bytedance.sdk.openadsdk.core.widget.PlayableLoadingView
+        android:id="@+id/tt_reward_playable_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <com.bytedance.sdk.openadsdk.component.reward.top.TopProxyLayout
+        android:id="@+id/tt_top_layout_proxy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/tt_full_reward_video_loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tt_ad_logo"
+        android:layout_width="32dp"
+        android:layout_height="14dp"
+        android:layout_gravity="start|bottom"
+        android:layout_marginLeft="16dp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/tt_ad_logo_new"
+        android:gravity="center"/>
+    <RelativeLayout
+        android:id="@+id/tt_video_ad_close_layout"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/tt_mute_btn_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/tt_video_ad_close"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/tt_video_close_drawable" />
+    </RelativeLayout>
+</FrameLayout>

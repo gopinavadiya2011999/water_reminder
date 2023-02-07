@@ -1,0 +1,878 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_hybrid_native_ad_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_hybrid_native_ad_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_top_reward_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_top_reward_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_full_reward_video_loading4.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_full_reward_video_loading4.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yodo1_app_openad_view_port.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2cf1fa80def8c8d872a7cfac0568b65f\\transformed\\jetified-yodo1-4.8.0\\res\\layout\\yodo1_app_openad_view_port.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_dynamic_splash_interact_unlock.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_dynamic_splash_interact_unlock.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_landscape_with_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_landscape_with_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\layout\\custom_dialog.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_reward_landingpage_style.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_reward_landingpage_style.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\applovin_native_ad_media_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\applovin_native_ad_media_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_multi_ad_activity.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_multi_ad_activity.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_app_internal_app_install_controls_dark.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_app_internal_app_install_controls_dark.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_outstream_controls_default.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_outstream_controls_default.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_hand_shake.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_hand_shake.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_dialog_listview_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_dialog_listview_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_videolandingpage.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_videolandingpage.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_custom_dailog_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_custom_dailog_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_browser_titlebar_for_dark.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_browser_titlebar_for_dark.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_model_33_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_model_33_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_native_video_img_cover_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_native_video_img_cover_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_video_traffic_tips_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_video_traffic_tips_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_videolandingpage_link2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_videolandingpage_link2.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_ad_report_info.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_ad_report_info.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_landscape_base.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_landscape_base.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_video_play_layout_for_live.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_video_play_layout_for_live.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_first_degradation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_first_degradation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_2_3_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_2_3_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_header_dark.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_header_dark.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_dynamic_splash_layout_brush_mask_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_dynamic_splash_layout_brush_mask_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_model_3_191_v.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_model_3_191_v.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_banner_icon_and_text_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_banner_icon_and_text_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_top_app_open_dislike.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_top_app_open_dislike.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_full_reward_video_loading2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_full_reward_video_loading2.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_playable_loading_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_playable_loading_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_video_draw_btn_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_video_draw_btn_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_app_internal_app_install_controls_light.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_app_internal_app_install_controls_light.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_media_custom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_call_to_action.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_call_to_action.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_full_reward_video_loading.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_full_reward_video_loading.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_adtune_container.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_adtune_container.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_portrait.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_portrait.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_top_reward_dislike_3.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_top_reward_dislike_3.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_outstream_controls_app_install.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_outstream_controls_app_install.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_leader_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_leader_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_banner_ad_closed_300_250.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_banner_ad_closed_300_250.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\ia_fullscreen_activity.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\ia_fullscreen_activity.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_reward_video_no_bar_style.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_reward_video_no_bar_style.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_list_item_detail.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_list_item_detail.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_landing_page_loading_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_landing_page_loading_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_ad1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_ad1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yodo1_mas_games_dialog_usercontent.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\60a28e675d8f28c3e3ad4f26a8bea565\\transformed\\jetified-core-4.8.0\\res\\layout\\yodo1_mas_games_dialog_usercontent.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_2_3.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_2_3.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_media_banner_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_media_banner_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_landing_page_loading_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_landing_page_loading_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_rewarded_close_verification.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_rewarded_close_verification.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_banner_layout1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_banner_layout1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_settings_list.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_settings_list.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_interstitial_portrait.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_interstitial_portrait.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_portrait_warning.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_portrait_warning.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_landscape_first_degradation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_landscape_first_degradation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_endcard_landingpage_newstyle.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_endcard_landingpage_newstyle.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_dynamic_splash_slide_up.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_dynamic_splash_slide_up.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_rating.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_rating.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_list_divider.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_list_divider.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_16_9_v.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_16_9_v.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_9_16_v.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_9_16_v.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_banner_ad_closed_320_50.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_banner_ad_closed_320_50.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_third_degradation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_third_degradation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_mrec_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_mrec_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_reward_video_new_bar_style.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_reward_video_new_bar_style.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_hand_shake_interaction_type_16.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_hand_shake_interaction_type_16.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_banner_layout4_video.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_banner_layout4_video.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_landscape_without_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_landscape_without_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_outstream_controls_fullscreen_content_v1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_outstream_controls_fullscreen_content_v1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_mode_3_v.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_mode_3_v.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_rewarded_controls.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_rewarded_controls.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yodo1_inter_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2cf1fa80def8c8d872a7cfac0568b65f\\transformed\\jetified-yodo1-4.8.0\\res\\layout\\yodo1_inter_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_tile_background.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_tile_background.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_model_173_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_model_173_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_top_reward_dislike_2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_top_reward_dislike_2.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_top_full_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_top_full_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_interstitial_landscape_horizontal_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_interstitial_landscape_horizontal_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_player_control_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_player_control_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_track_selection_dialog.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_track_selection_dialog.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_pangle_ad_banner_layout_600_300.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_pangle_ad_banner_layout_600_300.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_hand_wriggle_guide.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_hand_wriggle_guide.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_player_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_player_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\ia_buffering_overlay.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\ia_buffering_overlay.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_medium_template_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_medium_template_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_list_item_right_detail.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_list_item_right_detail.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yodo1_vp_activity.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2cf1fa80def8c8d872a7cfac0568b65f\\transformed\\jetified-yodo1-4.8.0\\res\\layout\\yodo1_vp_activity.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_sub_settings_list_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_sub_settings_list_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_dislike_dialog_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_dislike_dialog_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\ia_rich_media_video.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\ia_rich_media_video.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_pangle_ad_instersitial_layout_3_2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_pangle_ad_instersitial_layout_3_2.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_reward_video_default_style.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_reward_video_default_style.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_9_16_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_9_16_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_divkit.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_divkit.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_full_reward.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_full_reward.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_browser_download_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_browser_download_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_settings_list_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_settings_list_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\activity_internal_store_webpage.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\activity_internal_store_webpage.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_full_reward_video_loading3.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_full_reward_video_loading3.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_ttlandingpage_playable.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_ttlandingpage_playable.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_app_open_view3.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_app_open_view3.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_list_section_centered.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_list_section_centered.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_mode_3_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_mode_3_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_vertical_banner_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_vertical_banner_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_base.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_base.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_multibanner_controls.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_multibanner_controls.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_reward_video_vast_bar_style.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_reward_video_vast_bar_style.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_landing_page_loading_default.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_landing_page_loading_default.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_insert_ad_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_insert_ad_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_3_2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_3_2.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\ia_video_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\ia_video_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_ad_unit_detail_activity.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_ad_unit_detail_activity.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_player_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_player_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_vertical_leader_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_vertical_leader_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\cedfaab6eaaab6f0387da67443c05d79\\transformed\\core-1.7.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_browser_new_title_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_browser_new_title_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_cascading_menu_item_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_warning.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_warning.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_second_degradation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_portrait_second_degradation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_pangle_ad_instersitial_layout_2_3.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_pangle_ad_instersitial_layout_2_3.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_list_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_list_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_reward_and_full_video_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_reward_and_full_video_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_vertical_media_banner_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_vertical_media_banner_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_model_173_v.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_model_173_v.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_tooltip.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_tooltip.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_interstitial_content.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_interstitial_content.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_native_video_ad_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_native_video_ad_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\browser_actions_context_menu_row.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\139bf962852b8959a6c0c01b7c8dae01\\transformed\\browser-1.4.0\\res\\layout\\browser_actions_context_menu_row.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_interstitial_landscape_sponsored_container.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_interstitial_landscape_sponsored_container.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_video_ad_cover_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_video_ad_cover_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_reward_and_full_video_no_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_reward_and_full_video_no_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_ad.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_ad.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_player_control_rewind_button.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_player_control_rewind_button.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_browser_new_bottom_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_browser_new_bottom_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\ia_default_video_end_card.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\ia_default_video_end_card.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_pangle_ad_instersitial_layout_3_2_1_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_pangle_ad_instersitial_layout_3_2_1_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_browser_titlebar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_browser_titlebar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_interstitial_landscape_vetrical_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_interstitial_landscape_vetrical_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_banner_layout_vast_video.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_banner_layout_vast_video.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_landscape_warning.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_landscape_warning.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_interstitial_close.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_interstitial_close.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\browser_actions_context_menu_page.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\139bf962852b8959a6c0c01b7c8dae01\\transformed\\browser-1.4.0\\res\\layout\\browser_actions_context_menu_page.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_pangle_native_image_video_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_pangle_native_image_video_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\ia_click_overlay.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\dccef59f264179c1ee98b0aaf5cd55b4\\transformed\\jetified-marketplace-sdk-8.2.0\\res\\layout\\ia_click_overlay.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_privacy_dialog.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_privacy_dialog.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_rewarded_landscape.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_rewarded_landscape.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\mediation_debugger_list_section.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\mediation_debugger_list_section.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_app_open_view2.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_app_open_view2.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_pangle_ad_banner_layout_600_150.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_pangle_ad_banner_layout_600_150.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_reward_and_full_endcard.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_reward_and_full_endcard.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_fullscreen_content_v1_text_assets.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_fullscreen_content_v1_text_assets.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yodo1_banner_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2cf1fa80def8c8d872a7cfac0568b65f\\transformed\\jetified-yodo1-4.8.0\\res\\layout\\yodo1_banner_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_website.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_website.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_player_control_ffwd_button.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_player_control_ffwd_button.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_recycler_view_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_recycler_view_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_1_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_1_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_banner_layout4.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_banner_layout4.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_16_9_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_16_9_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\c886771aa5d28f1e574e308b8a3aa5d6\\transformed\\media-1.4.3\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\exo_styled_player_control_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1194be08e1ceb8bbbb6041acad8b0f73\\transformed\\jetified-exoplayer-ui-2.17.1\\res\\layout\\exo_styled_player_control_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_model_3_191_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_model_3_191_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_interaction_style_3_2_h.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_interaction_style_3_2_h.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_app_open_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_app_open_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_reward_and_full_video_vast_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_reward_and_full_video_vast_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_instream_controls_skin.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_instream_controls_skin.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_ttlandingpage.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_ttlandingpage.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_small_template_1.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_small_template_1.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yodo1_app_openad_view_land.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2cf1fa80def8c8d872a7cfac0568b65f\\transformed\\jetified-yodo1-4.8.0\\res\\layout\\yodo1_app_openad_view_land.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\max_native_ad_banner_view.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\10a874100fd29dcaf8f6260f1b766117\\transformed\\jetified-applovin-sdk-11.5.0\\res\\layout\\max_native_ad_banner_view.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_reward_and_full_video_new_bar.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_reward_and_full_video_new_bar.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_image_model_33_v.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_image_model_33_v.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_activity_full_reward_video_landingpage_style.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_activity_full_reward_video_landingpage_style.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_full_reward_video_landing_page_loading.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_full_reward_video_landing_page_loading.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_video_detail_layout.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_video_detail_layout.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_backup_ad_round_top_right.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_backup_ad_round_top_right.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\tt_video_traffic_tip.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\layout\\tt_video_traffic_tip.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_app_install_fullscreen_landscape_second_degradation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_app_install_fullscreen_landscape_second_degradation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\yandex_ads_internal_native_rewarded_portrait.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\layout\\yandex_ads_internal_native_rewarded_portrait.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\layout\\abc_alert_dialog_material.xml"
+    }
+]

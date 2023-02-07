@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\common_full_open_on_phone.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\ee98342ba92e2f798e50b733cc59df90\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\cloud_firestore\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\1d9e3bf46c2eac01c0d9b9159832c3f3\\transformed\\jetified-play-services-base-18.0.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    }
+]

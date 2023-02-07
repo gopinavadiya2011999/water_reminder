@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tt_pangle_ad_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/tt_pangle_ad_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/tt_pangle_ad_main_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="35.6dp"
+            android:layout_height="14.4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tt_ad_logo_new"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/tt_pangle_ad_close_layout"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/tt_pangle_ad_mute_btn_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tt_video_ad_close"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/tt_pangle_ad_close_drawable" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tt_pangle_ad_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.91"
+        android:orientation="vertical">
+
+        <com.bytedance.sdk.openadsdk.adapter.NiceImageView
+            android:id="@+id/tt_pangle_ad_icon"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="34dp"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/tt_pangle_ad_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="30dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Pangle"
+            android:textSize="20sp" />
+
+
+        <com.bytedance.sdk.openadsdk.core.widget.TTRatingBar2
+            android:id="@+id/tt_pangle_ad_score"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tt_pangle_ad_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            tools:text="pangle ad content"
+            android:textColor="#54000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/tt_pangle_ad_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/tt_pangle_btn_bg"
+        android:gravity="center"
+        android:text="pangle"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp" />
+</LinearLayout>

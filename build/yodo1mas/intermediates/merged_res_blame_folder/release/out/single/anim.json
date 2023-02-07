@@ -1,0 +1,158 @@
+[
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_radio_to_on_mtrl_dot_group_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_radio_to_on_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_checkbox_to_checked_box_inner_merged_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_checkbox_to_checked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_radio_to_on_mtrl_ring_outer_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_radio_to_on_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\fragment_close_enter.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9ac571ab9894da603ae72b4c8432551f\\transformed\\fragment-1.2.5\\res\\anim\\fragment_close_enter.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\fragment_close_exit.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9ac571ab9894da603ae72b4c8432551f\\transformed\\fragment-1.2.5\\res\\anim\\fragment_close_exit.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\fragment_fade_enter.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9ac571ab9894da603ae72b4c8432551f\\transformed\\fragment-1.2.5\\res\\anim\\fragment_fade_enter.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_checkbox_to_unchecked_check_path_merged_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\fragment_fade_exit.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9ac571ab9894da603ae72b4c8432551f\\transformed\\fragment-1.2.5\\res\\anim\\fragment_fade_exit.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\yandex_ads_internal_bottom_adtune_dialog_animation_in.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\anim\\yandex_ads_internal_bottom_adtune_dialog_animation_in.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_checkbox_to_unchecked_icon_null_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_checkbox_to_unchecked_icon_null_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_text_animation_y_in.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_text_animation_y_in.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\fragment_open_exit.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9ac571ab9894da603ae72b4c8432551f\\transformed\\fragment-1.2.5\\res\\anim\\fragment_open_exit.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_tooltip_enter.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_text_animation_x_in.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_text_animation_x_in.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_dislike_animation_show.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_dislike_animation_show.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_text_animation_y_out.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_text_animation_y_out.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_radio_to_off_mtrl_ring_outer_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_tooltip_exit.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_fade_out.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_fade_out.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_radio_to_on_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_checkbox_to_checked_box_outer_merged_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_checkbox_to_checked_box_outer_merged_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_radio_to_off_mtrl_dot_group_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_radio_to_off_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_loading_two_icon_scale.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_loading_two_icon_scale.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\yandex_ads_internal_bottom_adtune_dialog_animation_out.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\2dd3fc878f004064e816e1e6093491ce\\transformed\\jetified-mobileads-5.3.0\\res\\anim\\yandex_ads_internal_bottom_adtune_dialog_animation_out.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\fragment_open_enter.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9ac571ab9894da603ae72b4c8432551f\\transformed\\fragment-1.2.5\\res\\anim\\fragment_open_enter.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\tt_dislike_animation_dismiss.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\766282e84bf1bbd51f1e7584c1ecfddf\\transformed\\jetified-ads-sdk-4.7.0.5\\res\\anim\\tt_dislike_animation_dismiss.xml"
+    },
+    {
+        "merged": "E:\\gopi_workspace\\waterreminder\\build\\yodo1mas\\intermediates\\res\\merged\\release\\anim\\btn_checkbox_to_checked_icon_null_animation.xml",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\26760227a8832155cd9221c15c6c339d\\transformed\\appcompat-1.2.0\\res\\anim\\btn_checkbox_to_checked_icon_null_animation.xml"
+    }
+]

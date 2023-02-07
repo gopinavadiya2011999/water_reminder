@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/yodo1_iv_interimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+
+    <ImageButton
+        android:id="@+id/yodo1_iv_interclose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/yodo1_iv_interimg"
+        android:layout_alignRight="@+id/yodo1_iv_interimg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_yodo1_close" />
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:contentDescription="ia_default_endcard_video_overlay"
+        android:visibility="visible">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/ia_endcard_button_margin_bottom"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        <Button
+                android:id="@+id/ia_b_end_card_call_to_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ia_video_control_margin"
+                android:background="@drawable/bg_green"
+                android:gravity="center"
+                android:letterSpacing="0.04"
+                android:lineSpacingMultiplier="1.38"
+                android:minHeight="1dp"
+                android:paddingLeft="@dimen/ia_button_padding_lateral"
+                android:paddingTop="@dimen/ia_endcard_button_padding_vertical"
+                android:paddingRight="@dimen/ia_button_padding_lateral"
+                android:paddingBottom="@dimen/ia_endcard_button_padding_vertical"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ia_video_overlay_text_large_plus"
+                android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <ImageView
+            android:id="@+id/hand_animation"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="@dimen/ia_endcard_hand_margin_button"
+            android:src="@drawable/white_hand"
+            android:visibility="gone" />
+
+    <!-- AppInfo button, relevant for ignite trueSingleTap flow
+            Default location: Bottom-Left corner
+        -->
+    <TextView
+            android:id="@+id/ia_endcard_tv_app_info_button"
+            style="@style/ia_tv_app_info_btn_style"
+            android:layout_gravity="bottom|left" />
+
+
+</FrameLayout>
