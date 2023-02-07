@@ -89,9 +89,10 @@ class WaterRecords {
   String? timeId;
   String? waterMl;
   String ?totalWaterMl;
+  String ?percentage;
 
 
-  WaterRecords({this.time, this.totalWaterMl, this.timeId, this.waterMl});
+  WaterRecords({this.time, this.totalWaterMl, this.timeId, this.waterMl,this.percentage});
 
   factory WaterRecords.fromJson(Map<String, dynamic> jsonData) =>
       WaterRecords(
@@ -99,7 +100,10 @@ class WaterRecords {
           time: jsonData['time'] == null ? null : jsonData['time'],
           waterMl: jsonData['timeId'] == null ? null : jsonData['timeId'],
           totalWaterMl: jsonData['totalWaterMl'] == null ? null : jsonData['totalWaterMl'],
-          timeId: jsonData['waterMl'] == null ? null : jsonData['waterMl']);
+          timeId: jsonData['waterMl'] == null ? null : jsonData['waterMl'],
+        percentage: jsonData['percentage'] == null ? null : jsonData['percentage'],
+
+      );
 
   static Map<String, dynamic> toJson(WaterRecords timeRecords) =>
       {
@@ -108,6 +112,7 @@ class WaterRecords {
         'timeId': timeRecords.timeId == null ? null : timeRecords.timeId,
         'waterMl': timeRecords.waterMl == null ? null : timeRecords.waterMl,
         'totalWaterMl': timeRecords.totalWaterMl == null ? null : timeRecords.totalWaterMl,
+        'percentage': timeRecords.percentage == null ? null : timeRecords.percentage,
       };
 
   static String encode(List<WaterRecords> waterRecords) =>

@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:collection/collection.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-
+import 'dart:math';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:sizer/sizer.dart';
@@ -20,28 +22,28 @@ class ReportView extends GetView<ReportController> {
 
   final reportController = Get.put(ReportController());
 
-  final shadowColor = const Color(0xFFCCCCCC);
-  final dataList = [
-    _BarData(ColorConstant.blueFF, 18, 18),
-    _BarData(ColorConstant.greyAF, 17, 8),
-    _BarData(ColorConstant.bluF7, 10, 15),
-    _BarData(ColorConstant.black, 2.5, 5),
-    _BarData(ColorConstant.blueFe, 2, 2.5),
-    _BarData(ColorConstant.grey80, 2, 2),
-  ];
+  // final shadowColor = const Color(0xFFCCCCCC);
 
-  BarChartGroupData generateBarGroup(
-    int x,
-    Color color,
-    double value,
-    double shadowValue,
-  ) {
+  // final dataList = [
+  //   _BarData(ColorConstant.blueFF, 18, 18),
+  //   _BarData(ColorConstant.greyAF, 17, 8),
+  //   _BarData(ColorConstant.bluF7, 10, 15),
+  //   _BarData(ColorConstant.black, 2.5, 5),
+  //   _BarData(ColorConstant.blueFe, 2, 2.5),
+  //   _BarData(ColorConstant.grey80, 2, 2),
+  // ];
+
+  BarChartGroupData generateBarGroup({
+    required int x,
+    required double toY,
+    // double shadowValue,
+  }) {
     return BarChartGroupData(
       x: x,
       barRods: [
         BarChartRodData(
-          toY: value,
-          color: color,
+          toY: toY,
+          color: ColorConstant.blueFe,
           width: 6,
         ),
         // BarChartRodData(
@@ -88,127 +90,179 @@ class ReportView extends GetView<ReportController> {
                               _chartRow(),
                               SizedBox(height: 2.h),
                               Padding(
-                                padding: const EdgeInsets.all(24),
-                                child: AspectRatio(
-                                  aspectRatio: 1.4,
-                                  child: BarChart(
-                                    BarChartData(
-                                      alignment: BarChartAlignment.spaceBetween,
-                                      borderData: FlBorderData(
-                                        show: true,
-                                        border: Border.symmetric(
-                                          horizontal: BorderSide(
-                                            color: ColorConstant.greyCD,
-                                          ),
-                                        ),
-                                      ),
-                                      titlesData: FlTitlesData(
-                                        show: true,
-                                        leftTitles: AxisTitles(
-                                          drawBehindEverything: true,
-                                          sideTitles: SideTitles(
-                                            showTitles: true,
-                                            reservedSize: 30,
-                                            getTitlesWidget: (value, meta) {
-                                              return Text(
-                                                value.toInt().toString(),
-                                                textAlign: TextAlign.left,
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                        bottomTitles: AxisTitles(
-                                          sideTitles: SideTitles(
-                                            showTitles: true,
-                                            reservedSize: 36,
-                                            getTitlesWidget: (value, meta) {
-                                              final index = value.toInt();
-                                              return SideTitleWidget(
-                                                axisSide: meta.axisSide,
-                                                child: _IconWidget(
-                                                  color: dataList[index].color,
-                                                  isSelected:
-                                                      touchedGroupIndex.value ==
-                                                          index,
+                                padding: const EdgeInsets.only(
+                                    top: 24, bottom: 24, right: 20, left: 10),
+                                child: StreamBuilder(
+                                    stream: FirebaseFirestore.instance
+                                        .collection('user')
+                                        .doc(reportController.user!.uid)
+                                        .collection('water_records')
+                                        .orderBy('time')
+                                        .snapshots(),
+                                    builder: (context, snapshotData) {
+                                      if (snapshotData.hasData) {
+                                        return AspectRatio(
+                                          aspectRatio: 1.4,
+                                          child: BarChart(
+                                            BarChartData(
+
+                                              alignment: BarChartAlignment
+                                                  .spaceBetween,
+                                              borderData: FlBorderData(
+                                                show: true,
+                                                border: Border.symmetric(
+                                                  horizontal: BorderSide(
+                                                    color: ColorConstant.greyCD,
+                                                  ),
                                                 ),
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                        rightTitles: AxisTitles(),
-                                        topTitles: AxisTitles(),
-                                      ),
-                                      gridData: FlGridData(
-                                        show: true,
-                                        drawVerticalLine: false,
-                                        getDrawingHorizontalLine: (value) =>
-                                            FlLine(
-                                          color: ColorConstant.greyCD,
-                                          strokeWidth: 1,
-                                        ),
-                                      ),
-                                      barGroups:
-                                          dataList.asMap().entries.map((e) {
-                                        final index = e.key;
-                                        final data = e.value;
-                                        return generateBarGroup(
-                                          index,
-                                          ColorConstant.blueFe,
-                                          data.value,
-                                          data.shadowValue,
-                                        );
-                                      }).toList(),
-                                      maxY: 20,
-                                      minY: 0,
-                                      barTouchData: BarTouchData(
-                                        enabled: true,
-                                        handleBuiltInTouches: false,
-                                        touchTooltipData: BarTouchTooltipData(
-                                          tooltipBgColor: Colors.transparent,
-                                          tooltipMargin: 0,
-                                          getTooltipItem: (
-                                            BarChartGroupData group,
-                                            int groupIndex,
-                                            BarChartRodData rod,
-                                            int rodIndex,
-                                          ) {
-                                            return BarTooltipItem(
-                                              rod.toY.toString(),
-                                              TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: rod.color,
-                                                fontSize: 18,
-                                                shadows: const [
-                                                  Shadow(
-                                                    color: Colors.black26,
-                                                    blurRadius: 12,
-                                                  )
-                                                ],
                                               ),
-                                            );
-                                          },
-                                        ),
-                                        touchCallback: (event, response) {
-                                          if (event
-                                                  .isInterestedForInteractions &&
-                                              response != null &&
-                                              response.spot != null) {
-                                            // setState(() {
-                                            touchedGroupIndex.value = response
-                                                .spot!.touchedBarGroupIndex;
-                                            reportController.update();
-                                            // });
-                                          } else {
-                                            // setState(() {
-                                            touchedGroupIndex.value = -1;
-                                            reportController.update();
-                                            // });
-                                          }
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                              titlesData: FlTitlesData(
+                                                show: true,
+                                                leftTitles: AxisTitles(
+                                                  drawBehindEverything: true,
+                                                  sideTitles: SideTitles(
+                                                    showTitles: true,
+                                                    reservedSize: 8.5.w,
+                                                    getTitlesWidget:
+                                                        (value, meta) {
+                                                      return Text(
+                                                        value
+                                                            .toInt()
+                                                            .toString(),
+                                                        textAlign:
+                                                            TextAlign.right,
+                                                      );
+                                                    },
+                                                  ),
+                                                ),
+                                                bottomTitles: AxisTitles(
+                                                  sideTitles: SideTitles(
+                                                    showTitles: true,
+                                                    reservedSize: 4.5.h,
+                                                    getTitlesWidget:
+                                                        (value, meta) {
+                                                      final index =
+                                                          value.toInt();
+                                                      return SideTitleWidget(
+                                                        axisSide: meta.axisSide,
+                                                        child: _IconWidget(
+                                                          color: ColorConstant
+                                                              .blueFe,
+                                                          isSelected:
+                                                              touchedGroupIndex
+                                                                      .value ==
+                                                                  index,
+                                                        ),
+                                                      );
+                                                    },
+                                                  ),
+                                                ),
+                                                rightTitles: AxisTitles(),
+                                                topTitles: AxisTitles(),
+                                              ),
+                                              gridData: FlGridData(
+                                                show: true,
+                                                drawVerticalLine: false,
+                                                getDrawingHorizontalLine:
+                                                    (value) => FlLine(
+                                                  color: ColorConstant.greyCD,
+                                                  strokeWidth: 1,
+                                                ),
+                                              ),
+                                              barGroups: snapshotData.data!.docs
+                                                  .where((element) =>
+                                              DateFormat("yyyy-MM-dd")
+                                                  .parse(DateTime(
+                                                  DateTime.now()
+                                                      .year,
+                                                  DateTime.now()
+                                                      .month,
+                                                  DateTime.now()
+                                                      .day)
+                                                  .toString())
+                                                  .difference(DateFormat(
+                                                  'yyyy-MM-dd')
+                                                  .parse((DateTime.fromMicrosecondsSinceEpoch(element
+                                                  .get(
+                                                  'time')
+                                                  .microsecondsSinceEpoch)
+                                                  .toString())))
+                                                  .inDays <=
+                                                  7).toList()
+                                                  .asMap()
+                                                  .entries
+                                                  .map((e) {
+                                                final index = 0 /*e.key*/;
+                                                final data = e.value;
+                                                return generateBarGroup(
+                                                  x: index,
+                                                  toY:
+                                                       double.parse(
+                                                    data['waterMl']
+                                                        .toString()
+                                                        .split("ml")
+                                                        .first)
+                                                  ,
+                                                );
+                                              }).toList(),
+
+                                              maxY: maxBy(snapshotData.data!.docs.map((e) => double.parse(e['totalWaterMl'].split(' ').first)), (e) =>  e),
+                                              minY: 0,
+                                              barTouchData: BarTouchData(
+                                                enabled: true,
+                                                handleBuiltInTouches: false,
+                                                touchTooltipData:
+                                                    BarTouchTooltipData(
+                                                  tooltipBgColor:
+                                                      Colors.transparent,
+                                                  tooltipMargin: 0,
+                                                  getTooltipItem: (
+                                                    BarChartGroupData group,
+                                                    int groupIndex,
+                                                    BarChartRodData rod,
+                                                    int rodIndex,
+                                                  ) {
+                                                    return BarTooltipItem(
+                                                      rod.toY.toString(),
+                                                      TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: rod.color,
+                                                        fontSize: 18,
+                                                        shadows: const [
+                                                          Shadow(
+                                                            color:
+                                                                Colors.black26,
+                                                            blurRadius: 12,
+                                                          )
+                                                        ],
+                                                      ),
+                                                    );
+                                                  },
+                                                ),
+                                                touchCallback:
+                                                    (event, response) {
+                                                  if (event
+                                                          .isInterestedForInteractions &&
+                                                      response != null &&
+                                                      response.spot != null) {
+                                                    touchedGroupIndex.value =
+                                                        response.spot!
+                                                            .touchedBarGroupIndex;
+                                                    reportController.update();
+                                                  } else {
+                                                    touchedGroupIndex.value =
+                                                        -1;
+                                                    reportController.update();
+                                                  }
+                                                },
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                      return Container();
+                                    }),
                               ),
                             ],
                           ),
@@ -242,9 +296,9 @@ class ReportView extends GetView<ReportController> {
         backgroundColor: ColorConstant.white);
   }
 
-
-
   int drinkableWater = 0;
+  double lastWeekPer = 0;
+  double lastMonthPer = 0;
 
   _progressBar(
       {required BuildContext context,
@@ -258,17 +312,19 @@ class ReportView extends GetView<ReportController> {
             .snapshots(),
         builder: (context, snapshotData) {
           if (snapshotData.hasData) {
-            if (snapshotData.data!.docs
-                    .where((element) =>
-                        element.get('time') != null &&
-                        DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
-                            DateFormat('dd/MM/yyyy').format(
-                                DateTime.fromMicrosecondsSinceEpoch(element
-                                    .get('time')
-                                    .microsecondsSinceEpoch)))
-                    .toList()
-                    .length !=
-                0) {
+            ///Today's progress
+            if (reportController.progressValue == "Today's" &&
+                snapshotData.data!.docs
+                        .where((element) =>
+                            element.get('time') != null &&
+                            DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
+                                DateFormat('dd/MM/yyyy').format(
+                                    DateTime.fromMicrosecondsSinceEpoch(element
+                                        .get('time')
+                                        .microsecondsSinceEpoch)))
+                        .toList()
+                        .length !=
+                    0) {
               drinkableWater = (snapshotData.data!.docs
                   .where((element) =>
                       element.get('time') != null &&
@@ -279,20 +335,33 @@ class ReportView extends GetView<ReportController> {
                   .toList()
                   .length);
             }
-            // else if(snapshotData.data!.docs
-            //     .where((element) =>
-            // element.get('time') != null &&
-            //     DateFormat('dd/MM/yyyy').format(DateTime.now()) ==
-            //         DateFormat('dd/MM/yyyy').format(
-            //             DateTime.fromMicrosecondsSinceEpoch(element
-            //                 .get('time')
-            //                 .microsecondsSinceEpoch)))
-            //     .toList()
-            //     .length !=
-            //     0){
-            //
-            // }
-            else {
+
+            ///Last week Progress
+            else if (reportController.progressValue == "Last Week" &&
+                differenceInDays(snapshotData)
+                        .length !=
+                    0) {
+              lastWeekData(snapshotData);
+            }
+
+            ///Last Month Progress
+            else if (reportController.progressValue == "Last Month" &&
+                snapshotData.data!.docs
+                        .where((element) =>
+                            DateFormat("yyyy-MM").parse(DateTime(
+                                    DateTime.now().year,
+                                    DateTime.now().month - 1)
+                                .toString()) ==
+                            (DateFormat('yyyy-MM').parse(
+                                (DateTime.fromMicrosecondsSinceEpoch(element
+                                        .get('time')
+                                        .microsecondsSinceEpoch)
+                                    .toString()))))
+                        .toList()
+                        .length !=
+                    0) {
+              lastMonthData(snapshotData);
+            } else {
               drinkableWater = 0;
             }
             return CircularPercentIndicator(
@@ -301,24 +370,32 @@ class ReportView extends GetView<ReportController> {
                 animationDuration: 1200,
                 lineWidth: 28,
                 startAngle: 20,
-                percent: (int.parse((drinkableWater * 200).toString()) /
-                            int.parse(snapshot!['water_goal']
-                                .toString()
-                                .split('ml')
-                                .first
-                                .trim())) <=
-                        1
-                    ? int.parse((drinkableWater * 200).toString()) /
-                        int.parse(snapshot['water_goal']
-                            .toString()
-                            .split('ml')
-                            .first
-                            .trim())
-                    : 1,
+                percent: reportController.progressValue == "Last Week"
+                    ? (lastWeekPer <= 1 ? lastWeekPer : 1)
+                    : reportController.progressValue == "Last Month"
+                        ? (lastMonthPer <= 1 ? lastMonthPer : 1)
+                        : ((int.parse((drinkableWater * 200).toString()) /
+                                    int.parse(snapshot!['water_goal']
+                                        .toString()
+                                        .split('ml')
+                                        .first
+                                        .trim())) <=
+                                1
+                            ? int.parse((drinkableWater * 200).toString()) /
+                                int.parse(snapshot['water_goal']
+                                    .toString()
+                                    .split('ml')
+                                    .first
+                                    .trim())
+                            : 1),
                 center: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    " ${((drinkableWater * 200) / int.parse(snapshot['water_goal'].toString().split('ml').first.trim()) * 100).floor()}%",
+                    reportController.progressValue == "Last Week"
+                        ? "${(lastWeekPer * 100).floor()}%"
+                        : reportController.progressValue == "Last Month"
+                            ? "${(lastMonthPer * 100).floor()}%"
+                            : "${((drinkableWater * 200) / int.parse(snapshot!['water_goal'].toString().split('ml').first.trim()) * 100).floor()}%",
                     maxLines: 2,
                     textAlign: TextAlign.center,
                     style: TextStyleConstant.blue50.copyWith(fontSize: 38.sp),
@@ -352,6 +429,7 @@ class ReportView extends GetView<ReportController> {
               ),
               onTap: ({item}) {
                 reportController.progressValue.value = item!;
+                reportController.update();
               },
               showArrow: false,
               pressType: PressType.singleClick)),
@@ -378,20 +456,107 @@ class ReportView extends GetView<ReportController> {
               ),
               onTap: ({item}) {
                 reportController.chartValue.value = item!;
+                reportController.update();
               },
               showArrow: false,
               pressType: PressType.singleClick)),
         ]);
   }
+
+  lastWeekData(snapshotData) {
+    final values = <String, double>{};
+
+    for (int i = 0;
+        i <
+            differenceInDays(snapshotData)
+                .toList()
+                .length;
+        i++) {
+      final item = differenceInDays(snapshotData)
+          .toList()[i];
+      final itemName = DateFormat('yyyy-MM-dd')
+          .parse((DateTime.fromMicrosecondsSinceEpoch(
+                  item.get('time').microsecondsSinceEpoch)
+              .toString()))
+          .toString();
+      String qty = double.parse(item['percentage']).toStringAsExponential(1);
+      double previousValue = 0;
+      if (values.containsKey(itemName)) {
+        previousValue = values[itemName]!;
+      }
+      previousValue = previousValue + double.parse(qty);
+      values[itemName] = previousValue;
+    }
+
+    Iterable<double> result = values.values;
+
+    double sum = result.sum;
+
+    lastWeekPer = ((sum / 7));
+  }
+
+  void lastMonthData(
+      AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshotData) {
+    final values = <String, double>{};
+
+    for (int i = 0;
+        i <
+            snapshotData.data!.docs
+                .where((element) =>
+                    DateFormat("yyyy-MM").parse(
+                        DateTime(DateTime.now().year, DateTime.now().month - 1)
+                            .toString()) ==
+                    (DateFormat('yyyy-MM').parse(
+                        (DateTime.fromMicrosecondsSinceEpoch(
+                                element.get('time').microsecondsSinceEpoch)
+                            .toString()))))
+                .toList()
+                .length;
+        i++) {
+      final item = snapshotData.data!.docs
+          .where((element) =>
+              DateFormat("yyyy-MM").parse(
+                  DateTime(DateTime.now().year, DateTime.now().month - 1)
+                      .toString()) ==
+              (DateFormat('yyyy-MM').parse((DateTime.fromMicrosecondsSinceEpoch(
+                      element.get('time').microsecondsSinceEpoch)
+                  .toString()))))
+          .toList()[i];
+      final itemName = DateFormat('yyyy-MM-dd')
+          .parse((DateTime.fromMicrosecondsSinceEpoch(
+                  item.get('time').microsecondsSinceEpoch)
+              .toString()))
+          .toString();
+      String qty = double.parse(item['percentage']).toStringAsExponential(1);
+      double previousValue = 0;
+      if (values.containsKey(itemName)) {
+        previousValue = values[itemName]!;
+      }
+      previousValue = previousValue + double.parse(qty);
+      values[itemName] = previousValue;
+    }
+
+    Iterable<double> result = values.values;
+    print(result);
+    double sum = result.sum;
+
+    lastMonthPer = sum / 12;
+  }
 }
 
-class _BarData {
-  const _BarData(this.color, this.value, this.shadowValue);
-
-  final Color color;
-  final double value;
-  final double shadowValue;
+extension DateOnlyCompare on DateTime {
+  bool isSameDate(DateTime other) {
+    return year == other.year && month == other.month && day == other.day;
+  }
 }
+//
+// class _BarData {
+//   const _BarData(this.color, this.value, this.shadowValue);
+//
+//   final Color color;
+//   final double value;
+//   final double shadowValue;
+// }
 
 class _IconWidget extends ImplicitlyAnimatedWidget {
   const _IconWidget({
@@ -441,4 +606,28 @@ class _IconWidgetState extends AnimatedWidgetBaseState<_IconWidget> {
       ),
     ) as Tween<double>?;
   }
+}
+
+differenceInDays(snapshotData){
+  return snapshotData.data!.docs
+      .where((element) =>
+  DateFormat("yyyy-MM-dd")
+      .parse(DateTime(
+      DateTime.now()
+          .year,
+      DateTime.now()
+          .month,
+      DateTime.now()
+          .day)
+      .toString())
+      .difference(DateFormat(
+      'yyyy-MM-dd')
+      .parse((DateTime.fromMicrosecondsSinceEpoch(element
+      .get(
+      'time')
+      .microsecondsSinceEpoch)
+      .toString())))
+      .inDays <=
+      7)
+      .toList();
 }

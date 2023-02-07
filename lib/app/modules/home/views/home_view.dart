@@ -508,11 +508,11 @@ class HomeView extends GetView<HomeController> {
 
   void addWaterCode(
       {DocumentSnapshot<Map<String, dynamic>>? snapshot, String? id}) {
-    print("&&&& $drinkableWater");
-    if (((drinkableWater * 200) !=
+
+    if ((((drinkableWater+1) * 200) !=
             int.parse(
                 snapshot!['water_goal'].toString().split('ml').first.trim())) &&
-        ((drinkableWater * 200) <=
+        (((drinkableWater+1) * 200) <=
             int.parse(
                 snapshot['water_goal'].toString().split('ml').first.trim()))) {
       Uuid uuid = const Uuid();
@@ -520,9 +520,10 @@ class HomeView extends GetView<HomeController> {
         enter.value = true;
         waterRecords.time = Timestamp.now();
         waterRecords.totalWaterMl = snapshot['water_goal'];
+        waterRecords.percentage =((drinkableWater+1) * 200/int.parse(snapshot['water_goal'].split('ml').first.toString().trim())).toString();
         waterRecords.timeId =
             uuid.v1() + DateTime.now().millisecondsSinceEpoch.toString();
-        waterRecords.waterMl = '200ml';
+        waterRecords.waterMl = '${(drinkableWater+1) * 200}ml';
 
         FirebaseFirestore.instance
             .collection('user')
