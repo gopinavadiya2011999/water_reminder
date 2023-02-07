@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ironsource.adapters:tapjoyadapter:4.1.21@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f9ce770650728f19da78268366c2d333/transformed/jetified-tapjoyadapter-4.1.21/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f9ce770650728f19da78268366c2d333/transformed/jetified-tapjoyadapter-4.1.21/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f9ce770650728f19da78268366c2d333/transformed/jetified-tapjoyadapter-4.1.21/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

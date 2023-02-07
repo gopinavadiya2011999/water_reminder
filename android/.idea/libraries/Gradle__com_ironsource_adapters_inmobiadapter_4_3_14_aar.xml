@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ironsource.adapters:inmobiadapter:4.3.14@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bad88e40a3198e3651b6a74a715df714/transformed/jetified-inmobiadapter-4.3.14/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bad88e40a3198e3651b6a74a715df714/transformed/jetified-inmobiadapter-4.3.14/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bad88e40a3198e3651b6a74a715df714/transformed/jetified-inmobiadapter-4.3.14/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
