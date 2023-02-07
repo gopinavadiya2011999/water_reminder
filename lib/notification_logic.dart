@@ -79,7 +79,7 @@ class NotificationLogic {
     // if (dateTime.isBefore(DateTime.now())) {
     //   dateTime = dateTime.add(Duration(days: 1));
     // }
-    print("date time :: $dateTime");
+
 
     _notifications.zonedSchedule(
       UniqueKey().hashCode,
